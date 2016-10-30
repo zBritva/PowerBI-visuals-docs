@@ -3,11 +3,17 @@
 > The old `powerbi-visuals` repository has been moved to [powerbi-visuals-core](https://github.com/Microsoft/PowerBI-visuals-core).
 
 
-#Power BI Visuals
+# Power BI Visuals
 
 Learn how to build Power BI visuals!
- 
-##Developing Your First PowerBI Visual
+
+## New to API version 1.2.0
+A new custom visuals API was introduced (1.2.0) there are several updates to the way users should create custom visuals.
+Developers who want to start using the new API, will have to follow some steps to acheive this.
+
+[Changes made in Version 1.2.0](V120/Changes.md)
+
+## Developing Your First PowerBI Visual
  
 This section is to provide you with a step by step tutorial of developing your first PowerBI visual.
 In this tutorial, you will be building a simple bar chart. The source code is located here in the [Sample Bar Chart Repo](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart).

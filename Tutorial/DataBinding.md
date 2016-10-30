@@ -14,20 +14,20 @@ Currently, data roles are added for you, but customizations can still be made.
 `displayName` is the name shown on the field well.
 `name` is the internal name used to reference this data role.
 
-`0` for the kind property refers to the grouping or category. Groupings resemble a discrete number of values.
-`1` for the kind property refers to the values for each of the groupings.
+`"Grouping"` for the kind property refers to the grouping or category. Groupings resemble a discrete number of values.
+`"Measure"` for the kind property refers to the values for each of the groupings.
 
 ```json
 "dataRoles": [
     {
         "displayName": "Category Data",
         "name": "category",
-        "kind": 0
+        "kind": "Grouping"
     },
     {
         "displayName": "Measure Data",
         "name": "measure",
-        "kind": 1
+        "kind": "Measure"
     }
 ],
 ```

@@ -36,6 +36,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 2. [Starting a simple R Script](RVisualTutorial/CorrplotScript.md)
 3. [Adding a static property to the property pane](RVisualTutorial/PropertiesPane.md)
 4. [Validate input data in R Script](RVisualTutorial/InputValidationInR.md)
+5. [Creating R Powered Custom Visual with HTML output](RVisualTutorial/CreateRHTML.md)
 
 ##Table of Contents
 

@@ -27,6 +27,6 @@ internalSaveWidget(p, 'out.html');
 
 This R script calls a generic function for plotting of R object. The data frame "Values" will contian columns in "Values" data role.
 
-![Basic Plot Script Result](images/BasicPlot.png)
+![Basic HTML Plot Script Result](images/BasicHTMLPlot.png)
 
 See [commit - UPDATE!!!](https://github.com/Microsoft/PowerBI-visuals-sampleCorrPlotRVisual/commit/e7d31301bfa0ba9419e67383a9f27ae340e79fee) for what was added at this step.

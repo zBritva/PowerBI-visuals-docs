@@ -51,7 +51,7 @@ All visuals must implement a public update method. It is called whenever there i
 * `viewMode: ViewMode` - flags that indicate the view mode of the visual. (View | Edit)
 * `editMode: EditMode` - a flag that indicates the edit mode of the visual. (Default | Advanced).
     * If the visual supports AdvancedEditMode, it should render its advanced UI controls only when editMode is set to 'Advanced'.
-	* [Learn more about AdvancedEditMode](..\Capabilities\AdvancedEditMode.md)
+	* [Learn more about AdvancedEditMode](../Capabilities/AdvancedEditMode.md)
 	
 ##enumerateObjectInstances `optional`
 

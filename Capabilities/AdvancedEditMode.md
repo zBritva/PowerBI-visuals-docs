@@ -4,9 +4,12 @@ A visual can declare its support of Advanced Edit Mode.
 By default, the visual do not support Advanced Edit Mode.
 If a different behavior is required, it should be explicitly stated in the visual capabilities, by setting the AdvancedEditModeSupport capability.
 The possible values of AdvancedEditModeSupport are:
-`0` - NotSupported
-`1` - SupportedNoAction
-`2` - SupportedInFocus
+
+* 0 - NotSupported
+
+* 1 - SupportedNoAction
+
+* 2 - SupportedInFocus
 
 
 ##supportsHighlight

@@ -13,7 +13,7 @@ The possible values of AdvancedEditModeSupport are:
 
 If `advancedEditModeSupport` property is set in capabilities.json to SupportedNoAction or SupportedInFocus, an 'Edit' button will appear in the visual options (see screenshot).
 If `advancedEditModeSupport` property is set in capabilities.json to NotSupported, or if the property is missing from the capabilities, the 'Edit' button will not appear.
-![Enter edit mode](images/EditMode.png)
+![Enter edit mode](images/EditMode.PNG)
 
 When the user clicks on 'Edit', the visual will get an update() call with EditMode set to 'Advanced'.
 According to the value set in the capabilities, the following will occur:

@@ -1,9 +1,13 @@
-#Advanced Edit Mode
+#Advanced Edit Mode Support
 
-A visual can declare its support of Advanced Edit Mode.
-By default, the visual do not support Advanced Edit Mode.
-If a different behavior is required, it should be explicitly stated in the visual capabilities, by setting the AdvancedEditModeSupport capability.
-The possible values of AdvancedEditModeSupport are:
+Visuals that require advanced UI controls can declare support of Advanced Edit Mode.
+These controls should be visible only while authoring a report, and not while viewing it.
+The visual can use the EditMode flag to determine whether or not it should display such UI controls.
+
+By default, the visual does not support Advanced Edit Mode.
+If a different behavior is required, it should be explicitly stated in the visual's `capabilities.json` file, by setting the `advancedEditModeSupport` property.
+
+The possible values are:
 
 - 0 - NotSupported
 
@@ -11,15 +15,10 @@ The possible values of AdvancedEditModeSupport are:
 
 - 2 - SupportedInFocus
 
-
-##advancedEditModeSupport
-Setting `advancedEditModeSupport` property in capabilities.json to `SupportedNoAction` or `SupportedInFocus` will make an `Edit` button will appear in the visual options (see screenshot).
-
-
-For both `SupportedNoAction` and `SupportedInFocus`, pressing the `Edit` button will set EditMode to Advanced.
-Additionally, if the property is set to `SupportedInFocus`, when the `Edit` button is pressed, the visual will be popped out to in focus mode.
-
-
+##Entering Advanced Edit Mode
+`Edit` button will be visible if:
+- 1 - `advancedEditModeSupport` property set in capabilities.json to either `SupportedNoAction` or `SupportedInFocus`
+- 2 - The visual is viewed in report editing mode.
 If `advancedEditModeSupport` property is missing from capabilities.json, or set to `NotSupported`, the 'Edit' button will not appear.
 
 

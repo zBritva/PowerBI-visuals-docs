@@ -13,9 +13,14 @@ The possible values of AdvancedEditModeSupport are:
 
 
 ##supportsHighlight
+Setting `advancedEditModeSupport` property in capabilities.json to `SupportedNoAction` or `SupportedInFocus` will make an `Edit` button will appear in the visual options (see screenshot).
 
-* If `advancedEditModeSupport` property is set in capabilities.json to SupportedNoAction or SupportedInFocus, an 'Edit' button will appear in the visual options (see screenshot).
-* If `advancedEditModeSupport` property is set in capabilities.json to NotSupported, or if the property is missing from the capabilities, the 'Edit' button will not appear.
+
+For both `SupportedNoAction` and `SupportedInFocus`, pressing the `Edit` button will set EditMode to Advanced.
+Additionally, if the property is set to `SupportedInFocus`, when the `Edit` button is pressed, the visual will be popped out to in focus mode.
+
+
+If `advancedEditModeSupport` property is missing from capabilities.json, or set to `NotSupported`, the 'Edit' button will not appear.
 
 
 ![Enter edit mode](images/EditMode.PNG)

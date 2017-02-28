@@ -97,7 +97,7 @@ By default this value is set to false which means your "Values" will be automati
 
 [Learn more about highlighting](Highlighting.md)
 
-##Handle Advanced Edit Mode - 'advancedEditModeSupport'
+##Handle Advanced Edit Mode - `advancedEditModeSupport`
 
 A visual can declare its support of Advanced Edit Mode.
 By default, a visual doesn't support Advanced Edit Mode, unless stated otherwise in the capabilities json.

@@ -1,7 +1,8 @@
 #Advanced Edit Mode Support
 
 Visuals that require advanced UI controls can declare support of Advanced Edit Mode.
-These controls should be visible only while authoring a report, and not while viewing it.
+If supported, when in report editing mode, an `Edit` button will appear in the visual's menu.
+When the `Edit` button is clicked, EditMode is set to `Advanced`.
 The visual can use the EditMode flag to determine whether or not it should display such UI controls.
 
 By default, the visual does not support Advanced Edit Mode.

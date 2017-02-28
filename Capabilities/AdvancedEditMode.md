@@ -12,7 +12,7 @@ The possible values of AdvancedEditModeSupport are:
 - 2 - SupportedInFocus
 
 
-##supportsHighlight
+##advancedEditModeSupport
 Setting `advancedEditModeSupport` property in capabilities.json to `SupportedNoAction` or `SupportedInFocus` will make an `Edit` button will appear in the visual options (see screenshot).
 
 

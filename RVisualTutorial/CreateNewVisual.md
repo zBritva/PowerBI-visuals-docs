@@ -1,4 +1,4 @@
-# Building a new R Powered Custom Visual
+# Building new R Powered Custom Visual
 In order to create a new R Powered Custom Visual we will run the following command:
 
 ```
@@ -18,3 +18,12 @@ This R script calls a generic function for plotting of R object. The data frame 
 ![Basic Plot Script Result](images/BasicPlot.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleCorrPlotRVisual/commit/e7d31301bfa0ba9419e67383a9f27ae340e79fee) for what was added at this step.
+
+## Enable HTML output
+The static output image can be replaced by an HTML output, unlocking new possibilities to R powered custom visuals.
+The 'rhtml' template is used in this case:
+
+```
+pbiviz new sampleRHTMLVisual -t rhtml
+```
+For more information see [R HTML](CreateRHTML.md)

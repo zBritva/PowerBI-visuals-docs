@@ -13,7 +13,7 @@ This template includes a very basic ready to run R Visual which will actually ru
 plot(Values)
 ```
 
-This R script calls a generic function for plotting of R object. The data frame "Values" will contian columns in "Values" data role.
+This R script calls a generic function for plotting of R object. The data frame "Values" will contain columns in "Values" data role.
 
 ![Basic Plot Script Result](images/BasicPlot.png)
 

@@ -33,10 +33,15 @@ In this sample the HTML has several capabilities, such as displaying data values
 
 ## Creating HTML output in R
 In order to create HTML output in R we are using the [`HTMLWidgets`](http://www.htmlwidgets.org/) package. It supports saving to HTML of output which was created by other packages. In the sample we used `ggplot2` and `plotly`, but other packages are also supported. See the full list of [supported R Packages in the service](https://powerbi.microsoft.com/en-us/documentation/powerbi-service-r-packages-support/).
-
+The output is created as a widget which is saved to HTML file. The system supports the creation of a single file, without external dependencies. The function `internalSaveWidget` is saving the widget and merge all the external files into a single one (it supports only several packages, such as `plotly` and `networkD3`).
 
 ## Tips and best practice
+### Loading the `head` data once
+In many cases, the custom visual is using the same package for all rendering. In these cases the same scripts are being loaded to the `head` section of the HTML, while the main differernce is in the `body` section.
+
+There is a flag in `visual.ts` which can choose between updating the `head` section after each load or only in the first one:
 
 ```
 const updateHTMLHead: boolean = false;
 ```
+The default is `false`, which means that the scripts will only be loaded to the DOM once.

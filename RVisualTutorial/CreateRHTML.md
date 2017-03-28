@@ -29,4 +29,4 @@ This R script calls a generic function for plotting of R object. The data frame 
 
 ![Basic HTML Plot Script Result](images/BasicHTMLPlot.png)
 
-See [commit - UPDATE!!!](https://github.com/Microsoft/PowerBI-visuals-sampleCorrPlotRVisual/commit/e7d31301bfa0ba9419e67383a9f27ae340e79fee) for what was added at this step.
+See [commit](https://github.com/Microsoft/PowerBI-visuals-tools/commit/3e03b7595c69929716772e4f58f192d08e103619) for what was added at this step.

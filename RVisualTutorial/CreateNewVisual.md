@@ -26,4 +26,9 @@ The 'rhtml' template is used in this case:
 ```
 pbiviz new sampleRHTMLVisual -t rhtml
 ```
+![Basic HTML Plot Script Result](images/BasicHTMLPlot.png)
+
+In this sample the HTML has several capabilities, such as displaying data values and enables zooming.
+
 For more information see [R HTML](CreateRHTML.md)
+See [commit](https://github.com/Microsoft/PowerBI-visuals-tools/commit/3e03b7595c69929716772e4f58f192d08e103619) for what was added at this step.

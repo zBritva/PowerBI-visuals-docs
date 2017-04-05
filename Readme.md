@@ -54,7 +54,6 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
     * [Objects](Capabilities/Objects.md)
     * [Highlighting](Capabilities/Highlighting.md)
 	* [Drill Down](Capabilities/Drilldown.md)
-	
 * [Visual Documentation](Visual/Visual.md)
     * [Visual/IVisual Api](Visual/IVisualApi.md)
     * [Handling Selection in Visuals](Visual/Selection.md)

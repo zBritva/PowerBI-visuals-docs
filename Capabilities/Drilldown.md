@@ -14,4 +14,4 @@ Make sure that the property "max" in the conditions of the dataRole is set to 1.
 (once you add this role to `drilldown`, you can drag multiple fields into the data role)
  
 example:
-![Adding Drill down](../images/addDrillDown2.png)
+[Adding Drill down](../images/addDrillDown2.png)

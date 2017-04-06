@@ -1,7 +1,7 @@
-# Drill down in a visualization
+# Drill down in a visual
 
 Visuals can now make use of PowerBI's Drill down support.
-(read more about [Drill down in a visualization in Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-service-drill-down-in-a-visualization/))
+(read more about it (https://powerbi.microsoft.com/en-us/documentation/powerbi-service-drill-down-in-a-visualization/))
 
 
 ## How to add drill down to your visual

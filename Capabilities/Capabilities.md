@@ -102,3 +102,9 @@ By default this value is set to false which means your "Values" will be automati
 A visual can declare its support of Advanced Edit Mode.
 By default, a visual doesn't support Advanced Edit Mode, unless stated otherwise in the capabilities json.
 [Learn more about advancedEditModeSupport](AdvancedEditMode.md)
+
+## Data sorting options for visual - `sorting`
+
+A visual can define its sorting behavior via its capabilities.
+By default, a visual doesn't support modifying its sorting order unless stated otherwise in the capabilities.json.
+[Learn more about sorting](Sorting.md)

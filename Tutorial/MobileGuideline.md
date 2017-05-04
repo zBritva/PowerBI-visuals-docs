@@ -47,7 +47,8 @@ Visual should be rendered on all devices that support Power BI Apps.
 Testing against latest models of Windows, iOS and Android devices should cover most quality aspects. Use the following devices list for testing to be sure that your visual provides the best experience to mobile users:
 
 *	iPhone devices
-    *	iPhone 6
+    *	iPhone 7
+    * iPhone 6
 *	iPad tablets
     *	iPad 5
 *	Android devices
@@ -57,6 +58,7 @@ Testing against latest models of Windows, iOS and Android devices should cover m
     *	Google Nexus 7
     *	Samsung Galaxy Tab
 *	Windows Phone devices
-    *	Lumia 950 or Lumia 950 XL
+    *	Surface Pro 4
+    * Lumia 950 or Lumia 950 XL
 
 

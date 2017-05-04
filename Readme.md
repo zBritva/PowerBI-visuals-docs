@@ -60,6 +60,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
     * [Handling Selection in Visuals](Visual/Selection.md)
     * [Adding Tooltips to Visuals](Visual/Tooltips.md)
     * [Localizing Visuals](Visual/Locale.md)
+* [Mobile development guideline](Tutorial/MobileGuideline.md)
 * [PowerBI Glossary](Glossary.md)
 * [Change Log](ChangeLog.md)
 * [Roadmap](Roadmap/README.md)

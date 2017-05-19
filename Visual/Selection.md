@@ -106,7 +106,7 @@ this.selectionManager.select(selector, true).then((ids: ISelectionId[]) => {
 
 **Clearing selection**
 
-To clear selection simply call `clear` on the selection manager. This also retruns a promise that will resolve once the selection is cleared successfully.
+To clear selection simply call `clear` on the selection manager. This also returns a promise that will resolve once the selection is cleared successfully.
 
 ```typescript
 this.selectionManager.clear().then(() => {

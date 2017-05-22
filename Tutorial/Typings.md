@@ -30,6 +30,19 @@ Open your `tsconfig.json` file and add your `index.d.ts` to your list of files
 
 ![](images/AddTypings.png)
 
+## Adding Typings for d3 by npm (Recommended)
+
+Another way to include typings is to use npm
+Open your `package.json` file and add `"@types/d3": "3.5.36"` in `devDependencies` section.
+
+You must execute `npm install` again to install defined typings for project. Typings will be installed into `node_modules/@types/d3` folder.
+
+In this case you don't need to install `typings` package to manage your typings. And you can remove `typings` package from dependencies, `typings.json` file and `typings` folder from the root of the project.
+
+If typings of some package isn't located in npm repository you can continue to use `typings` package for manage typings for the project.
+
+[There is commit with changes in sampleBarChart visual](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/e955f676dadcc06c2cbad90c61e70a09fc05da03)
+
 ## Utilize Types in your Visual
 Now you should be able to use types within your code.
 

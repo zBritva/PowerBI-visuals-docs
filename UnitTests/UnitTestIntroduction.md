@@ -21,7 +21,7 @@ Add required libraries into package.json at `devDependencies` section:
 "karma-typescript-preprocessor": "0.3.0"
 ```
 
-A purpose of each them described below.
+A purpose of each described below.
 
 Save `package.json` and execute on command line at `package.json` location:
 
@@ -31,7 +31,7 @@ npm install
 
 Package manager will install all new packages added into `package.json`
 
-For running unit test we will need to configure runner. The sample of config you can find here 
+For running unit tests we will need to configure runner. The sample of config you can find here 
 
 ```js
 'use strict';
@@ -116,29 +116,29 @@ module.exports = (config) => {
 };
 ```
 
-You can modify this configuration late if it is required.
+You can modify this configuration if it is required.
 
 Some settings of `karma.conf.js`:
 
 * `recursivePathToTests` variable locates place of code of tests
 
-* `srcRecursivePath` varibale locates output JS code after compilling
+* `srcRecursivePath` variable locates output JS code after compilling
 
-* `srcCssRecursivePath` varibale locates output CSS after compilling less file with styles.
+* `srcCssRecursivePath` variable locates output CSS after compilling less file with styles.
 
 * `srcOriginalRecursivePath` variable locates source code of your visual
 
-* `coverageFolder` - variable determines a place where the report of coverage will create.
+* `coverageFolder` - variable determines a place where the report of coverage will be created.
 
 Some properties of config:
 
-* `singleRun: true` - test usually run in CI system. And it is enough to single one time. 
+* `singleRun: true` - tests usually run in CI system. And it is enough to single one time. 
 You can change to `false` for debugging your tests. Karma will keep running browser, and it will allow you use the console to debug.
 
 * `files: [...]` - in this array, you can set files for loading to the browser.
 Usually, there are source files, test cases, libraries (jasmine, test utils). You can add to list other files if you need.
 
-* `preprocessors` - this section of config you configure actions, which will do before tests will run. There are precompiling of typescript to JS and preparing sourcemap files and generating code coverage report. You can disable `coverage` for debugging your tests. Coverage generates additional code for check code for the test covering and it will complicate debugging tests. 
+* `preprocessors` - this section of config you configure actions, which executes before unit tests execution. There are precompiling of typescript to JS and preparing sourcemap files and generating code to generate code coverage report. You can disable `coverage` for debugging your tests. Coverage generates additional code for check code for the test covering and it will complicate debugging tests. 
 
 Description of configurations you can find in the documentation of karma.js:
 https://karma-runner.github.io/1.0/config/configuration-file.html
@@ -161,7 +161,7 @@ Next step is adding references to jasmine framework, powerbi-visuals-utils-testu
 
 Create `test` folder at the root of the project with `_references.ts` file. This file will contain references to typings and source code of unit tests:
 
-```xml
+```ts
 // External
 /// <reference path="../node_modules/@types/jquery/index.d.ts" />
 /// <reference path="../node_modules/@types/jasmine/index.d.ts" />
@@ -180,7 +180,7 @@ Create `test` folder at the root of the project with `_references.ts` file. This
 /// <reference path="visualBuilder.ts" />
 ```
 
-So, you are ready to begin writing your unit test.
+So, you are ready to begin writing your unit tests.
 
 ## Simple unite test for check DOM element of visual.
 
@@ -215,13 +215,13 @@ module powerbi.extensibility.visual.test {
 }
 ```
 
-There `PBI_CV_9894B302_1DFF_4A96_ABFE_BF8588197166` is guid of visual. You visual guid must be different.
+There `PBI_CV_9894B302_1DFF_4A96_ABFE_BF8588197166` is GUID of visual. You visual GUID must be different.
 
 There is `build` method for creating an instance of our visual. `mainElement` is a get method which returns an instance of "root" DOM element in our visual. The method is optional, but it convenient in writing unit test.
 
-So, we have the builder of an instance of visual. Let's write the test case. It will be a simple test case to check that SVG element created when our visual displays.
+So, we have the builder of an instance of visual. Let's write the test case. It will be a simple test case to check that SVG elements created when our visual displays.
 
-Add `visualTest.ts` file for test cases with next code:
+Add `visualTest.ts` file for test cases with these code:
 
 ```ts
 /// <reference path="_references.ts"/>
@@ -249,7 +249,7 @@ There are calling of several methods.
 
 * [`describe`](https://jasmine.github.io/api/2.6/global.html#describe) method describes test case. In a context of jasmine framework often called suite or group of specs.
 
-* `beforeEach` method will be call before each call of `it` method, which defined inside of [`describe`](https://jasmine.github.io/api/2.6/global.html#beforeEach) method. 
+* `beforeEach` method will be called before each call of `it` method, which defined inside of [`describe`](https://jasmine.github.io/api/2.6/global.html#beforeEach) method. 
 
 * `it` defines a single spec. [`it`](https://jasmine.github.io/api/2.6/global.html#it) method should contain one or more `expectations`.
 
@@ -257,21 +257,23 @@ There are calling of several methods.
 
 * `toBeInDOM` - it's one of matchers method. About exists matchers you can read in [documentation](https://jasmine.github.io/api/2.6/matchers.html) of jasmine framework.
 
-After that, you can run your simple unit test by type command in command line.
+After that, you can run your simple unit test typing a command in command line tool.
 
-This test will check that root SVG element will create when visuals create.
+This test checks that root SVG element of the visuals is created.
 
-To run the unit test, you can type in the command line.
+To run the unit test,you can type this command in the command line tool.
 
 ```
 npm run test 
 ```
 
+> Please note that Google Chrome has to be installed locally.
+
 karma.js will run chrome browser and will execute test case.
 
 ![](images/KarmaJSChrome.png)
 
-In command line you will get next output:
+In command line you will get following output:
 
 ```
 > karma start
@@ -296,7 +298,7 @@ You will agree that it isn't very useful test. The visual visualizes data.
 
 ## How to add static data for unit tests
 
-Create `visualData.ts` file in `test`folder. With next code:
+Create `visualData.ts` file in `test`folder. With these code:
 
 ```ts
 /// <reference path="_references.ts"/>
@@ -335,13 +337,13 @@ module powerbi.extensibility.visual.test {
 }
 ```
 
-The `SampleBarChartDataBuilder` class extends `TestDataViewBuilder` and relizes abstract method `getDataView`.
+The `SampleBarChartDataBuilder` class extends `TestDataViewBuilder` and implements abstract method `getDataView`.
 
-When you put data to buckets in `Fields` panel PowerBI will produce you the categorical dataview based on your data.
+When you put data to data field buckets Power BI produces a categorical dataview object based on your data.
 
 ![](images/FieldsBuckets.png)
 
-In unit tests, you don't have PowerBI core functions to reproduce it. But you need map your static data to categorical dataview. And `TestDataViewBuilder` class will help you in it.
+In unit tests, you don't have Power BI core functions to reproduce it. But you need map your static data to categorical dataview. And `TestDataViewBuilder` class will help you in that.
 
 [Read more about DataViewMapping](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/DataViewMappings.md)
 
@@ -394,7 +396,7 @@ In `sampleBarChart` visual [capabilities.json](https://github.com/Microsoft/Powe
 ],
 ```
 
-To generate the same mapping you must set following params to `createCategoricalDataViewBuilder` method:
+To generate the same mapping you must set the following params to `createCategoricalDataViewBuilder` method:
 
 ```js
 [
@@ -458,7 +460,7 @@ In `karma.conf.js` at `files` section
 
 In `test\_references.ts` file at `Power BI Extensibility` section
 
-```xml
+```ts
 /// <reference path="../node_modules/powerbi-visuals-utils-typeutils/lib/index.d.ts"/>
 ```
 
@@ -469,7 +471,7 @@ npm install
 
 to install `lodash` library.
 
-Now, you can run unit test again. You must get next output
+Now, you can run unit test again. You must get this output
 
 ```
 > karma start
@@ -490,11 +492,11 @@ Lines        : 52.83% ( 112/212 )
 ================================================================================
 ```
 
-And you must see started Chrome Browser with your visual
+And you must see started Chrome Browser with your visual.
 
 ![](images/KarmaJSChromeUTRunned.png)
 
-Make attention coverage summary increased. For more details and analyze code coverage you can open `coverage\index.html` by browser.
+Make attention coverage summary increased. Please open `coverage\index.html` to find out more about current code coverage
 
 ![](images/CodeCoverageIndex.png)
 
@@ -502,7 +504,7 @@ Or in scope of `src` folder
 
 ![](images/CodeCoverageSrcFolder.png)
 
-In the scope of file, you can look source code. `Coverage` utils would mark row background to red if a code were not executed during running of unit tests.
+In the scope of file, you can look at source code. `Coverage` utils would mark row background to red if a code were not executed during running of unit tests.
 
 ![](images/CodeCoverageVisualSrc.png)
 

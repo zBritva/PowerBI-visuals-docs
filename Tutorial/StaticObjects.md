@@ -35,6 +35,12 @@ Define an objects property inside your capabilities. This defines the object you
 
 For more information, see the section about using [Objects](../Capabilities/Objects.md).
 
+## DataViewObjectsParser class for parsing property settings
+
+Below basic principles of defining property settings described.
+But for providing settings properties you can also use utility classes defined at `powerbi-visuals-utils-dataviewutils` package. 
+There is [documentation](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/data-view-objects-parser.md) with the sample how to use `DataViewObjectsParser` class to provide settings property of Visual.
+
 ## Defining Property Settings
 Although this is optional, it is best to localize most settings onto a single object so that all settings can be easily referenced.
 

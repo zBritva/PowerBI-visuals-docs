@@ -20,7 +20,7 @@ pbiviz new My Visual Name
 
 Replace "My Visual Name" with the name of your visual. You can change this later by modifying the generated `pbiviz.json` file.
 
-This command will create a new folder in your current directory and generate a basic starter template for your visual. Once it finishes you can open the directory and use your favorite editor to start working on your new visual.
+This command will create a new folder in your current directory and generate a basic starter template for your visual. Once it finishes run `npm install` from within the new directory and use your favorite editor to start working on your new visual.
 
 [Learn more about writing custom visuals](../Readme.md) 
 

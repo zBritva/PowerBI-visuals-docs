@@ -31,6 +31,11 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 9. [Adding Locale support to the Bar Chart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/Tutorial/Locale.md)
 10. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
 
+### Building a Slicer Visual
+1. [The sample slicer visual](https://github.com/Microsoft/powerbi-visuals-sampleslicer)
+2. [Adding advanced filter API](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/AddingAdvancedFilterAPI.md)
+3. [Using the advanced filter API](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/UsingAdvancedFilterAPI.md)
+
 ### Building R Powered Custom Visual (corrplot)
 1. [Creating a new R Powered Custom Visual](RVisualTutorial/CreateNewVisual.md)
 2. [Starting a simple R Script](RVisualTutorial/CorrplotScript.md)
@@ -60,6 +65,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
     * [Handling Selection in Visuals](Visual/Selection.md)
     * [Adding Tooltips to Visuals](Visual/Tooltips.md)
     * [Localizing Visuals](Visual/Locale.md)
+    * [Applying filters](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/UsingAdvancedFilterAPI.md)
 * [Mobile development guideline](Tutorial/MobileGuideline.md)
 * [PowerBI Glossary](Glossary.md)
 * [Change Log](ChangeLog.md)

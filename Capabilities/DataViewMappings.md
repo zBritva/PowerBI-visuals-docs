@@ -256,3 +256,89 @@ PowerBI will produce you this as the table dataview. Do not assume there is an o
 
 The data can be aggregated by selecting the desired field and clicking sum.  
 ![](images/DataAggregation.png)
+
+# Data Reduction Algorithm
+
+A `DataReductionAlgorithm` can be applied if you want to control the amount of data received in the DataView.
+
+By default all Custom Visuals have the top DataReductionAlgorithm applied with the "count" set to 1000 dataPoints. This is equivalent to setting the following properties in the capabilities.json:
+```json
+"dataReductionAlgorithm": {
+    "top": {
+        "count": 1000
+    }
+}
+```
+You can modify the 'count' value to any integer value up to 30000. R-based custom visuals can support up to 150000 rows.
+
+## Data Reduction Algorithm types 
+
+There are four types of `DataReductionAlgorithm` settings::
+* `top` - if you want limit the data to values taken from the top of the dataset. The top first "count" values will be taken from the data set.
+* `bottom` - if you want limit the data to values taken from the bottom of the dataset. The last "count" values will be taken from the data set.
+* `sample` - reduce the dataset by a simple sampling algorithm limited to a "count" number of items. 
+It means first and last items are included, as well as a "count" number of items having equal intervals between them.
+For example if you got a data set [0, 1, 2, ... 100] and a `count: 9` then you will receive the following values [0, 10, 20 ... 100]
+* `window` - loads one 'window' of datapoints at a time containing "count" elements. Currently `top` and `window` are equivalent. There is work in progress to fully support a windowing setting.
+
+## Data Reduction Algorithm usage
+
+`DataReductionAlgorithm` can be used in categorical, table or matrix dataview mapping.
+
+For categorical data mapping it can be set into `categories` and/or group section of `values`.
+
+**Example 1**
+```json
+"dataViewMappings": {
+    "categorical": {
+        "categories": {
+            "for": { "in": "category" },
+            "dataReductionAlgorithm": {
+                "window": {
+                    "count": 300
+                }
+            }   
+        },
+        "values": {
+            "group": {
+                "by": "series",
+                "select": [{
+                        "for": {
+                            "in": "measure"
+                        }
+                    }
+                ],
+                "dataReductionAlgorithm": {
+                    "top": {
+                        "count": 100
+                    }
+                }  
+            }
+        }
+    }
+}
+```
+
+For table dataview mapping the data reduction algorithm can be applied to the `rows` section.
+
+**Example 2**
+```json
+"dataViewMappings": [
+    {
+        "table": {
+            "rows": {
+                "for": {
+                    "in": "values"
+                },
+                "dataReductionAlgorithm": {
+                    "top": {
+                        "count": 2000
+                    }
+                } 
+            }
+        }
+    }
+]
+```
+
+For `matrix` dataview mapping the data reduction algorithm can be applied to the `rows` and/or `columns` section.

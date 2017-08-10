@@ -12,7 +12,7 @@ Please pay attention to [this](Typings.md) if you'd like to add typings for your
 * Installing [d3](https://www.npmjs.com/package/d3) by using [npm](https://www.npmjs.com/)
 
 ```bash
-npm install d3@3.5.5 --save
+npm install d3@4.9.1 --save
 ```
 
 * Including ```d3``` to the ```pbiviz.json```

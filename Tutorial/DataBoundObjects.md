@@ -140,3 +140,11 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
     return objectEnumeration;
 }
 ```
+
+After providing a selector for each property, you will get the following dataView object array:
+
+![](images/ObjectDataBoundPropertyInSrc.png)
+
+Where each item in the array `dataViews[0].categorical.categories[0].objects` corresponds to the concrete category of the dataset.
+
+The function `getCategoricalObjectValue` just provides a convenient way of accessing properties by their category index. You must provide an `objectName` and `propertyName` which matches with the object and property in `capabilities.json`.

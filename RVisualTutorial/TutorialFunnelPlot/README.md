@@ -18,7 +18,7 @@
 
 
 ## Story about the "Funnel Plot"<a name="chapter-0"></a>
-This [atricle from The Gaurdian](https://www.theguardian.com/commentisfree/2011/oct/28/bad-science-diy-data-analysis) tells us the inspiring story about how using the wrong visualization tools can 
+This [article from The Gaurdian](https://www.theguardian.com/commentisfree/2011/oct/28/bad-science-diy-data-analysis) tells us the inspiring story about how using the wrong visualization tools can 
 lead to the wrong conclusion. The real hero of this story is the funnel plot, which can be used for comparing institutional performance and medical data analysis.  
 
 ![funnel plot image](fp.JPG)
@@ -40,13 +40,13 @@ We are going to use this code in order to incrementally create:
 
 ## Chapter 1<a name="chapter-1"></a>
 
-The minimal R-script and the accompanying data table: 
+The minimal R script and the accompanying data table: 
 
 [chapter1_R\dataset.csv](chapter1_R/dataset.csv)
 
 [chapter1_R\vscript_R_v1_00.r](chapter1_R/script_R_v1_00.r)
 
-The next version of R-script is essentially the same, but implements input error handling and user parameters to control the appearance of the plot: 
+The next version of R script is essentially the same, but implements input error handling and user parameters to control the appearance of the plot: 
 
 [chapter1_R\vscript_R_v1_01.r](chapter1_R/script_R_v1_01.r)
 
@@ -91,7 +91,7 @@ Now we will use any command line shell (like "Command Prompt") to create new R-p
 It will create funnelRvisual folder with initial template visual (`-t` stands for _template_). 
 The PBIVIZ is in _"dist"_ folder. Try to import it into Power BI and see what it does. The R-code is inside _"script.r"_ file. 
 
-* Open _"script.r"_ file for editing and replace its contents by  ["script_RV_v2_00.r"](chapter2_Rvisual/script_RV_v2_00.r)  just as is!
+* Open _"script.r"_ file for editing and replace its contents with  ["script_RV_v2_00.r"](chapter2_Rvisual/script_RV_v2_00.r)  just as is!
 * Open _"capabilities.json"_ in any editor and Find/Replace the `Values` string by `dataset` string. It replaces the name of "Role" in template to be like in R-code.  See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v01/capabilities_changes.PNG)
 * Optionally: open _"dependencies.json"_ in any editor and add one section for each R package required in your R script. This will tell Power BI to automatically import those packages when the visual is loaded for the first time.
 
@@ -180,7 +180,7 @@ The resulting  file is
 
 * Now edit the _"src\visual.ts"_ file. 
 
-his file is written in TypeScript.  You may find this part a little confusing, especially if you are not familiar with JavaScript / TypeScript. Don't worry, it is possible to use this example as a template.  
+This file is written in TypeScript.  You may find this part a little confusing, especially if you are not familiar with JavaScript / TypeScript. Don't worry, it is possible to use this example as a template.  
 
 To follow the changes in TypeScript, search for the commented blocks: 
 

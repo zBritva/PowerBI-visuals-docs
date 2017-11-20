@@ -29,7 +29,8 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 7. [Adding Tooltips to the Bar Chart](Tutorial/ToolTips.md)
 8. [Adding A Slider control to the Bar Chart](Tutorial/SliderControl.md)
 9. [Adding Locale support to the Bar Chart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/Tutorial/Locale.md)
-10. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
+10. [Adding URL Launcher element to the Bar Chart](Tutorial/LaunchURL.md)
+11. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
 
 ### Building a Slicer Visual
 1. [The sample slicer visual](https://github.com/Microsoft/powerbi-visuals-sampleslicer)

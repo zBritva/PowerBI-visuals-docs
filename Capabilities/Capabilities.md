@@ -30,6 +30,15 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
     * 2 `GroupingOrMeasure` - Can be used as either a grouping or measure
 * **displayName** - the name displayed to the user in the properties pane
 * **description** - a short description of the field (optional)
+* **requiredTypes** - the required type of data for this data role. Any values that do not match will be set to null (optional)
+* **preferredTypes** - the preferred type of data for this data role (optional)
+
+### Valid data types in "requiredTypes" and "preferredTypes"
+* **bool** - a boolean value
+* **integer** - an integer (whole number) value
+* **numeric** - a numeric value
+* **text** - a text value
+* **geography** - a geographic data
 
 ### Example
 
@@ -38,12 +47,94 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
     {
         "displayName": "My Category Data",
         "name": "myCategory",
-        "kind": 0
+        "kind": 0,
+        "requiredTypes": [
+            {
+                "text": true
+            },
+            {
+                "numeric": true
+            },
+            {
+                "integer": true
+            }
+        ],
+        "preferredTypes": [
+            {
+                "text": true
+            }
+        ]
     },
     {
         "displayName": "My Measure Data",
         "name": "myMeasure",
-        "kind": 1
+        "kind": 1,
+        "requiredTypes": [
+            {
+                "integer": true
+            },
+            {
+                "numeric": true
+            }
+        ],
+        "preferredTypes": [
+            {
+                "integer": true
+            }
+        ]
+    },
+    {
+        "displayNameKey": "Visual_Location",
+        "name": "Locations",
+        "kind": "Measure",
+        "displayName": "Locations",
+        "requiredTypes": [
+            {
+                "geography": {
+                    "address": true
+                }
+            },
+            {
+                "geography": {
+                    "city": true
+                }
+            },
+            {
+                "geography": {
+                    "continent": true
+                }
+            },
+            {
+                "geography": {
+                    "country": true
+                }
+            },
+            {
+                "geography": {
+                    "county": true
+                }
+            },
+            {
+                "geography": {
+                    "place": true
+                }
+            },
+            {
+                "geography": {
+                    "postalCode": true
+                }
+            },
+            {
+                "geography": {
+                    "region": true
+                }
+            },
+            {
+                "geography": {
+                    "stateOrProvince": true
+                }
+            }
+        ]
     }
 ]
 ```

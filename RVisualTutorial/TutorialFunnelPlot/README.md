@@ -102,7 +102,7 @@ Now re-package the visual again:
 Try to import it into Power BI again and see what it does.  
 The resulting PBIX and the whole Custom Visual Project from this section may be found in: 
 
-[chapter3_RCustomVisual](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
+[chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
 
 [chapter3_RCustomVisual\funnelRvisual_v01](chapter3_RCustomVisual/funnelRvisual_v01/)
 

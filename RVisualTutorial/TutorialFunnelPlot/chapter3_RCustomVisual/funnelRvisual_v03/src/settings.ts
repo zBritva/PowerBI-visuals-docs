@@ -58,5 +58,5 @@ module powerbi.extensibility.visual {
       public scaleYformat: string = "none";
       public sizeTicks: string = "6";  
     }
-	/RVIZ_IN_PBI_GUIDE:END:Added to enable user parameters 
+	//RVIZ_IN_PBI_GUIDE:END:Added to enable user parameters 
 }

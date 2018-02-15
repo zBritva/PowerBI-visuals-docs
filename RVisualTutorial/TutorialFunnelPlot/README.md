@@ -355,7 +355,7 @@ Let's recap main steps for creation and perfection of R-powered custom visual fr
 1.	Edit the key files:
     1.  Edit _script.r_ and _capabilities.json_ to create basic working custom visual
     1.  Edit _script.r_ and _capabilities.json_ to allow for multiple input fields (if required)
-    1.  Edit _script.r_ and _capabilities.json_ and _visual.ts_ to allow user parameters (if required)
+    1.  Edit _script.r_ and _capabilities.json_ and _settings.ts_ to allow user parameters (if required)
     1.  Edit  _dependencies.json_ and _pbiviz.json_ and _icon.png_ as final touches to your custom visual
 1.	Package the visual and share it with the community  
 
@@ -384,7 +384,7 @@ if(file.exists(dirname(fileRda)))
 
 This code saves the environment from Power BI report and loads it in RStudio. 
 
-* You do not need to develop R-powered Custom Visuals from scratch. All the code is available in [_github_](https://github.com/Microsoft?utf8=%E2%9C%93&q=PowerBI&type=&language=). Select the visual which is the most similar to the one you want to develop. Again, you should not be copying the entire project. If you want to reuse the functionality across visuals, copy the core code across into a new project. For example, you can start from the[spline custom visual](https://github.com/Microsoft/PowerBI-visuals-spline).  
+* You do not need to develop R-powered Custom Visuals from scratch. All the code is available in [_github_](https://github.com/Microsoft?utf8=%E2%9C%93&q=PowerBI&type=&language=). Select the visual which is the most similar to the one you want to develop. Again, you should not be copying the entire project. If you want to reuse the functionality across visuals, copy the core code across into a new project. For example, you can start from the [spline custom visual](https://github.com/Microsoft/PowerBI-visuals-spline).  
 
 
 * Keep in mind, that each R visual and R Custom Visual applies `unique` operator to the input table. To avoid the identical rows being removed, consider adding an extra input field with a unique ID and just ignore it in R code.   

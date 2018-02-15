@@ -29,13 +29,14 @@ module powerbi.extensibility.visual {
     import DataViewObjectsParser = powerbi.extensibility.utils.dataview.DataViewObjectsParser;
 
    export class VisualSettings extends DataViewObjectsParser {
+   //RVIZ_IN_PBI_GUIDE:BEGIN:Added to enable user parameters
       public settings_funnel_params: settings_funnel_params = new settings_funnel_params();
       public settings_scatter_params: settings_scatter_params = new settings_scatter_params();
       public settings_axes_params: settings_axes_params = new settings_axes_params();
-      
+   //RVIZ_IN_PBI_GUIDE:END:Added to enable user parameters  
       }
 
- 
+	//RVIZ_IN_PBI_GUIDE:BEGIN:Added to enable user parameters
     export class settings_funnel_params {
       public lineColor: string = "blue";   
       public conf1: string = "0.95";
@@ -57,5 +58,5 @@ module powerbi.extensibility.visual {
       public scaleYformat: string = "none";
       public sizeTicks: string = "6";  
     }
-
+	/RVIZ_IN_PBI_GUIDE:END:Added to enable user parameters 
 }

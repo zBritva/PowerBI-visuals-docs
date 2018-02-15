@@ -26,16 +26,36 @@
 
 module powerbi.extensibility.visual {
     "use strict";
-
     import DataViewObjectsParser = powerbi.extensibility.utils.dataview.DataViewObjectsParser;
 
    export class VisualSettings extends DataViewObjectsParser {
-      public rcv_script: rcv_scriptSettings = new rcv_scriptSettings();
+      public settings_funnel_params: settings_funnel_params = new settings_funnel_params();
+      public settings_scatter_params: settings_scatter_params = new settings_scatter_params();
+      public settings_axes_params: settings_axes_params = new settings_axes_params();
+      
       }
 
-    export class rcv_scriptSettings {
-     // undefined
-      public provider     // undefined
-      public source     }
+ 
+    export class settings_funnel_params {
+      public lineColor: string = "blue";   
+      public conf1: string = "0.95";
+      public conf2: string = "0.99";
+    }
+
+    export class settings_scatter_params {
+      public pointColor: string = "orange";   
+      public weight: number = 10;
+      public percentile: number = 40;
+      public sparsify: boolean = true;
+    }
+
+    export class settings_axes_params {
+      public colLabel: string = "gray";   
+      public textSize: number = 12;
+      public axisXisPercentage: boolean = true;
+      public scaleXformat: string = "comma";
+      public scaleYformat: string = "none";
+      public sizeTicks: string = "6";  
+    }
 
 }

@@ -198,19 +198,19 @@ goodPlotDimension = function(minWidthInch = 3,minHeightInch = 2.2)
 #tweak the limits of the axis
 NiceLimitsAxis <- function(axisData, baseline =NULL, isPositive = TRUE)
 {
-  limsA = c(min(axisData), max(axisData)) # default
-  if(is.null(baseline))
-    baseline = sum(limsA)/2
-  
-  limsA = (limsA - mean(limsA))*1.3 + baseline # centralize
-  limsA[1] = min(limsA[1],min(axisData)) # include outliers
-  limsA[2] = max(limsA[2],max(axisData)) # include outliers
-  if(limsA[1] < 0 && isPositive) # don't include region far away from 0
-  { 
-    temp = -0.02 * (limsA[2])
-    limsA[1] = max(temp, limsA[1]) 
-  }
-  return(limsA)
+limsA = c(min(axisData), max(axisData)) # default
+if(is.null(baseline))
+  baseline = sum(limsA)/2
+
+limsA = (limsA - mean(limsA))*1.3 + baseline # centralize
+limsA[1] = min(limsA[1],min(axisData)) # include outliers
+limsA[2] = max(limsA[2],max(axisData)) # include outliers
+if(limsA[1] < 0 && isPositive) # don't include region far away from 0
+{ 
+  temp = -0.02 * (limsA[2])
+  limsA[1] = max(temp, limsA[1]) 
+}
+return(limsA)
 }
 
 
@@ -261,7 +261,7 @@ if(validToPlot && (sum(validData) < minPoints)) # not enough data samples
 
 if(validToPlot)
 {
-  
+
   dataset = dataset[validData,]# keep only valid
   namesDS = names(dataset)
   

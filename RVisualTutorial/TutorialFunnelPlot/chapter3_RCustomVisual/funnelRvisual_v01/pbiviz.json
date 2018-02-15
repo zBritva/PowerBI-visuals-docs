@@ -2,14 +2,14 @@
   "visual": {
     "name": "funnelRvisualVer01",
     "displayName": "funnelRvisualVer01",
-    "guid": "funnelRvisualVer01",
+    "guid": "funnelRvisualVer01_FEFF3",
     "visualClassName": "Visual",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "",
     "supportUrl": "",
     "gitHubUrl": ""
   },
-  "apiVersion": "1.7.0",
+  "apiVersion": "1.10.0",
   "author": {
     "name": "",
     "email": ""

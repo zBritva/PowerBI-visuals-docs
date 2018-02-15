@@ -192,7 +192,7 @@ To follow the changes in TypeScript, search for the commented blocks:
 ```
 
 The resulting  file is 
-[chapter3_RCustomVisual\funnelRvisual_v03\src\visual.ts](chapter3_RCustomVisual/funnelRvisual_v03/src/settings.ts)
+[chapter3_RCustomVisual\funnelRvisual_v03\src\settings.ts](chapter3_RCustomVisual/funnelRvisual_v03/src/settings.ts)
  
 
 You will find two blocks of code added. 
@@ -222,6 +222,8 @@ and
  ...
 #RVIZ_IN_PBI_GUIDE:END:Removed to enable user parameters
 ```
+See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/script_r_before_after_1.png)
+
 
 Note that you may decide not to expose some of the parameters to UI, like we did.  
  
@@ -287,7 +289,7 @@ We also move most of utility functions to [_"r_files/utils.r"_](chapter4_RHTMLCu
 The resulting  file is 
 
 [chapter4_RHTMLCustomVisual\funnelRHTMLvisual_v01\script.r](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script.r)
-
+See before vs. after [1](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_1.PNG), [2](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_2.PNG)
 
 To follow the changes in R-script, search for the blocks: 
 
@@ -311,19 +313,7 @@ and
 The resulting  file is 
 [chapter4_RCustomVisual\funnelRHTMLvisual_v01\dependencies.json](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/dependencies.json)
 
-* Change the script _"src/visual.ts"_ in exactly the same way as you did in Chapter 3.3 
-
- To follow the changes in TypeScript, search for the blocks:
- 
-```
-//RVIZ_IN_PBI_GUIDE:BEGIN:Added to create HTML-based `
- ...
-//RVIZ_IN_PBI_GUIDE:BEGIN:Added to create HTML-based `
-```
-
-You will find same four blocks of code added (like in Section 3.3). 
-The resulting  file is 
-[chapter4_RCustomVisual\funnelRHTMLvisual_v01\src\visual.ts](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/visual.ts)
+* Change the script _"src/settings.ts"_ in exactly the same way as you did in Chapter 3.3 
 
 * Now re-package the visual again: 
 

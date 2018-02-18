@@ -93,7 +93,7 @@ The PBIVIZ is in _"dist"_ folder. Try to import it into Power BI and see what it
 
 * Open _"script.r"_ file for editing and replace its contents with  ["script_RV_v2_00.r"](chapter2_Rvisual/script_RV_v2_00.r)  just as is!
 * Open _"capabilities.json"_ in any editor and Find/Replace the `Values` string by `dataset` string. It replaces the name of "Role" in template to be like in R-code.  See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v01/capabilities_changes.PNG)
-* Optionally: open _"dependencies.json"_ in any editor and add one section for each R package required in your R script. This will tell Power BI to automatically import those packages when the visual is loaded for the first time.
+* Optionally: open _"dependencies.json"_ in any editor and add one section for each R package required in your R script. This will tell Power BI to automatically import those packages when the visual is loaded for the first time. See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v01/dependencies_changes.PNG)
 
 Now re-package the visual again: 
 
@@ -102,7 +102,7 @@ Now re-package the visual again:
 Try to import it into Power BI again and see what it does.  
 The resulting PBIX and the whole Custom Visual Project from this section may be found in: 
 
-[chapter3_RCustomVisual](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
+[chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
 
 [chapter3_RCustomVisual\funnelRvisual_v01](chapter3_RCustomVisual/funnelRvisual_v01/)
 
@@ -123,12 +123,12 @@ See more information [here](https://github.com/Microsoft/PowerBI-visuals/blob/ma
 
 The resulting  file is 
 
-[chapter3_RCustomVisual\funnelRvisual_v02\capabilities.json](chapter3_RCustomVisual/funnelRvisual_v02/capabilities.json) 
+[chapter3_RCustomVisual\funnelRvisual_v02\capabilities.json](chapter3_RCustomVisual/funnelRvisual_v02/capabilities.json). See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v02/capabilities_before_vs_after.PNG)
 
 * Edit _"script.r"_ to support _Population_, _Number_ and _Tooltips_ as input dataframes instead of _dataset_
 
 The resulting  file is 
-[chapter3_RCustomVisual\funnelRvisual_v02\script.r](chapter3_RCustomVisual/funnelRvisual_v02/script.r )
+[chapter3_RCustomVisual\funnelRvisual_v02\script.r](chapter3_RCustomVisual/funnelRvisual_v02/script.r ). See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v02/script_r_before_vs_after.PNG)
 
 To follow the changes in R-script, search for the commented blocks: 
 
@@ -177,10 +177,11 @@ This is the place to define names, tooltips and types of each parameter. We also
 The resulting  file is
 
 [chapter3_RCustomVisual\funnelRvisual_v03\capabilities.json](chapter3_RCustomVisual/funnelRvisual_v03/capabilities.json)
+See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/capabilities_before_after.PNG)
 
-* Now edit the _"src\visual.ts"_ file. 
+* Now edit the _"src\settings.ts"_ file. 
 
-This file is written in TypeScript.  You may find this part a little confusing, especially if you are not familiar with JavaScript / TypeScript. Don't worry, it is possible to use this example as a template.  
+This file is written in TypeScript.  Don't worry, it is easy to use this example as a template.  
 
 To follow the changes in TypeScript, search for the commented blocks: 
 
@@ -191,15 +192,14 @@ To follow the changes in TypeScript, search for the commented blocks:
 ```
 
 The resulting  file is 
-[chapter3_RCustomVisual\funnelRvisual_v03\src\visual.ts](chapter3_RCustomVisual/funnelRvisual_v03/src/visual.ts)
+[chapter3_RCustomVisual\funnelRvisual_v03\src\settings.ts](chapter3_RCustomVisual/funnelRvisual_v03/src/settings.ts)
  
 
-You will find four blocks of code added. 
+You will find two blocks of code added. 
 1. Declare new interface to hold the property value; 
 1. Define a member property and default values; 
-1. Change the  _updateObjects_  method to get the value of the enumeration; 
-1. The code in  _enumerateObjectInstances_ to show the property in the property pane
 
+See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/settings_ts_before_after.PNG)
 
 * Now edit _"script.r"_ to support the parameters in UI, it is quite easy just by adding `if.exists` calls per user-parameter
 
@@ -222,6 +222,8 @@ and
  ...
 #RVIZ_IN_PBI_GUIDE:END:Removed to enable user parameters
 ```
+See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/script_r_before_after_1.png)
+
 
 Note that you may decide not to expose some of the parameters to UI, like we did.  
  
@@ -287,7 +289,7 @@ We also move most of utility functions to [_"r_files/utils.r"_](chapter4_RHTMLCu
 The resulting  file is 
 
 [chapter4_RHTMLCustomVisual\funnelRHTMLvisual_v01\script.r](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script.r)
-
+See before vs. after [1](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_1.PNG), [2](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_2.PNG)
 
 To follow the changes in R-script, search for the blocks: 
 
@@ -311,19 +313,7 @@ and
 The resulting  file is 
 [chapter4_RCustomVisual\funnelRHTMLvisual_v01\dependencies.json](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/dependencies.json)
 
-* Change the script _"src/visual.ts"_ in exactly the same way as you did in Chapter 3.3 
-
- To follow the changes in TypeScript, search for the blocks:
- 
-```
-//RVIZ_IN_PBI_GUIDE:BEGIN:Added to create HTML-based `
- ...
-//RVIZ_IN_PBI_GUIDE:BEGIN:Added to create HTML-based `
-```
-
-You will find same four blocks of code added (like in Section 3.3). 
-The resulting  file is 
-[chapter4_RCustomVisual\funnelRHTMLvisual_v01\src\visual.ts](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/visual.ts)
+* Change the script _"src/settings.ts"_ in exactly the same way as you did in Chapter 3.3 
 
 * Now re-package the visual again: 
 
@@ -365,7 +355,7 @@ Let's recap main steps for creation and perfection of R-powered custom visual fr
 1.	Edit the key files:
     1.  Edit _script.r_ and _capabilities.json_ to create basic working custom visual
     1.  Edit _script.r_ and _capabilities.json_ to allow for multiple input fields (if required)
-    1.  Edit _script.r_ and _capabilities.json_ and _visual.ts_ to allow user parameters (if required)
+    1.  Edit _script.r_ and _capabilities.json_ and _settings.ts_ to allow user parameters (if required)
     1.  Edit  _dependencies.json_ and _pbiviz.json_ and _icon.png_ as final touches to your custom visual
 1.	Package the visual and share it with the community  
 
@@ -394,7 +384,7 @@ if(file.exists(dirname(fileRda)))
 
 This code saves the environment from Power BI report and loads it in RStudio. 
 
-* You do not need to develop R-powered Custom Visuals from scratch. All the code is available in [_github_](https://github.com/Microsoft?utf8=%E2%9C%93&q=PowerBI&type=&language=). Select the visual which is the most similar to the one you want to develop. Again, you should not be copying the entire project. If you want to reuse the functionality across visuals, copy the core code across into a new project. For example, you can start from the[spline custom visual](https://github.com/Microsoft/PowerBI-visuals-spline).  
+* You do not need to develop R-powered Custom Visuals from scratch. All the code is available in [_github_](https://github.com/Microsoft?utf8=%E2%9C%93&q=PowerBI&type=&language=). Select the visual which is the most similar to the one you want to develop. Again, you should not be copying the entire project. If you want to reuse the functionality across visuals, copy the core code across into a new project. For example, you can start from the [spline custom visual](https://github.com/Microsoft/PowerBI-visuals-spline).  
 
 
 * Keep in mind, that each R visual and R Custom Visual applies `unique` operator to the input table. To avoid the identical rows being removed, consider adding an extra input field with a unique ID and just ignore it in R code.   

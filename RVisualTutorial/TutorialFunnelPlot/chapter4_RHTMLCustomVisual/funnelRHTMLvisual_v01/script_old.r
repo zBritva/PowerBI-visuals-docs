@@ -36,6 +36,7 @@ libraryRequireInstall = function(packageName, ...)
 libraryRequireInstall("ggplot2")
 libraryRequireInstall("scales")
 
+#RVIZ_IN_PBI_GUIDE:BEGIN:Added to enable user parameters   
 
 ############ User Parameters #########
 # Set of parameters from GUI
@@ -123,11 +124,67 @@ colLabel = "gray"
 if(exists("settings_axes_params_colLabel")){
   colLabel = settings_axes_params_colLabel
 }
+#RVIZ_IN_PBI_GUIDE:END:Added to enable user parameters
 
 
 ###############Internal parameters definitions#################
 # Set of parameters, which are not exported to GUI
 
+
+#RVIZ_IN_PBI_GUIDE:BEGIN:Removed to enable user parameters
+
+# ##PBI_PARAM Color of scatterplot points
+# #Type:string, Default:"orange", Range:NA, PossibleValues:"orange","blue","green","black"
+# pointsCol = "orange"
+# 
+# #PBI_PARAM Transparency of scatterplot points
+# #Type:numeric, Default:0.4, Range:[0,1], PossibleValues:NA, Remarks: NA
+# transparency = 0.4
+# 
+# ##PBI_PARAM Color of baseline
+# #Type:string, Default:"blue", Range:NA, PossibleValues:"orange","blue","green","black"
+# lineColor = "blue"
+# 
+# 
+# #PBI_PARAM Sparsification of scatterplot points
+# #Type:bool, Default:TRUE, Range:NA, PossibleValues:NA, Remarks: NA
+# sparsify = TRUE
+# 
+# #PBI_PARAM Size of points on the plot
+# #Type:numeric, Default: 1 , Range:[0.1,5], PossibleValues:NA, Remarks: NA
+# pointCex = 1
+# 
+# 
+# #PBI_PARAM Confidence level line
+# #Type:numeric, Default: 0.75 , Range:[0,1], PossibleValues:NA, Remarks: GUI input is predefined set of values
+# conf1 = 0.95
+# 
+# #PBI_PARAM Confidence level line #2
+# #Type:numeric, Default: 0.95 , Range:[0,1], PossibleValues:NA, Remarks: NA
+# conf2 = 0.99
+# 
+# ##PBI_PARAM Precentage or Ratio ?
+# #Type:bool, Default:TRUE, Range:NA, PossibleValues:NA
+# axisXisPercentage = TRUE # ratio or percentage 
+# 
+# ##PBI_PARAM Axis X format
+# #Type:string, Default:"comma", Range:NA, PossibleValues:"none","comma","scientific","dollar"
+# scaleXformat = "comma"
+# 
+# ##PBI_PARAM Axis Y format
+# #Type:string, Default:"none", Range:NA, PossibleValues:"none","comma","scientific"
+# scaleYformat = "none"
+# 
+# #PBI_PARAM Size of labels on axes
+# sizeLabel = 12
+# 
+# #PBI_PARAM Size of ticks on axes 
+# sizeTicks = 6
+# 
+# #PBI_PARAM Size of labels on axes
+# colLabel = "gray"
+
+#RVIZ_IN_PBI_GUIDE:END:Removed to enable user parameters
 
 #PBI_PARAM is vertical plot
 verticalPlot = FALSE

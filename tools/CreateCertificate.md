@@ -1,4 +1,4 @@
-# Create certificate (Windows)
+# [Create certificate (Windows)](Windows)
 
 ----------
 
@@ -12,7 +12,7 @@ For install OpenSSL visit [https://www.openssl.org](https://www.openssl.org) or 
 pbiviz --install-cert
 ```
 
-# Create certificate (MacOS)
+# [Create certificate (MacOS)](#macos)
 
 Usually OpenSSL utils available in Linux or MacOS operations systems.
 
@@ -35,7 +35,7 @@ After installation OpenSSL for generating new certificate call:
 pbiviz --install-cert
 ```
 
-# Create certificate (Linux)
+# [Create certificate (Linux)](#linux)
 
 OpenSSL utils aren't available in your Linux operation system, you can install by using following commands.
 
@@ -65,6 +65,49 @@ pbiviz --install-cert
 to generate new certificate.
 
 Or get from [https://www.openssl.org](https://www.openssl.org) or [https://wiki.openssl.org/index.php/Binaries](https://wiki.openssl.org/index.php/Binaries)
+
+## [Generate certificate manually](#manual)
+
+You can specify your generated early certificates.
+
+Usually PowerBI-visuals-tools web server certificates located at
+
+```
+%appdata%\npm\node_modules\PowerBI-visuals-tools\certs
+```
+
+for global instance of tools
+
+or
+
+```
+<custom visual project root>\node_modules\PowerBI-visuals-tools\certs
+```
+
+for local instance of tools.
+
+You should save cert file as `PowerBICustomVisualTest_public.cer` and privatekey as `PowerBICustomVisualTest_public.key` if you use PEM format.
+Save cert file as `PowerBICustomVisualTest_public.pfx` if you use PFX format.
+
+If your PFX cert file requires passphrase, you should specify in
+
+```
+\PowerBI-visuals-tools\config.json
+```
+
+at server section:
+
+```
+"server":{
+    "root":"webRoot",
+    "assetsRoute":"/assets",
+    "privateKey":"certs/PowerBICustomVisualTest_private.key",
+    "certificate":"certs/PowerBICustomVisualTest_public.crt",
+    "pfx":"certs/PowerBICustomVisualTest_public.pfx",
+    "port":"8080",
+    "passphrase":"YOUR PASSPHRASE"
+}
+```
 
 ## Move to next step:
 

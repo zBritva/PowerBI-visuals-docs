@@ -20,18 +20,44 @@ It happens each time when the user change selection and adds new bookmarks.
 Once created, the user can switch between the bookmarks.
 
 When the user clicks on a bookmark, PowerBI restores the saved selections and passes them to the visual.
-The `update` method of the visuals will be called, and inside the update options there will be a special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression three of the selection (filter), although it is not recommended to use this object directly.
+The `update` method of the visuals will be called, and inside the update options there will be a special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression tree of the selection (filter), although it is not recommended to use this object directly.
 
 You can use `FilterManager.restoreSelectionIds` method to convert this object to an array of `ISelectionId`.
 
 ### Visuals with selections
 
+If your visuals interact with other visuals by using [selections](https://github.com/Microsoft/PowerBI-visuals/blob/master/Tutorial/Selection.md) or by using [interactivity service](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityService.md). You can use `FilterManager.restoreSelectionIds` if you don't use interactivity service in your visual or `applySelectionFromFilter` in `InteractivityService` if your visual uses `InteractivityService`.
+
+#### Using `FilterManager.restoreSelectionIds`
+
+When a user clicks on bookmarks, Power BI calls `update` method of the visual with corresponding filter object. In this case, the visual should restore selectionId's from filter object:
+
+```typescript
+const filter: ISelectionId[] = FilterManager.restoreSelectionIds(
+    dataView.metadata
+    && dataView.metadata.objects
+    && dataView.metadata.objects["general"]
+    && dataView.metadata.objects["general"]["filter"] as any
+) as IAdvancedFilter;
+```
+
+When your visual restored the selectionId's from the filter, your visual should change internal state to correspond to restored selections.
+
+// TODO added sample, how to compare selections and change state of selection.
+
+### Using `InteractivityService.applySelectionFromFilter`
+
+If your visual uses `InteractivityService`, it's more simple, your visuals shoulds call `applySelectionFromFitler` method of `InteractivityService` instance.
+
+```typescript
+this.interactivityService.applySelectionFromFitler(this.slicerSettings.general.filter);
+```
 
 ### Visuals with filter
 
 Let's assume that the visual creates a filter of data by date range. So, we have `startDate` and `endDate` as start and end of the range.
 The visual creates an advanced filter and calls host method `applyJsonFilter` to filter data by the relevant conditions.
-The `target` is the table for filtering
+The `target` is the table for filtering.
 
 ```typescript
 const filter: IAdvancedFilter = new window["powerbi-models"].AdvancedFilter(

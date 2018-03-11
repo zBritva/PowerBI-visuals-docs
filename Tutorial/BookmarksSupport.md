@@ -4,34 +4,34 @@ Power BI report bookmarks allow capturing the currently configured view of a rep
 
 ## Bookmarks support in your visuals
 
-If your visuals interact with other visuals, selects datapoint or filters other visuals, you need to restore state from properties. If your visuals don't interact with other visuals, actions are not required.
+If your visuals interact with other visuals, selects datapoint or filters other visuals, you need to restore state from properties.
 
-## How to added bookmarks support
+## How to add bookmarks support
 
-Install required utils or update to new one. The `powerbi-visuals-utils-interactivityutils` version 3.0.0 or higher contains additional classes to manipulate with state selection or filter. Install or update utils in your project before continue.
+Install the required utils or update to new one. The `powerbi-visuals-utils-interactivityutils`(https://github.com/Microsoft/PowerBI-visuals-utils-interactivityutils/) version 3.0.0 or higher contains additional classes to manipulate with state selection or filter. Install or update utils in your project before continue.
 
 ### How the bookmarks support visuals interact with Power BI
 
 Let's consider the sample, where a user creates several bookmarks in the report page and use different selections in each bookmark.
 
-The user selects datapoint in your visual. The visuals interact with Power BI and other visuals by passings selections to host. After that user clicks to "Added" in `Bookmark panel`. The Power BI saves current selections for new bookmarks.
+The user selects a datapoint in your visual. The visual interacts with Power BI and other visuals by passings selections to the host. Then the user selects "Add" in `Bookmark panel` and Power BI saves the current selections for the new bookmark.
 
-It happens each time when user change selection and added new bookmarks.
-When user prepared bookmarks, he can switch between them.
+It happens each time when the user change selection and adds new bookmarks.
+Once created, the user can switch between the bookmarks.
 
-When the user clicks on first bookmarks, PowerBI restores saved selections and pass to the visuals.
-The `update` method will be called of the visual. And inside update options will available special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression three of selection (filter). It's not convenient to use this object direct way.
+When the user clicks on a bookmark, PowerBI restores the saved selections and passes them to the visual.
+The `update` method of the visuals will be called, and inside the update options there will be a special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression three of the selection (filter), although it is not recommended to use this object directly.
 
-You can use `FilterManager.restoreSelectionIds` method to convert this object to array of `ISelectionId`.
+You can use `FilterManager.restoreSelectionIds` method to convert this object to an array of `ISelectionId`.
 
 ### Visuals with selections
 
 
 ### Visuals with filter
 
-Let's assume that the visual creates a filter of data by date range. So, we have `startDate` and `endDate` as start and end of a range.
-The visual create an advanced filter and calls host method `applyJsonFilter` to filter data by created conditions.
-There `target` is the table for filtering
+Let's assume that the visual creates a filter of data by date range. So, we have `startDate` and `endDate` as start and end of the range.
+The visual creates an advanced filter and calls host method `applyJsonFilter` to filter data by the relevant conditions.
+The `target` is the table for filtering
 
 ```typescript
 const filter: IAdvancedFilter = new window["powerbi-models"].AdvancedFilter(
@@ -60,7 +60,7 @@ this.host.applyJsonFilter(
 );
 ```
 
-In each time when a user clicks on some bookmarks custom visual get `update` method calling.
+Each time a user clicks a bookmark, the custom visual gets an `update` call.
 
 The custom visual should check the filter in the object:
 
@@ -90,7 +90,7 @@ if (filter
 }
 ```
 
-After that, the visual should change internal state to corresponding conditions.
+After that, the visual should change internal state to the corresponding conditions.
 
 **The visual shouldn't call `applyJsonFilter` to filter other visuals because they already filtered by Power BI.**
 

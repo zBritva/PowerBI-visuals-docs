@@ -26,7 +26,11 @@ You can use `FilterManager.restoreSelectionIds` method to convert this object to
 
 ### Visuals with selections
 
-If your visuals interact with other visuals by using [selections](https://github.com/Microsoft/PowerBI-visuals/blob/master/Tutorial/Selection.md) or by using [interactivity service](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityService.md). You can use `FilterManager.restoreSelectionIds` if you don't use interactivity service in your visual or `applySelectionFromFilter` in `InteractivityService` if your visual uses `InteractivityService`.
+If your visuals interact with other visuals by using [selections](https://github.com/Microsoft/PowerBI-visuals/blob/master/Tutorial/Selection.md). You have two ways to add bookmarks. 
+
+* You can use `FilterManager.restoreSelectionIds` method if you **didn't use [`InteractivityService`](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityService.md)** before in your visual.
+
+* If your visual already uses **[`InteractivityService`](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityService.md)** to manage selections. You should use `applySelectionFromFilter` method in instance of `InteractivityService`.
 
 #### Using `FilterManager.restoreSelectionIds`
 
@@ -47,7 +51,7 @@ When your visual restored the selectionId's from the filter, your visual should 
 
 ### Using `InteractivityService.applySelectionFromFilter`
 
-If your visual uses `InteractivityService`, it's more simple, your visuals shoulds call `applySelectionFromFitler` method of `InteractivityService` instance.
+If your visual uses `InteractivityService`, it's more simple, your visuals should call `applySelectionFromFitler` method of `InteractivityService` instance. The `InteractivityService` changes state to correspond selections.
 
 ```typescript
 this.interactivityService.applySelectionFromFitler(this.slicerSettings.general.filter);

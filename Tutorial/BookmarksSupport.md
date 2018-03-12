@@ -10,6 +10,8 @@ If your visuals interact with other visuals, selects datapoint or filters other 
 
 Install the required utils or update to new one. The `powerbi-visuals-utils-interactivityutils`(https://github.com/Microsoft/PowerBI-visuals-utils-interactivityutils/) version 3.0.0 or higher contains additional classes to manipulate with state selection or filter. Install or update utils in your project before continue.
 
+And update visual API to 1.11.0 to use `registerOnSelectCallback` in instance of `SelectionManager`.
+
 ### How the bookmarks support visuals interact with Power BI
 
 Let's consider the sample, where a user creates several bookmarks in the report page and use different selections in each bookmark.
@@ -19,10 +21,12 @@ The user selects a datapoint in your visual. The visual interacts with Power BI 
 It happens each time when the user change selection and adds new bookmarks.
 Once created, the user can switch between the bookmarks.
 
-When the user clicks on a bookmark, PowerBI restores the saved selections and passes them to the visual.
-The `update` method of the visuals will be called, and inside the update options there will be a special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression tree of the selection (filter), although it is not recommended to use this object directly.
+When the user clicks on a bookmark, PowerBI restores the saved filter and passes them to the visual.
+The `update` method of the visuals will be called, and inside the update options there will be a special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression tree of filter, although it is not recommended to use this object directly.
 
-You can use `FilterManager.restoreSelectionIds` method to convert this object to an array of `ISelectionId`.
+You can use `FilterManager.restoreSelectionIds` method to convert filter object to an array of `ISelectionId`.
+
+Or use the special callback function calls registred `registerOnSelectCallback` method of ISelectionManager, if the visual use selections only.
 
 ### Visuals with selections
 
@@ -32,30 +36,52 @@ If your visuals interact with other visuals by using [selections](https://github
 
 * If your visual already uses **[`InteractivityService`](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityService.md)** to manage selections. You should use `applySelectionFromFilter` method in instance of `InteractivityService`.
 
-#### Using `FilterManager.restoreSelectionIds`
+#### Using `ISelectionManager.registerOnSelectCallback`
 
-When a user clicks on bookmarks, Power BI calls `update` method of the visual with corresponding filter object. In this case, the visual should restore selectionId's from filter object:
+When a user clicks on bookmarks, Power BI calls `callback` method of the visual with corresponding filter object. In this case, the visual should restore selectionId's from filter object.
+
+Lets' assume you have a datapoint in your visual created in [`'visualTransform'`](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/barChart.ts#L60) method.
+
+And `datapoints` looks like:
 
 ```typescript
-const filter: ISelectionId[] = FilterManager.restoreSelectionIds(
-    dataView.metadata
-    && dataView.metadata.objects
-    && dataView.metadata.objects["general"]
-    && dataView.metadata.objects["general"]["filter"] as any
-) as IAdvancedFilter;
+visualDataPoints.push({
+    category: categorical.categories[0].values[i],
+    color: getCategoricalObjectValue<Fill>(categorical.categories[0], i, 'colorSelector', 'fill', defaultColor).solid.color,
+    selectionId: host.createSelectionIdBuilder()
+        .withCategory(categorical.categories[0], i)
+        .createSelectionId(),
+    selected: false
+});
 ```
 
-When your visual restored the selectionId's from the filter, your visual should change internal state to correspond to restored selections.
+So, you have `visualDataPoints` as your datapoints and `restoredSelections` created from filter.
 
-// TODO added sample, how to compare selections and change state of selection.
+At this point you should compare array of `ISelectionId[]` with selections in your `visualDataPoints` arrays.
+
+```typescript
+visualDataPoints.forEach(selection => {
+    if (selectionId.key === selection.key) {
+        selected = true;
+    }
+});
+```
+
+After updating datapoints, they are correspond's to current selection stored in `filter` object.
+
+And in rendering datapoints in visual, the visual can draw datapoints visualization properly.
 
 ### Using `InteractivityService.applySelectionFromFilter`
 
-If your visual uses `InteractivityService`, it's more simple, your visuals should call `applySelectionFromFitler` method of `InteractivityService` instance. The `InteractivityService` changes state to correspond selections.
+If your visual uses `InteractivityService`, it's more simple, your visuals should call `applySelectionFromFilter` method of `InteractivityService` instance. The `InteractivityService` changes state to correspond selections.
 
 ```typescript
-this.interactivityService.applySelectionFromFitler(this.slicerSettings.general.filter);
+this.interactivityService.applySelectionFromFilter(this.slicerSettings.general.filter);
 ```
+
+The `InteractivityService` changes visual selection to correspond state. There is no additional actions requires for changing visual state because instance of `IInteractiveBehavior` provides required functionality already.
+
+### Sync selection manager with current filter/selection
 
 ### Visuals with filter
 
@@ -124,8 +150,9 @@ After that, the visual should change internal state to the corresponding conditi
 
 **The visual shouldn't call `applyJsonFilter` to filter other visuals because they already filtered by Power BI.**
 
-// TODO Explain what means `change internal state`
+An `change internal state` means visual's datapoints, datapoint visualization objects (lines, rectangles, e.t.c).
 
+Example: 
 [Timeline Slicer](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380786) changes range selector to correspond data ranges.
 
 ![](Tutorial/images/TimelinesBookmarksSupport.png)

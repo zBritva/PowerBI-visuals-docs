@@ -112,3 +112,43 @@ The resulting property pane will contain the displayName according to the string
 In our example, in case we change the language to Hebrew we will get the following property pane:
 
 ![Localized Property Pane](../images/localizedPropertyPane.png)
+
+# Localization manager usage guide
+
+All the required steps to use the localization manager are described below (currently it is not supported for debugging the dev visual)
+
+## API
+The localization manager in the visual’s code is supported from `API` 1.10.0 and higher.
+
+## Setup environment
+
+### Desktop
+For desktop usage, download the localized version of PowerBI desktop from https://powerbi.microsoft.com.
+
+###	Web service 
+If you use the web client (browser) in the service then change your language in settings:
+
+![Web service settings](../images/WebServiceSettings.png)
+
+## Resource file
+Add a `resources.resjson` file to a folder named as the locale you’re going to use inside of the `stringResources` folder. It is en-US and ru-RU in our example.
+
+![New Resjson file](../images/NewResjson.png)
+
+After that, add all the localization strings you are going to use into the `resources.resjson` file you’ve added in the previous step.
+
+![New Resjson strings ru-RU](../images/NewStringsRu.png)
+
+This is the en-US version of resources.resjson file:
+
+![New Resjson strings en-US](../images/NewStringsEn.png)
+
+## New `localizationManager` instance
+Create an instance of localizationManager in your visual’s code as follows:
+
+![New localizationManager](../images/CreateLocalizationManager.png)
+
+## `localizationManager` usage sample
+Now you can simply call the getDisplayName function of the localization manager with the string key argument you defined in resources.resjson to get the required string anywhere inside of your code:
+
+![GetDisplayName sample](../images/GetDisplayName.png)

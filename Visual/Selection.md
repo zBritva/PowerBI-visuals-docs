@@ -113,3 +113,19 @@ this.selectionManager.clear().then(() => {
     //called when clearing the selection has been completed successfully
 });
 ```
+### Report Bookmarks Support
+As of March 2018, Power BI [Report Bookmarks](https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-october-2017-feature-summary/#bookmarking) feature is generally available. This introduces a new scenario, where a visual needs to restore a previously bookmarked selection state.
+
+For custom visuals, this is achieved by registering a callback function with the selection manager:
+```typescript
+this.selectionManager.registerOnSelectCallback(
+    (ids: ISelectionId[]) => {
+        //called when a selection was set by Power BI
+    });
+)
+```
+The registered function should handle rendering so that the visual reflects the new selection state. It is recommended to register it in the constructor, after initializing `SelectionManager`.
+
+See this [Sample BarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/937cf49a4d6fcc3e7e46b482e5cf44a737e9aece/src/barChart.ts#L173) commit for a working example.
+
+**Important**: The `selectionManager.registerOnSelectCallback()` method is available from API v1.11.0, make sure to [update the visual](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/usage.md#updating-visuals-api) to that version or higher.

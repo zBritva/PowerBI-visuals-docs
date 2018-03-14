@@ -38,7 +38,15 @@ If your visuals interact with other visuals by using [selections](https://github
 
 #### Using `ISelectionManager.registerOnSelectCallback`
 
-When a user clicks on bookmarks, Power BI calls `callback` method of the visual with corresponding filter object. In this case, the visual should restore selectionId's from filter object.
+When a user clicks on bookmarks, Power BI calls `callback` method of the visual with corresponding selections. 
+
+```typescript
+this.selectionManager.registerOnSelectCallback(
+    (ids: ISelectionId[]) => {
+        //called when a selection was set by Power BI
+    });
+);
+```
 
 Lets' assume you have a datapoint in your visual created in [`'visualTransform'`](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/barChart.ts#L60) method.
 
@@ -55,31 +63,32 @@ visualDataPoints.push({
 });
 ```
 
-So, you have `visualDataPoints` as your datapoints and `restoredSelections` created from filter.
+So, you have `visualDataPoints` as your datapoints and `ids` array passed to `callback` function.
 
 At this point you should compare array of `ISelectionId[]` with selections in your `visualDataPoints` arrays.
+And mark correspond dataPoints as selected datapoints.
 
 ```typescript
-visualDataPoints.forEach(selection => {
-    if (selectionId.key === selection.key) {
-        selected = true;
-    }
-});
+this.selectionManager.registerOnSelectCallback(
+    (ids: ISelectionId[]) => {
+        visualDataPoints.forEach(dataPoint => {
+            if (ids.key === dataPoint.selectionId.key) {
+                dataPoint.selected = true;
+            }
+        });
+    });
+);
 ```
 
 After updating datapoints, they are correspond's to current selection stored in `filter` object.
 
 And in rendering datapoints in visual, the visual can draw datapoints visualization properly.
 
-### Using `InteractivityService.applySelectionFromFilter`
+### Using `InteractivityService` for controll selections in the visual.
 
-If your visual uses `InteractivityService`, it's more simple, your visuals should call `applySelectionFromFilter` method of `InteractivityService` instance. The `InteractivityService` changes state to correspond selections.
+If your visual uses `InteractivityService`, you don't need to do any aditional actions to support bookmarks in your visual.
 
-```typescript
-this.interactivityService.applySelectionFromFilter(this.slicerSettings.general.filter);
-```
-
-The `InteractivityService` changes visual selection to correspond state. There is no additional actions requires for changing visual state because instance of `IInteractiveBehavior` provides required functionality already.
+The util resposible to controll visual selection state, when the user selects bookmarks.
 
 ### Sync selection manager with current filter/selection
 

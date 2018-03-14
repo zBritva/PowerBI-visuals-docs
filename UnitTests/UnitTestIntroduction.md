@@ -1,6 +1,6 @@
 # Custom visuals unit test
 
-This tutorial will describe basics of writing unit tests for your custom visuals. In this tutorial, we will consider how to use test runner karma.js, testing framework. - jasmine.js and also we will consider how to use powerbi-visuals-utils-testutils package. It is a set of mocks and fakes to simplify unit testing for Power BI custom visuals.
+This tutorial describes basics of writing unit tests for your custom visuals. In this tutorial, we will consider how to use test runner karma.js, testing framework - jasmine.js and also we will consider how to use powerbi-visuals-utils-testutils package. It is a set of mocks and fakes to simplify unit testing for Power BI custom visuals.
 
 ## Install and configure karma.js and jasmine
 
@@ -21,7 +21,7 @@ Add required libraries into package.json at `devDependencies` section:
 "karma-typescript-preprocessor": "0.3.0"
 ```
 
-A purpose of each described below.
+To find out more about the package see the description below.
 
 Save `package.json` and execute on command line at `package.json` location:
 
@@ -29,9 +29,9 @@ Save `package.json` and execute on command line at `package.json` location:
 npm install
 ```
 
-Package manager will install all new packages added into `package.json`
+The package manager will install all new packages added to `package.json`
 
-For running unit tests we will need to configure runner. The sample of config you can find here 
+For running unit tests we will need to configure the test runner. The sample of config you can find here 
 
 ```js
 'use strict';
@@ -132,29 +132,28 @@ Some settings of `karma.conf.js`:
 
 Some properties of config:
 
-* `singleRun: true` - tests usually run in CI system. And it is enough to single one time. 
+* `singleRun: true` - tests usually run on CI system. And it is enough to single one time. 
 You can change to `false` for debugging your tests. Karma will keep running browser, and it will allow you use the console to debug.
 
 * `files: [...]` - in this array, you can set files for loading to the browser.
 Usually, there are source files, test cases, libraries (jasmine, test utils). You can add to list other files if you need.
 
-* `preprocessors` - this section of config you configure actions, which executes before unit tests execution. There are precompiling of typescript to JS and preparing sourcemap files and generating code to generate code coverage report. You can disable `coverage` for debugging your tests. Coverage generates additional code for check code for the test covering and it will complicate debugging tests. 
+* `preprocessors` - this section of config you configure actions, which executes before unit tests execution. There are precompiling of typescript to JS and preparing sourcemap files and generating code to generate code coverage report. You can disable `coverage` for debugging your tests. Coverage generates additional code for check code for the test coverage and it will complicate debugging tests. 
 
-Description of configurations you can find in the documentation of karma.js:
-https://karma-runner.github.io/1.0/config/configuration-file.html
+**Description of all configurations you can find in the [documentation](https://karma-runner.github.io/1.0/config/configuration-file.html) of karma.js**
 
-To convenient use, you can add test command in `scripts` section of `package.json`.
+o convenient use, you can add test command into `scripts`:
 
 ```json
 "scripts": {
-        "postinstall": "pbiviz update 1.5.0",
-        "pbiviz": "pbiviz",
-        "start": "pbiviz start",
-        "typings":"node node_modules/typings/dist/bin.js i",
-        "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\"",
-        "pretest": "pbiviz package --resources --no-minify --no-pbiviz --no-plugin",
-        "test": "karma start"
-    },
+    "postinstall": "pbiviz update 1.5.0",
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "typings":"node node_modules/typings/dist/bin.js i",
+    "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\"",
+    "pretest": "pbiviz package --resources --no-minify --no-pbiviz --no-plugin",
+    "test": "karma start"
+},
 ```
 
 Next step is adding references to jasmine framework, powerbi-visuals-utils-testutils, jquery and other libs.
@@ -182,7 +181,7 @@ Create `test` folder at the root of the project with `_references.ts` file. This
 
 So, you are ready to begin writing your unit tests.
 
-## Simple unite test for check DOM element of visual.
+## Simple unit test for check DOM element of the visual.
 
 For testing visual, we must create an instance of visual. 
 
@@ -217,9 +216,9 @@ module powerbi.extensibility.visual.test {
 
 There `PBI_CV_9894B302_1DFF_4A96_ABFE_BF8588197166` is GUID of visual. You visual GUID must be different.
 
-There is `build` method for creating an instance of our visual. `mainElement` is a get method which returns an instance of "root" DOM element in our visual. The method is optional, but it convenient in writing unit test.
+There is `build` method for creating an instance of your visual. `mainElement` is a get method which returns an instance of "root" DOM element in your visual. The getter is optional, but it makes writing unit test easier..
 
-So, we have the builder of an instance of visual. Let's write the test case. It will be a simple test case to check that SVG elements created when our visual displays.
+So, we have the builder of an instance of visual. Let's write the test case. It will be a simple test case to check those SVG elements created when your visual displays.
 
 Add `visualTest.ts` file for test cases with these code:
 
@@ -257,11 +256,13 @@ There are calling of several methods.
 
 * `toBeInDOM` - it's one of matchers method. About exists matchers you can read in [documentation](https://jasmine.github.io/api/2.6/matchers.html) of jasmine framework.
 
+**Read more about jasmine framework in official [documentation](https://jasmine.github.io/).**
+
 After that, you can run your simple unit test typing a command in command line tool.
 
 This test checks that root SVG element of the visuals is created.
 
-To run the unit test,you can type this command in the command line tool.
+To run the unit test, you can type this command in the command line tool.
 
 ```
 npm run test 
@@ -269,7 +270,7 @@ npm run test
 
 > Please note that Google Chrome has to be installed locally.
 
-karma.js will run chrome browser and will execute test case.
+karma.js will run chrome browser and will execute the test case.
 
 ![](images/KarmaJSChrome.png)
 
@@ -293,8 +294,6 @@ Functions    : 43.86% ( 25/57 )
 Lines        : 20.85% ( 44/211 )
 ================================================================================
 ```
-
-You will agree that it isn't very useful test. The visual visualizes data.  
 
 ## How to add static data for unit tests
 
@@ -339,17 +338,17 @@ module powerbi.extensibility.visual.test {
 
 The `SampleBarChartDataBuilder` class extends `TestDataViewBuilder` and implements abstract method `getDataView`.
 
-When you put data to data field buckets Power BI produces a categorical dataview object based on your data.
+When you put data into data field buckets Power BI produces a categorical dataview object based on your data.
 
 ![](images/FieldsBuckets.png)
 
-In unit tests, you don't have Power BI core functions to reproduce it. But you need map your static data to categorical dataview. And `TestDataViewBuilder` class will help you in that.
+In unit tests, you don't have Power BI core functions to reproduce it. But you need to map your static data to categorical dataview. And `TestDataViewBuilder` class will help you in that.
 
 [Read more about DataViewMapping](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/DataViewMappings.md)
 
 In `getDataView` method you just call `createCategoricalDataViewBuilder` method with your data.
 
-In `sampleBarChart` visual [capabilities.json](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/capabilities.json#L2) we have a dataRoles and dataViewMapping described below
+In `sampleBarChart` visual [capabilities.json](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/capabilities.json#L2) we have a dataRoles and dataViewMapping objects:
 
 ```json
 "dataRoles": [
@@ -444,7 +443,7 @@ Now, you can use `SampleBarChartDataBuilder` class in your unit test.
 `ValueType` class defined in `powerbi-visuals-utils-testutils` package. And 
 `createCategoricalDataViewBuilder` method requires `lodash` library.
 
-You need add thes packages to dependencies
+You need to add these packages to dependencies
 
 In `package.json` at `devDependencies` section
 ```json
@@ -464,14 +463,14 @@ In `test\_references.ts` file at `Power BI Extensibility` section
 /// <reference path="../node_modules/powerbi-visuals-utils-typeutils/lib/index.d.ts"/>
 ```
 
-You will need call 
+You will need to call 
 ```
 npm install 
 ```
 
 to install `lodash` library.
 
-Now, you can run unit test again. You must get this output
+Now, you can run the unit test again. You must get this output
 
 ```
 > karma start

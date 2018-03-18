@@ -36,6 +36,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 1. [The sample slicer visual](https://github.com/Microsoft/powerbi-visuals-sampleslicer)
 2. [Adding advanced filter API](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/AddingAdvancedFilterAPI.md)
 3. [Using the advanced filter API](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/UsingAdvancedFilterAPI.md)
+3. [Added bookmarks support](Tutorial/BookmarksSupport.md)
 
 ### Building R Powered Custom Visual (corrplot)
 1. [Creating a new R Powered Custom Visual](RVisualTutorial/CreateNewVisual.md)

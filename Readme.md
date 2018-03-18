@@ -11,13 +11,14 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 
 ### Setting Up Environment
 1. [Install PowerBI visuals CLI tool](tools/README.md#installation)
-2. [Install SSL certifications to enable live preview of visuals](tools/CertificateSetup.md)
-3. [Enable Developer Tools in PowerBI](tools/DebugVisualSetup.md)
-4. [Create New PowerBI Visual Project](tools/usage.md#creating-a-new-visual)
-5. [Start Development Server for Live Update and Incremental Development](tools/usage.md#testing-your-visual-in-powerbi)
-6. [Adding the Debug Visual from the Visual Well into your Favorite Report](tools/usage.md#viewing-your-visual-in-powerbi)
-7. [Adding External Libraries](Tutorial/ExternalLibraries.md)
-8. [Installing Typings for Libraries](Tutorial/Typings.md)
+2. [Create SSL certifications to enable live preview of visuals](tools/CreateCertificate.md)
+3. [Install generated SSL certifications to enable live preview of visuals](tools/CertificateSetup.md)
+4. [Enable Developer Tools in PowerBI](tools/DebugVisualSetup.md)
+5. [Create New PowerBI Visual Project](tools/usage.md#creating-a-new-visual)
+6. [Start Development Server for Live Update and Incremental Development](tools/usage.md#testing-your-visual-in-powerbi)
+7. [Adding the Debug Visual from the Visual Well into your Favorite Report](tools/usage.md#viewing-your-visual-in-powerbi)
+8. [Adding External Libraries](Tutorial/ExternalLibraries.md)
+9. [Installing Typings for Libraries](Tutorial/Typings.md)
 
 ### Building Bar Chart
 1. [Building a Visual with Static Data](Tutorial/StaticVisual.md)

@@ -2,9 +2,9 @@
 
 ----------
 
-Run the following command to generates the certificate by using powershell New-SelfSignedCertificate cmdlet on Windows 8 or higer.
+Run the following command to generates the certificate by using powershell New-SelfSignedCertificate cmdlet on Windows 8 or higher.
 
-For **Windows** **7** tool requires OpenSSL installation. Util `openssll` must be avialable from command line.
+For **Windows** **7** tool requires OpenSSL installation. Util `openssll` must be available from command line.
 
 For install OpenSSL visit [https://www.openssl.org](https://www.openssl.org) or [https://wiki.openssl.org/index.php/Binaries](https://wiki.openssl.org/index.php/Binaries)
 
@@ -57,7 +57,7 @@ For *Redhat Package Manager*:
 rpm install openssl
 ```
 
-If OpenSSl aliready avialable in your operation system call
+If OpenSSl already available in your operation system call
 
 ```
 pbiviz --create-cert

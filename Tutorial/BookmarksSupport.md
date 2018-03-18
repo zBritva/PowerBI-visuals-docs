@@ -1,32 +1,33 @@
-# Power BI report bookmarks (Preview)
+# Power BI report bookmarks
 
-Power BI report bookmarks allow capturing the currently configured view of a report page, selection state, filtering state of the visual e.t.c. But it requires additional action from custom visuals side to support the bookmark and react correctly to changes of report state. Read more about bookmarks in the [documentation](https://docs.microsoft.com/en-us/power-bi/desktop-bookmarks)
+Power BI report bookmarks allow capturing the currently configured view of a report page, selection state, filtering state of the visual etc. But it requires additional action from custom visuals side to support the bookmark and react correctly to changes of report state. Read more about bookmarks in the [documentation](https://docs.microsoft.com/en-us/power-bi/desktop-bookmarks)
 
-## Bookmarks support in your visuals
+## Report bookmarks support in your visual
 
-If your visuals interact with other visuals, selects datapoint or filters other visuals, you need to restore state from properties.
+If your visual interact with other visuals, selects data points or filters other visuals, you need to restore state from properties.
 
-## How to add bookmarks support
+## How to add report bookmarks support
 
-Install the required utils or update to new one. The `powerbi-visuals-utils-interactivityutils`(https://github.com/Microsoft/PowerBI-visuals-utils-interactivityutils/) version 3.0.0 or higher contains additional classes to manipulate with state selection or filter. Install or update utils in your project before continue.
+1. Install (or update) the required util: `powerbi-visuals-utils-interactivityutils`(https://github.com/Microsoft/PowerBI-visuals-utils-interactivityutils/) version 3.0.0 or higher. It contains additional classes to manipulate with state selection or filter. This is required for filter visuals, and any visual using the `InteractivityService`.
 
-And update visual API to 1.11.0 to use `registerOnSelectCallback` in instance of `SelectionManager`.
+2. Update visual API to 1.11.0 to use `registerOnSelectCallback` in instance of `SelectionManager`. This is required for non-filter visuals using the plain `SelectionManager` rather than the `InteractivityService`.
 
-### How the bookmarks support visuals interact with Power BI
+### How custom visuals interact with Power BI in the report bookmarks scenario
 
-Let's consider the sample, where a user creates several bookmarks in the report page and use different selections in each bookmark.
+Let's consider the following example: A user creates several bookmarks in the report page, with a different selection state in each bookmark.
 
-The user selects a datapoint in your visual. The visual interacts with Power BI and other visuals by passings selections to the host. Then the user selects "Add" in `Bookmark panel` and Power BI saves the current selections for the new bookmark.
+First, the user selects a data point in your visual. The visual interacts with Power BI and other visuals by passing selections to the host. Then the user selects "Add" in `Bookmark panel` and Power BI saves the current selections for the new bookmark.
 
-It happens each time when the user change selection and adds new bookmarks.
+This happens repeatedly as the user changes selection and adds new bookmarks.
 Once created, the user can switch between the bookmarks.
 
-When the user clicks on a bookmark, PowerBI restores the saved filter and passes them to the visual.
-The `update` method of the visuals will be called, and inside the update options there will be a special object at `options.dataViews[0].metadata.objects.general.filter`. It is expression tree of filter, although it is not recommended to use this object directly.
+When the user views a bookmark, PowerBI restores the saved filter or selection state and passes them to the all the visuals. Other visuals will be highlighted or filtered according to the state stored in the bookmark, this is handled by Power BI host. Your visual is responsible for correctly reflecting the new selection state (e.g. change color of rendered data points).
 
-You can use `FilterManager.restoreSelectionIds` method to convert filter object to an array of `ISelectionId`.
+The new selection state is communicated to the visual through the `update` method. The `options` argument will contain a special property: `options.dataViews[0].metadata.objects.general.filter`. This is the raw expression tree of the filter, it is not recommended to use this object directly.
 
-Or use the special callback function calls registred `registerOnSelectCallback` method of ISelectionManager, if the visual use selections only.
+Instead, use `FilterManager.restoreSelectionIds` method to convert the filter object to an array of `ISelectionId`s.
+
+Alternatively, use the special callback function call registred `registerOnSelectCallback` method of ISelectionManager, if the visual use selections only.
 
 ### Visuals with selections
 
@@ -48,7 +49,7 @@ this.selectionManager.registerOnSelectCallback(
 );
 ```
 
-Lets' assume you have a datapoint in your visual created in [`'visualTransform'`](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/barChart.ts#L60) method.
+Let's assume you have a data point in your visual created in [`'visualTransform'`](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/barChart.ts#L60) method.
 
 And `datapoints` looks like:
 
@@ -63,10 +64,9 @@ visualDataPoints.push({
 });
 ```
 
-So, you have `visualDataPoints` as your datapoints and `ids` array passed to `callback` function.
+So, you have `visualDataPoints` as your data points and `ids` array passed to `callback` function.
 
-At this point you should compare array of `ISelectionId[]` with selections in your `visualDataPoints` arrays.
-And mark correspond dataPoints as selected datapoints.
+At this point you should compare the array of `ISelectionId[]` with the selections in your `visualDataPoints` array and mark corresponding data points as selected.
 
 ```typescript
 this.selectionManager.registerOnSelectCallback(
@@ -80,15 +80,13 @@ this.selectionManager.registerOnSelectCallback(
 );
 ```
 
-After updating datapoints, they are correspond's to current selection stored in `filter` object.
+After updating the data points, they will reflect the current selection state stored in `filter` object. Then when the data points are rendered, the custom visual's selection state will match the state of the bookmark.
 
-And in rendering datapoints in visual, the visual can draw datapoints visualization properly.
+### Using `InteractivityService` for control selections in the visual.
 
-### Using `InteractivityService` for controll selections in the visual.
+If your visual uses `InteractivityService`, you don't need any additional actions to support bookmarks in your visual.
 
-If your visual uses `InteractivityService`, you don't need to do any aditional actions to support bookmarks in your visual.
-
-The util resposible to controll visual selection state, when the user selects bookmarks.
+The util will handle the visual's selection state when the user selects bookmarks.
 
 ### Sync selection manager with current filter/selection
 
@@ -155,13 +153,10 @@ if (filter
 }
 ```
 
-After that, the visual should change internal state to the corresponding conditions.
+After that, the visual should change its internal state - data points and visualization objects (lines, rectangles, etc.) - to reflect the current conditions.
 
-**The visual shouldn't call `applyJsonFilter` to filter other visuals because they already filtered by Power BI.**
+**Important:** In the report bookmarks scenario, the visual shouldn't call `applyJsonFilter` to filter other visuals - they will already be filtered by Power BI.
 
-An `change internal state` means visual's datapoints, datapoint visualization objects (lines, rectangles, e.t.c).
-
-Example: 
-[Timeline Slicer](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380786) changes range selector to correspond data ranges.
+Example: [Timeline Slicer](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380786) changes range selector to correspond data ranges.
 
 ![](Tutorial/images/TimelinesBookmarksSupport.png)

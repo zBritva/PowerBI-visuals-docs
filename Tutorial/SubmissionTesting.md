@@ -37,10 +37,10 @@ Passed | Test case | Expected Results
 Passed | Test case | Expected Results
 ------ | --------- | ----------------
  | **Windows** | 
- | Chrome (previous version) | All displays and features should work correctly. 
- | Firefox (previous version) | All displays and features should work correctly. 
- | Internet Explorer (version 10) | All displays and features should work correctly. 
- | Edge (previous version) | All displays and features should work correctly. 
+ | Chrome (previous version) | All displays and features should work correctly.
+ | Firefox (previous version) | All displays and features should work correctly.
+ | Edge (previous version) | All displays and features should work correctly.
+ | Internet Explorer 11 (Optional) | All displays and features should work correctly. 
  | **MacOS** | 
  | Chrome (previous version) | All displays and features should work correctly. 
  | Firefox (previous version) | All displays and features should work correctly. 

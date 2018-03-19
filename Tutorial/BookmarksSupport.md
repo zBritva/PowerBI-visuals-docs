@@ -1,4 +1,4 @@
-# Power BI report bookmarks
+# Power BI Report Bookmarks
 
 Power BI report bookmarks allow capturing the currently configured view of a report page, selection state, filtering state of the visual etc. But it requires additional action from custom visuals side to support the bookmark and react correctly to changes of report state. Read more about bookmarks in the [documentation](https://docs.microsoft.com/en-us/power-bi/desktop-bookmarks)
 
@@ -158,5 +158,3 @@ After that, the visual should change its internal state - data points and visual
 **Important:** In the report bookmarks scenario, the visual shouldn't call `applyJsonFilter` to filter other visuals - they will already be filtered by Power BI.
 
 Example: [Timeline Slicer](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380786) changes range selector to correspond data ranges.
-
-![](Tutorial/images/TimelinesBookmarksSupport.png)

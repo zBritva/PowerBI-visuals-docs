@@ -129,3 +129,5 @@ The registered function should handle rendering so that the visual reflects the 
 See this [Sample BarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/937cf49a4d6fcc3e7e46b482e5cf44a737e9aece/src/barChart.ts#L173) commit for a working example.
 
 **Important**: The `selectionManager.registerOnSelectCallback()` method is available from API v1.11.0, make sure to [update the visual](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/usage.md#updating-visuals-api) to that version or higher.
+
+Read more on [Report Bookmarks support](https://github.com/Microsoft/PowerBI-visuals/blob/master/Tutorial/BookmarksSupport.md) in the tutorial.

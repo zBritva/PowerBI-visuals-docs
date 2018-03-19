@@ -157,4 +157,4 @@ After that, the visual should change its internal state - data points and visual
 
 **Important:** In the report bookmarks scenario, the visual shouldn't call `applyJsonFilter` to filter other visuals - they will already be filtered by Power BI.
 
-Example: [Timeline Slicer](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380786) changes range selector to correspond data ranges.
+Example: [Timeline Slicer](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380786) changes range selector to correspond data ranges, see [this commit](https://github.com/Microsoft/powerbi-visuals-timeline/commit/606f1152f59f82b5b5a367ff3b117372d129e597?diff=unified#diff-b6ef9a9ac3a3225f8bd0de84bee0a0df) for reference.

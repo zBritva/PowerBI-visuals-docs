@@ -4,9 +4,13 @@ Before you can get started you'll need to install the tools. This should only ta
 
 ## Dependencies
 
-Before you can run (or install) the command line tools you must install NodeJS.
+Before you can run (or install) the command line tools you must install NodeJS. To check that node is installed and up to date, run the following command in your terminal 
 
-* NodeJS 4.0+ Required (5.0 recommended) - [Download NodeJS](https://nodejs.org)
+```bash
+node --version
+``` 
+
+* NodeJS 5.0+ Required. Versions 5 through 8 are all confirmed to work with pbiviz. - [Download NodeJS](https://nodejs.org)
 
 
 ## Installation

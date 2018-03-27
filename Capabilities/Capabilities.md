@@ -25,9 +25,9 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
 
 * **name** - the internal name of this data field (must be unique)
 * **kind** - the kind of field:
-    * 0 `Grouping` - Discrete values used for grouping of measure fields
-    * 1 `Measure` - Numeric data values 
-    * 2 `GroupingOrMeasure` - Can be used as either a grouping or measure
+    * `Grouping` - Discrete values used for grouping of measure fields
+    * `Measure` - Numeric data values 
+    * `GroupingOrMeasure` - Can be used as either a grouping or measure
 * **displayName** - the name displayed to the user in the properties pane
 * **description** - a short description of the field (optional)
 * **requiredTypes** - the required type of data for this data role. Any values that do not match will be set to null (optional)
@@ -47,7 +47,7 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
     {
         "displayName": "My Category Data",
         "name": "myCategory",
-        "kind": 0,
+        "kind": "Grouping",
         "requiredTypes": [
             {
                 "text": true
@@ -68,7 +68,7 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
     {
         "displayName": "My Measure Data",
         "name": "myMeasure",
-        "kind": 1,
+        "kind": "Measure",
         "requiredTypes": [
             {
                 "integer": true

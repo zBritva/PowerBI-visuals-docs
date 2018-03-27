@@ -18,7 +18,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 6. [Start Development Server for Live Update and Incremental Development](tools/usage.md#testing-your-visual-in-powerbi)
 7. [Adding the Debug Visual from the Visual Well into your Favorite Report](tools/usage.md#viewing-your-visual-in-powerbi)
 8. [Adding External Libraries](Tutorial/ExternalLibraries.md)
-9. [Installing Typings for Libraries](Tutorial/Typings.md)
+9. [Installing @Types for External Libraries](Tutorial/@Types.md)
 
 ### Building Bar Chart
 1. [Building a Visual with Static Data](Tutorial/StaticVisual.md)
@@ -76,7 +76,8 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 
 ## Reporting Issues
 
-If you have any issues with Power BI custom visuals or the command line tools please let us know. First, search the issues page to see if your issue has already been reported. If it already exists please contribute your experience to the comments otherwise create a new issue. Be sure to be as detailed as possible about exactly what you were doing when the issue occured and how we can reproduce it.
+If you have any issues with Power BI custom visuals or the command line tools, please let us know. First, search the Power BI Developer Forums page to see if your issue has already been reported. If it already exists, please contribute your experience to the comments. Otherwise, create a new issue. Be sure to be as detailed as possible about exactly what you were doing when the issue occured and how we can reproduce it.
 
+* [PowerBI Developer Forum](https://community.powerbi.com/t5/Developer/bd-p/Developer) - Custom visual creation, API usage, real-time dashboards, integrating with Power BI, content packs. Basically, everything about extending Power BI.
 * [PowerBI-visuals-tools issue page](https://github.com/Microsoft/PowerBI-visuals-tools/issues) - Issues related to the CLI tools specifically
 * [PowerBI-visuals issue page](https://github.com/Microsoft/PowerBI-visuals/issues) - Any other issues related to Power BI visuals

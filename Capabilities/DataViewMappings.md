@@ -17,9 +17,9 @@ Each valid mapping will produce a `DataView`, but currently we only support perf
 ]
 ```
 
-Important to note that Power BI puts a mapping to a DataView if and only if the valid mapping is filled in `dataViewMappings`.
+Important to note that Power BI creates a mapping to a DataView if and only if the valid mapping is filled in `dataViewMappings`.
 
-In other words if `categorical` is filled in `dataViewMappings` but other mappings such as `table`, `single`, etc. are not filled in:
+In other words if `categorical` is defined in `dataViewMappings` but other mappings such as `table`, `single`, etc. are not, as in the following example:
 ```json
 "dataViewMappings": [
     {
@@ -28,7 +28,7 @@ In other words if `categorical` is filled in `dataViewMappings` but other mappin
 ]
 ```
 
-Power BI will produce a `DataView` with the single `categorical` mapping (`table` and other mappings will be `undefined`):
+Power BI will produce a `DataView` with a single `categorical` mapping (`table` and other mappings will be `undefined`):
 ```javascript
 {
     "categorical": {

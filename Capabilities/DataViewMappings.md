@@ -1,12 +1,12 @@
 # DataViewMappings
 
-A `DataViewMappings` describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
+A `dataViewMappings` describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
 There is a section for each of the `dataMappings`.
 
-Each valid mapping will produce a DataView, but currently we only support performing one query per visual so in most situations you will only get one DataView. However, you can provide multiple data mappings with different conditions which allow
+Each valid mapping will produce a `DataView`, but currently we only support performing one query per visual so in most situations you will only get one `DataView`. However, you can provide multiple data mappings with different conditions which allow
 
 ```json
-"dataViewMappings":[
+"dataViewMappings": [
     {
         "conditions": [ ... ],
         "categorical": { ... },
@@ -15,6 +15,28 @@ Each valid mapping will produce a DataView, but currently we only support perfor
         "matrix": { ... }
     }
 ]
+```
+
+Important to note that Power BI puts a mapping to a DataView if and only if the valid mapping is filled in `dataViewMappings`.
+
+In other words if `categorical` is filled in `dataViewMappings` but other mappings such as `table`, `single`, etc. are not filled in:
+```json
+"dataViewMappings": [
+    {
+        "categorical": { ... }
+    }
+]
+```
+
+Power BI will produce a `DataView` with the single `categorical` mapping (`table` and other mappings will be `undefined`):
+```javascript
+{
+    "categorical": {
+        "categories": [ ... ],
+        "values": [ ... ]
+    },
+    "metadata": { ... }
+}
 ```
 
 ## Conditions

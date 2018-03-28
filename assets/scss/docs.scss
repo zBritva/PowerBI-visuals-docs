@@ -1,0 +1,25 @@
+@import "../../scss/functions";
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+// Load docs components
+@import "variables";
+@import "nav";
+@import "masthead";
+@import "content";
+@import "skiplink";
+@import "sidebar";
+@import "footer";
+@import "component-examples";
+@import "buttons";
+@import "callouts";
+@import "examples";
+@import "browser-bugs";
+@import "brand";
+@import "colors";
+@import "clipboard-js";
+
+// Load docs dependencies
+@import "syntax";
+@import "anchor";
+@import "algolia";

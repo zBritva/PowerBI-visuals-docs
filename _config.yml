@@ -1,0 +1,61 @@
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+kramdown:
+  auto_ids:     true
+  parse_block_html: true
+
+# Permalinks
+permalink:      pretty
+
+# Server
+source:         "."
+destination:    ./_gh_pages
+host:           0.0.0.0
+port:           9001
+baseurl:        "/PowerBI-visuals"
+url:            "https://Microsoft.github.io/PowerBI-visuals"
+encoding:       UTF-8
+exclude:
+  - .git/
+  - .github/
+  - assets/scss/
+  - build/
+  - js/
+  - node_modules/
+  - scss/
+  - Gemfile
+  - Gemfile.lock
+  - package.js
+  - package.json
+  - package-lock.json
+  - README.md
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Social
+title:              PowerBI Custom Visuals
+description:        "PowerBI Custom Visuals Developers Documenation"    
+authors:            "Microsoft"
+blog:               "https://powerbi.microsoft.com/en-us/blog/"
+appsource:          "https://appsource.microsoft.com/en-us/marketplace/apps?product=power-bi-visuals"
+
+# Custom variables
+current_version:      1.11
+current_ruby_version: 4.0.0
+docs_version:         latest
+repo:                 "https://github.com/Microsoft/PowerBI-visuals-tools"
+ga_id:                "UA-116683883-1"            
+
+cdn:
+  bootstrap_css:    "https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/css/bootstrap.min.css"
+  css_hash:         "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  js:               "https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/bootstrap.min.js"
+  js_hash:          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+
+toc:
+  min_level:        1
+  max_level:        6

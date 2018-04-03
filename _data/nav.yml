@@ -1,0 +1,66 @@
+- title: Getting started
+  pages:
+    - title: Installation
+    - title: Create SSL Certificate
+    - title: Server certification install
+    - title: Enable Developer Tools
+    - title: Create New PowerBI Visual Project
+    - title: Adding External Libraries
+
+- title: What's New
+  pages:
+    - title: API 1.11.0
+    - title: API 1.10.0
+    - title: API 1.9.0
+    - title: API 1.8.0
+    - title: API 1.7.0
+    - title: API 1.6.2
+    - title: API 1.5.0
+    - title: API 1.4.0
+    - title: API 1.3.0
+    - title: API 1.2.0
+    - title: API 1.1.0
+    - title: API 1.0.0
+
+- title: Concepts
+  pages:
+    - title: Overview
+    - title: Versioning
+    - title: Databinding
+    - title: Selections and Slicers
+    - title: Custom Visual Settings
+    - title: External Libraries
+    - title: Limitations
+    - title: R Custom Visuals
+
+- title: Reference
+  pages:
+    - title: Tooltips Manager
+    - title: Selection Manager
+
+- title: Utilities
+  pages:
+    - title: Overview
+    - title: DataViewUtils
+    - title: ChartUtils
+    - title: ColorUtils
+    - title: TooltipUtils
+    - title: TypeUtils
+    - title: InteractivityUtils
+    - title: FormattingUtils
+    - title: SVGUtils
+    - title: TestUtils
+
+- title: Guidelines
+  pages:
+    - title: Mobile development
+    - title: Performance tips
+
+- title: Submissions
+  pages:
+    - title: Overview
+    - title: Certification
+
+- title: Roadmap
+
+- title: Support

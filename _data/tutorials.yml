@@ -1,0 +1,28 @@
+- title: Building Bar Chart
+  pages:
+    - title: Building a Visual with Static Data
+    - title: Adding Databinding to the Bar Chart
+    - title: Adding Color to the Bar Chart
+    - title: Adding Selection and Interaction with Other Visuals
+    - title: Adding Static Objects to Property Pane
+    - title: Adding Databound Objects to Property Pane
+    - title: Adding Tooltips to the Bar Chart
+    - title: Adding A Slider control to the Bar Chart
+    - title: Adding Locale support to the Bar Chart
+    - title: Adding URL Launcher element to the Bar Chart
+    - title: Finally Package for Distribution
+- title: Building Slicer Visual
+  pages:
+    - title: Code structure
+    - title: Adding the Interactivity Utils to the project
+    - title: Using the Interactivity Utils
+    - title: Adding the Advanced Filter API to the project
+    - title: Using the Advanced Filter API
+- title: Building R Powered Custom Visual
+  pages:
+    - title: Creating a new R Powered Custom Visual
+    - title: Starting a simple R Script
+    - title: Adding a static property to the property pane
+    - title: Validate input data in R Script
+    - title: Creating R Powered Custom Visual with HTML output
+- title: Funnel Plot from R script to R Custom Visual

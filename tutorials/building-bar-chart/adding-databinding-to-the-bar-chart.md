@@ -14,7 +14,7 @@ To add databinding, all changes will be located in `capabilities.json`. A sample
 
 Databinding can be done on the field well.
 
-![](images/DataBinding.png)
+![](../images/DataBinding.png)
 
 ## Adding Data Roles
 Currently, data roles are added for you, but customizations can still be made.

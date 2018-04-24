@@ -22,7 +22,7 @@ plot(Values)
 
 This R script calls a generic function for plotting of R object. The data frame "Values" will contain columns in "Values" data role.
 
-![Basic Plot Script Result](images/BasicPlot.png)
+![Basic Plot Script Result](../images/BasicPlot.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleCorrPlotRVisual/commit/e7d31301bfa0ba9419e67383a9f27ae340e79fee) for what was added at this step.
 
@@ -33,7 +33,7 @@ The 'rhtml' template is used in this case:
 ```
 pbiviz new sampleRHTMLVisual -t rhtml
 ```
-![Basic HTML Plot Script Result](images/BasicHTMLPlot.png)
+![Basic HTML Plot Script Result](../images/BasicHTMLPlot.png)
 
 In this sample the HTML has several capabilities, such as displaying data values and enables zooming.
 

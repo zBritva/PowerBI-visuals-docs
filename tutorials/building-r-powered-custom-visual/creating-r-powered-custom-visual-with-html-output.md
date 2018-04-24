@@ -34,7 +34,7 @@ internalSaveWidget(p, 'out.html');
 
 This R script calls a function from [`ggplot2`](http://ggplot2.org/) package, which plots a pre-defined dataset, and is using the [`Plotly`](https://plot.ly/) package for converting it into HTML.
 
-![Basic HTML Plot Script Result](images/BasicHTMLPlot.png)
+![Basic HTML Plot Script Result](../images/BasicHTMLPlot.png)
 
 In this sample the HTML has several capabilities, such as displaying data values and enables zooming.
 

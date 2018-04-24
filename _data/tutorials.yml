@@ -26,3 +26,5 @@
     - title: Validate input data in R Script
     - title: Creating R Powered Custom Visual with HTML output
 - title: Funnel Plot from R script to R Custom Visual
+  pages:
+    - title: Overview

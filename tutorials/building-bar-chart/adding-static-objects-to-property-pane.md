@@ -12,7 +12,7 @@ We will be using static objects to render an x axis for the Bar Chart.
 
 Objects can be toggled on the property pane.
 
-![](images/PropertyPane.png)
+![](../images/PropertyPane.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/7602bb5c34aca97f02ea8e713f841a4ce19929c7) for what was added at this step.
 
@@ -25,7 +25,7 @@ Define an objects property inside your capabilities. This defines the object you
 
 **NOTE**: `show` is a special property on `properties`. It enables the switch on the actual object. Since show is a switch, it is typed as a `bool`.
 
-![](images/ObjectShowProperty.png)
+![](../images/ObjectShowProperty.png)
 
 {% highlight js %}
 "objects": {

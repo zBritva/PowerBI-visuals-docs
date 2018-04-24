@@ -1,13 +1,52 @@
-- title: Getting started
+- title: Overview
+
+- title: QuickStarts
   pages:
-    - title: Installation
+    - title: What you need to start implementing a custom visual
+    - title: Installation and environment setup
     - title: Create SSL Certificate
     - title: Server certification install
-    - title: Enable Developer Tools
-    - title: Create New PowerBI Visual Project
-    - title: Adding External Libraries
+    - title: Add Certificate (Windows)
+      skip: true
+    - title: Add Certificate (Mac OS X)
+      skip: true
+    - title: Remove Certificate (Windows)
+      skip: true
+    - title: Remove Certificate (Mac OS X)
+      skip: true
+    - title: Step by step on how to create your first visual
+    - title: How to debug
 
-- title: What's New
+- title: Concepts and Guidelines
+  pages:
+    - title: Capabilities
+    - title: SandBox
+      skip: true
+    - title: Versioned API
+      skip: true
+    - title: DataViewMappings
+    - title: Objects and properties
+    - title: R Powered Custom Visuals
+      skip: true
+    - title: Limitations
+      skip: true
+    - title: Custom visuals for mobile
+    - title: Performance tips
+    - title: Migrating to versioned API guide
+    
+- title: How-to guide
+  pages:
+    - title: Bookmarks support
+    - title: Adding colors to your visual
+    - title: Adding tooltips
+    - title: Launching URL
+    - title: Sorting
+    - title: Adding selection and interaction with other visuals
+    - title: Highlighting
+    - title: Adding a slide control
+    - title: Adding drill down support
+
+- title: APIs
   pages:
     - title: API 1.11.0
     - title: API 1.10.0
@@ -22,25 +61,9 @@
     - title: API 1.1.0
     - title: API 1.0.0
 
-- title: Concepts
+- title: Libraries and Utilities
   pages:
-    - title: Overview
-    - title: Versioning
-    - title: Databinding
-    - title: Selections and Slicers
-    - title: Custom Visual Settings
-    - title: External Libraries
-    - title: Limitations
-    - title: R Custom Visuals
-
-- title: Reference
-  pages:
-    - title: Tooltips Manager
-    - title: Selection Manager
-
-- title: Utilities
-  pages:
-    - title: Overview
+    - title: Adding external libraries
     - title: DataViewUtils
     - title: ChartUtils
     - title: ColorUtils
@@ -51,14 +74,11 @@
     - title: SVGUtils
     - title: TestUtils
 
-- title: Guidelines
-  pages:
-    - title: Mobile development
-    - title: Performance tips
-
 - title: Submissions
   pages:
-    - title: Overview
+    - title: Submission process
+    - title: Checklist before you submit
+    - title: Submission common problems
     - title: Certification
 
 - title: Roadmap

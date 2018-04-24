@@ -10,7 +10,7 @@ toc: true
 Databound objects are similar to static objects, however they typically deal with data selection.
 We will be changing the color associated with the data point.
 
-![](images/ObjectDataBoundProperty.png)
+![](../images/ObjectDataBoundProperty.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3018a4ef020ee5de8a87be5f29f008bd5cf8fe63) for what was added at this step.
 
@@ -151,7 +151,7 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
 
 After providing a selector for each property, you will get the following dataView object array:
 
-![](images/ObjectDataBoundPropertyInSrc.png)
+![](../images/ObjectDataBoundPropertyInSrc.png)
 
 Where each item in the array `dataViews[0].categorical.categories[0].objects` corresponds to the concrete category of the dataset.
 

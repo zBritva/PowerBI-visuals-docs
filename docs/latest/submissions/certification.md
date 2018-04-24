@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Custom Visuals Certification
-description: Submissions
+title: Custom Visuals certification
+description: 
 group: submissions
 toc: true
 ---

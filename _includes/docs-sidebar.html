@@ -31,6 +31,9 @@
             {%- assign active = 'active bd-sidenav-active' -%}
           {%- endif -%}
 
+
+          {%- if doc.skip != true -%}
+
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
             <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ doc_slug }}/">
               {{ doc.title }}
@@ -50,6 +53,7 @@
             {% endunless %}
             {%- endcomment -%}
           </li>
+          {%- endif -%}
         {%- endfor -%}
       </ul>
     </div>

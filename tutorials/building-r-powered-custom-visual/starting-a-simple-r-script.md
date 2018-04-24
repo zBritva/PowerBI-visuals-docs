@@ -36,6 +36,6 @@ Now add the `corrplot` package to the CRAN dependencies of this visual in the `d
 
 Now you can package the visual and try it out (or you can use the `pbiviz start` feature to debug the visual in [PowerBI.com](https://powerbi.microsoft.com/))
 
-![Basic Corrplot Visual](./images/BasicCorrplot.png)
+![Basic Corrplot Visual](../images/BasicCorrplot.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleCorrPlotRVisual/commit/19f587c499511a19533dfedd86a25f0707f375a8) for what was added at this step.

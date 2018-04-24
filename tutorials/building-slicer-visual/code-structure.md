@@ -6,7 +6,7 @@ group: building-slicer-visual
 toc: true
 ---
 
-![](/doc/images/src-folder.PNG)
+![](../images/src-folder.PNG)
 
 The following source files are of particular interest:
 - selectionBehavior.ts:

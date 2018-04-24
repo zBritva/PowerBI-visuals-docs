@@ -135,7 +135,7 @@ corrplot(M, method=settings_method)
 
 The result:
 
-![Property Pane](./images/EnumPropertyPane.png)
-![Visual with 'pie' selected](./images/PieMethod.png)
+![Property Pane](../images//EnumPropertyPane.png)
+![Visual with 'pie' selected](../images//PieMethod.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleCorrPlotRVisual/commit/00870919ebe8a2f8a4fa8c4550f8a19ccd5639ed) for what was added at this step.

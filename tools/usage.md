@@ -1,6 +1,6 @@
 # PowerBI Visual Tools (pbiviz) - Usage Guide
 
-The easiest way to create custom visuals is by using the PowerBI command line tools which can be easily to installed via NPM. The command line tools provide everything you need to develop visuals and test them in live PowerBI reports and dashboards. 
+The easiest way to create custom visuals is by using the PowerBI command line tools which can be easily installed via NPM. The command line tools provide everything you need to develop visuals and test them in live PowerBI reports and dashboards. 
 
 **Features:**
 
@@ -19,8 +19,17 @@ pbiviz new My Visual Name
 ```
 
 Replace "My Visual Name" with the name of your visual. You can change this later by modifying the generated `pbiviz.json` file.
+This command will create a new folder in your current directory and generate a basic 'sample template' for your visual. 
 
-This command will create a new folder in your current directory and generate a basic starter template for your visual. Once it finishes run `npm install` from within the new directory and use your favorite editor to start working on your new visual.
+Once it finishes you also need to download all dependencies listed in the package.json file using this command from within the newly created folder:
+
+```bash
+npm install
+```
+
+Note: This command should also be executed if you download and build an already existing visual.
+
+Then use your favorite editor to start working on your new visual.
 
 [Learn more about writing custom visuals](../Readme.md) 
 
@@ -28,7 +37,9 @@ This command will create a new folder in your current directory and generate a b
 
 ## Testing your visual in PowerBI
 
-You can easily test your visual live in reports and dashboards in the PowerBI service
+You can easily test your visual live in reports and dashboards in the PowerBI service using the live developer visual, once it's enabled.
+
+* [How to enable the developer visual in PowerBI](DebugVisualSetup.md)
 
 ### Running your visual
 
@@ -87,7 +98,7 @@ pbiviz update
 
 ```
 
-This will download the latest tools from npm (which includes the updated type definitions and schemas) and `pbiviz update` will overwrite the version in your visual with the latest version. This will maintain the api version your visual already uses (specified in your pbiviz.json file).
+This will download the latest tools from npm (which includes the updated type definitions and schemas) and `pbiviz update` will overwrite the version in your visual with the latest version. NOTE: This will maintain the api version your visual already uses (specified in your pbiviz.json file). If you want to upgrade to a more recent version, follow the steps below.
 
 ### Upgrading to a different API version
 
@@ -99,11 +110,11 @@ You can update to a different api version by using the same steps, but explicitl
 npm install -g powerbi-visuals-tools
 
 #Run update from the root of your visual project (where pbiviz.json is located)
-pbiviz update 1.2.0
+pbiviz update 1.10.0
 
 ```
 
-This would update your visual to api version 1.2.0 (replace 1.2.0 with whatever version you're trying to upgrade to).
+This would update your visual to api version 1.10.0, the current version of the api, which supports TypeScript version 2.3.3.
 
 > **API VERSION WARNING**
 > The default API version used by the tools will always be the stable version of the API. Any later versions are unstable, subject to change, and may behave differently in different environments (service vs desktop). For the current stable API version see the [Change Log](../ChangeLog.md) for information about pre-release versions see the [Roadmap](../Roadmap/README.md)
@@ -119,7 +130,7 @@ For tips about debugging your custom visual in the developer tools see the [debu
 
 ### Pbiviz command not found (or similar errors)
 
-If you run `pbiviz` in your terminal / command line you should see the help screen. If not it is not installed correctly.
+If you run `pbiviz` in your terminal / command line you should see the help screen. If not, it is not installed correctly.
 
 More Info: [Installation Guide](README.md)
 

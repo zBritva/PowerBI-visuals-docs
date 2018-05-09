@@ -1,6 +1,6 @@
 # Add Certificate (Windows)
 
-To be access your visual through PowerBI you need to add a trusted certificate for localhost. This will allow PowerBI to load the visual assets in your browser without a security warning.
+To access your visual through PowerBI you need to add a trusted certificate for localhost. This will allow PowerBI to load the visual assets in your browser without a security warning.
 
 ----------
 
@@ -12,7 +12,7 @@ Run the following command to open the certificate and start the process.
 pbiviz --install-cert
 ```
 
-*If this command fails for some reason find pbiviz in your global node modules folder and open the certificate manually.*
+*If this command fails for some reason, find pbiviz in your global node modules folder and open the certificate manually.*
 
 ----------
 

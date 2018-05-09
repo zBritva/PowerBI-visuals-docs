@@ -4,7 +4,7 @@ This page shows some tips for debugging while building your visual.
 
 ## Using breakpoints
 
-Because the visuals JS is entirely reloaded every time the visual is updated any breakpoints you add will be lost when the debug visual is refreshed. To work around this use `debugger` statements in your code. It is recommended that you turn off auto-reload while using `debugger` in your code.
+Because the visual's JavaScript is entirely reloaded every time the visual is updated, any breakpoints you add will be lost when the debug visual is refreshed. To work around this, use `debugger` statements in your code. It is recommended that you turn off auto-reload while using `debugger` in your code.
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -18,7 +18,7 @@ public update(options: VisualUpdateOptions) {
 
 When working on your visual you'll notice that all errors are "eaten" by the Power BI service. This is an intentional feature of Power BI to prevent misbehaving visuals from causing the entire app to become unstable.
 
-To work around this you need to add code to programmatically catch and log your exceptions or just set your debugger to "break on caught exceptions"
+To work around this, you need to add code to programmatically catch and log your exceptions or just set your debugger to "break on caught exceptions"
 
 ## Log exceptions programmatically
 
@@ -54,7 +54,7 @@ public update(options: VisualUpdateOptions) {
 
 ## Break on exceptions
 
-You can also set the browser to break on caught exceptions which will stop code execution wherever an error happens and allow you to debug from there.
+You can also set the browser to break on caught exceptions, which will stop code execution wherever an error happens and allow you to debug from there.
 
 ### Edge
 

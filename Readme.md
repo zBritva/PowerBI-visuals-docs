@@ -11,13 +11,14 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 
 ### Setting Up Environment
 1. [Install PowerBI visuals CLI tool](tools/README.md#installation)
-2. [Install SSL certifications to enable live preview of visuals](tools/CertificateSetup.md)
-3. [Enable Developer Tools in PowerBI](tools/DebugVisualSetup.md)
-4. [Create New PowerBI Visual Project](tools/usage.md#creating-a-new-visual)
-5. [Start Development Server for Live Update and Incremental Development](tools/usage.md#testing-your-visual-in-powerbi)
-6. [Adding the Debug Visual from the Visual Well into your Favorite Report](tools/usage.md#viewing-your-visual-in-powerbi)
-7. [Adding External Libraries](Tutorial/ExternalLibraries.md)
-8. [Installing Typings for Libraries](Tutorial/Typings.md)
+2. [Create SSL certifications to enable live preview of visuals](tools/CreateCertificate.md)
+3. [Install generated SSL certifications to enable live preview of visuals](tools/CertificateSetup.md)
+4. [Enable Developer Tools in PowerBI](tools/DebugVisualSetup.md)
+5. [Create New PowerBI Visual Project](tools/usage.md#creating-a-new-visual)
+6. [Start Development Server for Live Update and Incremental Development](tools/usage.md#testing-your-visual-in-powerbi)
+7. [Adding the Debug Visual from the Visual Well into your Favorite Report](tools/usage.md#viewing-your-visual-in-powerbi)
+8. [Adding External Libraries](Tutorial/ExternalLibraries.md)
+9. [Installing @Types for External Libraries](Tutorial/@Types.md)
 
 ### Building Bar Chart
 1. [Building a Visual with Static Data](Tutorial/StaticVisual.md)
@@ -29,12 +30,14 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 7. [Adding Tooltips to the Bar Chart](Tutorial/ToolTips.md)
 8. [Adding A Slider control to the Bar Chart](Tutorial/SliderControl.md)
 9. [Adding Locale support to the Bar Chart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/Tutorial/Locale.md)
-10. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
+10. [Adding URL Launcher element to the Bar Chart](Tutorial/LaunchURL.md)
+11. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
 
 ### Building a Slicer Visual
 1. [The sample slicer visual](https://github.com/Microsoft/powerbi-visuals-sampleslicer)
 2. [Adding advanced filter API](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/AddingAdvancedFilterAPI.md)
 3. [Using the advanced filter API](https://github.com/Microsoft/powerbi-visuals-sampleslicer/blob/master/doc/UsingAdvancedFilterAPI.md)
+3. [Added bookmarks support](Tutorial/BookmarksSupport.md)
 
 ### Building R Powered Custom Visual (corrplot)
 1. [Creating a new R Powered Custom Visual](RVisualTutorial/CreateNewVisual.md)
@@ -73,7 +76,8 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 
 ## Reporting Issues
 
-If you have any issues with Power BI custom visuals or the command line tools please let us know. First, search the issues page to see if your issue has already been reported. If it already exists please contribute your experience to the comments otherwise create a new issue. Be sure to be as detailed as possible about exactly what you were doing when the issue occured and how we can reproduce it.
+If you have any issues with Power BI custom visuals or the command line tools, please let us know. First, search the Power BI Developer Forums page to see if your issue has already been reported. If it already exists, please contribute your experience to the comments. Otherwise, create a new issue. Be sure to be as detailed as possible about exactly what you were doing when the issue occured and how we can reproduce it.
 
+* [PowerBI Developer Forum](https://community.powerbi.com/t5/Developer/bd-p/Developer) - Custom visual creation, API usage, real-time dashboards, integrating with Power BI, content packs. Basically, everything about extending Power BI.
 * [PowerBI-visuals-tools issue page](https://github.com/Microsoft/PowerBI-visuals-tools/issues) - Issues related to the CLI tools specifically
 * [PowerBI-visuals issue page](https://github.com/Microsoft/PowerBI-visuals/issues) - Any other issues related to Power BI visuals

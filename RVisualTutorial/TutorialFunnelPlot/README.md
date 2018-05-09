@@ -12,6 +12,7 @@
 4. [Chapter 4 - Convert our visual from PNG to HTML-based visual](#chapter-4)
     1. [Create HTML-based Custom Visual ](#chapter-41)
     2. [Bonus example with HTML-based Custom Visual](#chapter-42)
+    3. [Bonus example with multiple HTML widgets](#chapter-43)
 5. [Let's summarize about R Custom Visuals](#summary)
 6. [Tips and tricks](#tips)
 7. [Useful links](#links)
@@ -344,6 +345,19 @@ The changes for the HTML-based visual are highlighted
 ![Highlighted changes](imgs/CaptureNetworkD3.PNG)
 
 Just copy it instead of your template `script.r` and run `pbiviz package`  again.  Now you get this cool visual in your Power BI report!
+
+
+### Section 4.3: Bonus example. <a name="chapter-43"></a>
+
+Dozens of visuals from this gallery [gallery](http://gallery.htmlwidgets.org/) of html widgets are  ready to become your next custom visual. You are invited to try out this custom visual: 
+
+[chapter4_RCustomVisual\multipleRHTML](chapter4_RHTMLCustomVisual/multipleRHTML)
+
+It contains more than 20 interactive HTML visuals. 
+
+![Sample of htmlWidgets](chapter4_RHTMLCustomVisual\multipleRHTML\assets\CaptureSample.PNG)
+
+
 
 ## Quick Summary of R-powered Custom Visuals <a name="summary"></a>
 

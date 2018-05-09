@@ -347,13 +347,13 @@ The changes for the HTML-based visual are highlighted
 Just copy it instead of your template `script.r` and run `pbiviz package`  again.  Now you get this cool visual in your Power BI report!
 
 
-### Section 4.3: Bonus example. <a name="chapter-43"></a>
+### Section 4.3: HTML widgets gallery <a name="chapter-43"></a>
 
 Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) of html widgets are  ready to become your next custom visual. To make it easier, we created this single custom visual project: 
 
 [chapter4_RCustomVisual\multipleRHTML](chapter4_RHTMLCustomVisual/multipleRHTML)
 
-It contains more than 30 interactive HTML visuals !!!  
+It contains __more than 30 interactive HTML visuals !!!__  
 
 ![Sample of htmlWidgets](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
 

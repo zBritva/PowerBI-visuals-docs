@@ -21,16 +21,6 @@
 # AUTHOR: pbicvsupport@microsoft.com
 #
 
-#DEBUG in RStudio
-fileRda = "C:/Users/boefraty/projects/PBI/R/tempData.Rda"
-if(file.exists(dirname(fileRda)))
-{
-  if(Sys.getenv("RSTUDIO")!="")
-    load(file= fileRda)
-  else
-    save(list = ls(all.names = TRUE), file=fileRda)
-}
-
 
 ###############Library Declarations###############
 source('./r_files/flatten_HTML.r')
@@ -69,7 +59,7 @@ if((myparam %in% c('visNetwork4',
 
 
 
-####### Create htmlWidget #### 
+####### Create Widget  #### 
 
 w = NULL
 
@@ -510,7 +500,7 @@ if(myparam %in% c("not4desktop","not4service"))
 }
 
 
-
+######################Save Widget ##################################
 if(!is.null(w)){
   if(length(intersect(class(w),"gvis"))== 0)
     internalSaveWidget(w, 'out.html')
@@ -520,15 +510,3 @@ if(!is.null(w)){
     htmlwidgets::saveWidget(w, file = 'out.html')
 }
 ####################################################
-
-
-
-# #DEBUG in RStudio
-if(Sys.getenv("RSTUDIO")!="" && !is.null(w))
-{
-  if(length(intersect(class(w),"htmlwidget"))!= 0)
-  {print(w)}
-  else
-  {plot(w)}
-}
-

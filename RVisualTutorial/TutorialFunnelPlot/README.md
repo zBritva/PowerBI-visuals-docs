@@ -355,7 +355,8 @@ Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) 
 
 It contains __more than 30 interactive HTML visuals !!!__  
 
-![Sample of htmlWidgets](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
+![Sample of htmlWidgets1](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
+![Sample of htmlWidgets2](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
 
 Try it out in [PBIX file](chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between differen html widgets via `Format > Settings > Type`. 
 

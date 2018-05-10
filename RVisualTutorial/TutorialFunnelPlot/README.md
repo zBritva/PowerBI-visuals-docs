@@ -358,13 +358,13 @@ It contains __more than 30 interactive HTML visuals !!!__
 ![Sample of htmlWidgets1](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
 ![Sample of htmlWidgets2](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
 
-Try it out in [PBIX file](chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between differen html widgets via `Format > Settings > Type`. 
+Try it out in [PBIX file](chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
 
 If you decide to use it as a starting point for your custom visual: 
 1. Download the whole folder
 1. Edit _script.r_ and _dependencies.json_ to keep only one widget 
 1. Edit _capabilities.json_ and _settings.ts_ to remove `Type` selector
-1. Change `const updateHTMLHead: boolean = true;` to `false` in _visual.ts_  
+1. Change `const updateHTMLHead: boolean = true;` to `false` in _visual.ts_  (performance) 
 
 * Not all of the widgets in this project are supported in service yet. 
 

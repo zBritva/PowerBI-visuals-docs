@@ -365,8 +365,10 @@ If you decide to use it as a starting point for your custom visual:
 1. Edit _script.r_ and _dependencies.json_ to keep only one widget 
 1. Edit _capabilities.json_ and _settings.ts_ to remove `Type` selector
 1. Change `const updateHTMLHead: boolean = true;` to `false` in _visual.ts_  (performance) 
+1. Change metadata in _pbiviz.json_, particularly `"guid"` field
+1. Re-package and continue the development of Custom Visual as explained in previous chapter 
 
-* Not all of the widgets in this project are supported in service yet. 
+* Remark: Not all of the widgets in this project are supported in service yet. 
 
 ## Quick Summary of R-powered Custom Visuals <a name="summary"></a>
 

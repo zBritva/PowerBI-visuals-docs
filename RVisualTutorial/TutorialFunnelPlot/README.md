@@ -353,7 +353,7 @@ Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) 
 
 [chapter4_RCustomVisual\multipleRHTML](chapter4_RHTMLCustomVisual/multipleRHTML)
 
-It contains __more than 30 interactive HTML visuals !!!__  
+It contains __more than 20 interactive HTML visuals !!!__  
 
 ![Sample of htmlWidgets1](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
 ![Sample of htmlWidgets2](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)

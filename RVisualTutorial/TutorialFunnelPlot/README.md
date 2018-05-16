@@ -12,6 +12,7 @@
 4. [Chapter 4 - Convert our visual from PNG to HTML-based visual](#chapter-4)
     1. [Create HTML-based Custom Visual ](#chapter-41)
     2. [Bonus example with HTML-based Custom Visual](#chapter-42)
+    3. [Bonus example with multiple HTML widgets](#chapter-43)
 5. [Let's summarize about R Custom Visuals](#summary)
 6. [Tips and tricks](#tips)
 7. [Useful links](#links)
@@ -344,6 +345,30 @@ The changes for the HTML-based visual are highlighted
 ![Highlighted changes](imgs/CaptureNetworkD3.PNG)
 
 Just copy it instead of your template `script.r` and run `pbiviz package`  again.  Now you get this cool visual in your Power BI report!
+
+
+### Section 4.3: HTML widgets gallery <a name="chapter-43"></a>
+
+Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) of html widgets are  ready to become your next custom visual. To make it easier, we created this single custom visual project: 
+
+[chapter4_RCustomVisual\multipleRHTML](chapter4_RHTMLCustomVisual/multipleRHTML)
+
+It contains __more than 20 interactive HTML visuals !!!__  
+
+![Sample of htmlWidgets1](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
+![Sample of htmlWidgets2](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
+
+Try it out in [PBIX file](chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
+
+If you decide to use it as a starting point for your custom visual: 
+1. Download the whole folder
+1. Edit _script.r_ and _dependencies.json_ to keep only one widget 
+1. Edit _capabilities.json_ and _settings.ts_ to remove `Type` selector
+1. Change `const updateHTMLHead: boolean = true;` to `false` in _visual.ts_  (performance) 
+1. Change metadata in _pbiviz.json_, particularly `"guid"` field
+1. Re-package and continue the development of Custom Visual as explained in previous chapter 
+
+* Remark: Not all of the widgets in this project are supported in service yet. 
 
 ## Quick Summary of R-powered Custom Visuals <a name="summary"></a>
 

@@ -1,18 +1,20 @@
 # Getting started with new version of powerbi-visuals-tools (Preview)
 
-With the next version of tools, you can start writing Power BI Custom Visuals by using external modules in TypeScript.
+Power BI Visuals Tools 2.0.x brings modern [ECMAScript 2015 modules](https://www.typescriptlang.org/docs/handbook/modules.html) into TypeScript code.
 
 In TypeScript 1.5 the nomenclature has changed. [Read more about TypeScript modules](https://www.typescriptlang.org/docs/handbook/modules.html).
 
-The previous version of tools requires the definition of the visual class inside `powerbi.extensibility.visual` module.
+The previous version of of Power BI Visuals Tools required to define a visual class under `powerbi.extensibility.visual` module.
 
-With the new tools, you should use external modules in your visual project.
+This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
 
-This article describes steps how to convert the existing visual to use with the new tools. As sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
+## How to install powerbi-visuals-tools@beta
 
-## Install powerbi-visuals-tools
+The new tools set is available as a `beta` version and can be installed by executing the command.
 
-The new tools available as `beta` version and can be installed by the command `npm install powerbi-visuals-tools@beta`. It will install a local instance of the tools.
+`npm install powerbi-visuals-tools@beta`. 
+
+It will install tools set locally.
 
 To start dev server you should generate certificates for local instance. Add the new command into `script` section at `package.json`"
 
@@ -44,34 +46,36 @@ The sample of sampleBarChart visual and correspond [commit](https://github.com/z
 }
 ```
 
-## Install API type definitions for TypeScript
+## How to install Power BI Custom Visuals API
 
-The type definitions for Power BI Custom Visuals API available in [`@types/powerbi-visuals-tools`](https://www.npmjs.com/package/@types/powerbi-visuals-tools) package. The version of package matches with API version of Power BI Custom Visuals.
+The type definitions for Power BI Custom Visuals API is available in [`@types/powerbi-visuals-tools`](https://www.npmjs.com/package/@types/powerbi-visuals-tools) package. The version of package matches with API version of Power BI Custom Visuals.
 
-Add `"@types/powerbi-visuals-tools": "1.11.0",` into `devDependencies` of `package.json` and call `npm install`. And you should remove the link to old API type definitions. Because types from `@types` include automatically by TS compiler. Correspond changes are in [this](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/aa0f667ba7a9072ccc7389f97834e304b01021ce) commit.
+Add `@types/powerbi-visuals-tools` into dependencies of project by executing command 
+`npm install --save-dev @types/powerbi-visuals-tools`.
+And you should remove the link to old API type definitions. Because types from `@types` include automatically by TS compiler. Correspond changes are in [this](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/aa0f667ba7a9072ccc7389f97834e304b01021ce) commit.
 
 ## Update `tsconfig.json`
 
 To use external modules, you should switch `out` option to `outDir`.
 `"outDir": "./.tmp/build/",` instead `"out": "./.tmp/build/visual.js",`. 
 
-Because each TypeScript file compiles separate JavaScript file, you don't need specify one `visual.js` file as output.
+This is required as TypeScript files will be compiled into a JavaScript files independently. This is why you no longer have to specify visual.js file as an output.
 
-And you can also change `target` option to `ES6` if you want to use modern JavaScript in output. [It's optional](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/b6b85420de9588da560e38a0d7e9b761d8aa989f).
+And you can also change `target` option to `ES6` if you want to use modern JavaScript as an output. [It's optional](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/b6b85420de9588da560e38a0d7e9b761d8aa989f).
 
 ## Update Custom Visuals utils
 
-If you used [utils](https://www.npmjs.com/search?q=powerbi-visuals-utils) you should update them to `beta` version too.
+If you use [utils](https://www.npmjs.com/search?q=powerbi-visuals-utils) you should update them to `beta` version too.
 
-Call the command `npm install powerbi-visuals-utils-<UTILNAME>@beta`. (Ex. `npm install powerbi-visuals-utils-dataviewutils@beta` ) to get the new version with external modules of TypeScript.
+Execute the command `npm install powerbi-visuals-utils-<UTILNAME>@beta --save`. (Ex. `npm install powerbi-visuals-utils-dataviewutils@beta --save` ) to get the new version with external modules of TypeScript.
 
 TODO addi link to mekkochart repo PR with converting
 
 ## Changes inside of the visuals sources
 
-The main change is converting internal modules to external modules. Because you cannot use external modules within internal modules.
+The main change is converting internal modules to external modules as you can't use external modules within internal modules.
 
-In this [commit](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/47047757e2e32f519386b7044a2994bb41b22488), you can see all changes of the source.
+This [commit](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/47047757e2e32f519386b7044a2994bb41b22488) describes changes that have been applied to Sample Bar Chart
 
 Detailed descriptions of changes are below.
 
@@ -122,5 +126,11 @@ import {
     createTooltipServiceWrapper
 } from "./tooltipServiceWrapper";
 ```
+
+## `externalJS` in `pbiviz.json`
+
+The tools doesn't requires list of `externalJS` to load into the visual bundle.
+
+**The `externalJS` in `pbivi.json` should be empty.**
 
 Call the typical commands `npm run package` to create the visual package or `npm run start` to start dev server.

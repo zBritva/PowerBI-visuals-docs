@@ -44,7 +44,7 @@ blog:               "https://powerbi.microsoft.com/en-us/blog/"
 appsource:          "https://appsource.microsoft.com/en-us/marketplace/apps?product=power-bi-visuals"
 
 # Custom variables
-current_version:      1.11
+current_version:      1.12
 current_ruby_version: 4.0.0
 docs_version:         latest
 repo:                 "https://github.com/Microsoft/PowerBI-visuals-tools"

@@ -2,20 +2,19 @@
 
 - title: QuickStarts
   pages:
-    - title: What you need to start implementing a custom visual
-    - title: Installation and environment setup
-    - title: Create SSL Certificate
-    - title: Server certification install
-    - title: Add Certificate (Windows)
-      skip: true
-    - title: Add Certificate (Mac OS X)
-      skip: true
-    - title: Remove Certificate (Windows)
-      skip: true
-    - title: Remove Certificate (Mac OS X)
-      skip: true
-    - title: Step by step on how to create your first visual
-    - title: How to debug
+    - title: Developing a Power BI Custom Visual
+    - title: Signing In to the Power BI Service
+    - title: Setting Up the Developer Environment
+    - title: Creating a Custom Visual
+    - title: Adding Visual Elements
+    - title: Configuring Data Binding
+    - title: Installing Power BI Utilities
+    - title: Formatting Data Values
+    - title: Adding Formatting Options
+    - title: Packaging the Custom Visual
+    - title: Importing the Custom Visual
+    - title: Finishing Up
+    - title: Summary
 
 - title: Concepts
   pages:
@@ -35,6 +34,7 @@
     
 - title: How-to guide
   pages:
+    - title: How to debug
     - title: Bookmarks support
     - title: Adding colors to your visual
     - title: Adding tooltips
@@ -45,9 +45,11 @@
     - title: Highlighting
     - title: Adding a slide control
     - title: Adding drill down support
+    - title: Allow interactions
     - title: Adding localization
     - title: Custom visuals for mobile
     - title: Performance tips
+    - title: Migrating to powerbi-visuals-tools 2.0
 
 - title: Libraries and Utilities
   pages:

@@ -12,6 +12,7 @@
   }
 
   thead th {
+    background-color: $gray-100;
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
   }

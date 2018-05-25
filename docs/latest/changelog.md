@@ -37,7 +37,7 @@ Versions listed on this page are considered stable and should not change. For in
 * **[Interactive (html) R custom visuals](../../../tutorials/building-r-powered-custom-visual/creating-a-new-r-powered-custom-visual/)** - support for creating interactive R custom visuals, based on html
 
 ## API v1.5.0
-* **[allowInteractions](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/AllowInteractions.md)** - support for visual interactivity
+* **[Allow interactions](../how-to-guide/allow-interactions/)** - support for visual interactivity
 
 ## API v1.4.0
 * **[Localization Support](../how-to-guide/adding-localization/)** - support for visual localization

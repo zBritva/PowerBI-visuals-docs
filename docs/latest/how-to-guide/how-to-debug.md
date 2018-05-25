@@ -2,7 +2,7 @@
 layout: docs
 title: Debugging
 description:
-group: quickstarts
+group: how-to-guide
 toc: true
 ---
 

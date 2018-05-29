@@ -11,7 +11,7 @@ Versions listed on this page are considered stable and should not change. For in
 
 ## API v1.12
 * Themes support
-* LoadMoreData
+* **[LoadMoreData](../../../api/references/fetchmoredata/)** - Load more data API overcome the hard limit of 30K data points
 * **[Canvas tooltips](../how-to-guide/adding-report-page-tooltips/#support-canvas-tooltips)** - Added LaunchUrl API call support
 
 ## API v1.11

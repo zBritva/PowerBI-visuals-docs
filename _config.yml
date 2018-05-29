@@ -59,3 +59,5 @@ cdn:
 toc:
   min_level:        1
   max_level:        6
+
+exclude2: [node_modules, README.md]

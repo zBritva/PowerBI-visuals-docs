@@ -21,12 +21,14 @@
     "css-prefix-docs": "postcss --config build/postcss.config.js --replace \"assets/css/docs.min.css\" \"docs/**/*.css\"",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css",
     "css-minify-docs": "cleancss --level 1 --source-map --source-map-inline-sources --output assets/css/docs.min.css assets/css/docs.min.css",
-    "docs-compile": "bundle exec jekyll build",
+    "docs-compile": "bundle exec jekyll build --incremental",
     "docs-github-serve": "bundle exec jekyll serve --skip-initial-build --no-watch",
     "docs-lint": "npm-run-all docs-lint-*",
-    "docs-serve": "bundle exec jekyll serve",
+    "docs-serve": "bundle exec jekyll serve ",
     "watch": "npm-run-all --parallel watch-css",
-    "watch-css": "nodemon --ignore js/ --ignore dist/ -e scss -x \"npm run css\""
+    "watch-css": "nodemon --ignore js/ --ignore dist/ -e scss -x \"npm run css\"",
+    "watch-docs-css": "nodemon --ignore js/ --ignore dist/ -e scss -x \"npm run css-compile-docs\"",
+    "profile": "bundle exec jekyll serve --profile --incremental"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",

@@ -51,6 +51,12 @@
     - title: Performance tips
     - title: Migrating to powerbi-visuals-tools 2.0
 
+- title: Building for Excel
+  pages:
+    - title: Overview
+    - title: Getting Started
+    - title: Building for Excel
+
 - title: Libraries and Utilities
   pages:
     - title: Adding external libraries

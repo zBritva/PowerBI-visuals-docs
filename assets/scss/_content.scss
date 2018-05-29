@@ -3,6 +3,12 @@
 .bd-content {
   order: 1;
 
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+
   // Hack the sticky header
   > h2[id],
   > h3[id],
@@ -13,7 +19,7 @@
     > a {
       pointer-events: auto;
     }
-
+ /*
     &::before {
       display: block;
       height: 6rem;
@@ -21,6 +27,7 @@
       visibility: hidden;
       content: "";
     }
+    */
   }
 
   > table {
@@ -56,9 +63,28 @@
       }
     }
 
+    th {
+      background: $table-th-background;
+      color: $bd-white;
+      font-weight: $table-th-font-weight;
+    }
+
+    tr {
+      background: $table-tr-background;
+      border-top: $table-tr-border-top;
+    }
+
     // Prevent breaking of code (e.g., Grunt tasks list)
+    td:first-child {
+      font-weight: bold;
+    }
+
     td:first-child > code {
       white-space: nowrap;
+    }
+
+    td > a {
+        color: $table-td-link;      
     }
   }
 }
@@ -113,3 +139,7 @@
 
 .bd-text-purple { color: $bd-purple; }
 .bd-text-purple-bright { color: $bd-purple-bright; }
+
+h5 {
+  padding-top: 2rem;
+}

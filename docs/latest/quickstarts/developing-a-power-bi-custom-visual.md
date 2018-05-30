@@ -7,6 +7,7 @@ toc: true
 ---
 
 In this tutorial, you will develop a Power BI custom visual named Circle Card to display a formatted measure value inside a circle. The Circle Card visual will support customization of fill color and thickness of its outline.
+This is a test!
 
 When imported into your Power BI Desktop report, the cards will be modified to become Circle Cards.
 

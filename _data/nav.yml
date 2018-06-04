@@ -52,6 +52,7 @@
     - title: Migrating to powerbi-visuals-tools 2.0
 
 - title: Building for Excel
+  skip: true
   pages:
     - title: Overview
     - title: Getting Started

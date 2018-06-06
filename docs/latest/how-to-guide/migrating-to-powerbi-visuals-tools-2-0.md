@@ -23,13 +23,7 @@ Please do not use it in production until API 2.0 will be released.
 
 It will install tools set locally.
 
-To start dev server you should generate certificates for local instance. Add the new command into `script` section at `package.json`"
-
-`"cert": "pbiviz --create-cert"`
-
-After that just run `npm run cert` and you should get a message that certificate was generated.
-
-The sample of sampleBarChart visual and correspond [commit](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/516c7bc4e68d676e744cf977addabbb8635b9e87):
+The sample of sampleBarChart visual and correspond [changes](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/package.json#L16) in `package.json`:
 
 ```json
 {
@@ -40,8 +34,7 @@ The sample of sampleBarChart visual and correspond [commit](https://github.com/z
         "pbiviz": "pbiviz",
         "start": "pbiviz start",
         "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\"",
-        "test": "pbiviz package --resources --no-minify --no-pbiviz",
-        "cert": "pbiviz --create-cert"
+        "test": "pbiviz package --resources --no-minify --no-pbiviz"
     },
     "devDependencies": {
       "@types/d3": "3.5.36",
@@ -59,7 +52,7 @@ The type definitions for Power BI Custom Visuals API are available in [`@types/p
 
 Add `@types/powerbi-visuals-tools` into dependencies of project by executing command 
 `npm install --save-dev @types/powerbi-visuals-tools`.
-And you should remove the link to old API type definitions. Because types from `@types` include automatically by TS compiler. Correspond changes are in [this](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/aa0f667ba7a9072ccc7389f97834e304b01021ce) commit.
+And you should remove the link to old API type definitions. Because types from `@types` include automatically by TS compiler. Correspond changes are in [this](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/package.json#L14) line of `package.json`.
 
 ## Update `tsconfig.json`
 
@@ -68,7 +61,7 @@ To use external modules, you should switch `out` option to `outDir`.
 
 This is required as TypeScript files will be compiled into a JavaScript files independently. This is why you no longer have to specify visual.js file as an output.
 
-And you can also change `target` option to `ES6` if you want to use modern JavaScript as an output. [It's optional](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/b6b85420de9588da560e38a0d7e9b761d8aa989f).
+And you can also change `target` option to `ES6` if you want to use modern JavaScript as an output. [It's optional](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/tsconfig.json#L6).
 
 ## Update Custom Visuals utils
 
@@ -82,11 +75,11 @@ TODO addi link to mekkochart repo PR with converting
 
 The main change is converting internal modules to external modules as you can't use external modules within internal modules.
 
-This [commit](https://github.com/zBritva/PowerBI-visuals-sampleBarChart/commit/47047757e2e32f519386b7044a2994bb41b22488) describes changes that have been applied to Sample Bar Chart
+This changes describes modifications that have been applied to Sample Bar Chart
 
 Detailed descriptions of changes are below:
 
-1. You should remove all modules definitions from each file of source code.
+1. You should remove all modules definitions from each file of [source code](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L153).
 
 ```typescript
 module powerbi.extensibility.visual {
@@ -94,13 +87,13 @@ module powerbi.extensibility.visual {
 }
 ```
 
-2. Import Power BI custom visual API definitions.
+2. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L3) Power BI custom visual API definitions.
 
 ```typescript
 import powerbi from "powerbi-visuals-tools";
 ```
 
-3. Import necessary interfaces or classes from `powerbi` internal module.
+3. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L11-L24) necessary interfaces or classes from `powerbi` internal module.
 
 ```typescript
 import PrimitiveValue = powerbi.PrimitiveValue; 
@@ -117,13 +110,13 @@ import VisualTooltipDataItem = powerbi.extensibility.VisualTooltipDataItem;
 import ISelectionManager = powerbi.extensibility.ISelectionManager; 
 ```
 
-4. Import D3.js library
+4. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L2) D3.js library
 
 ```typescript
 import * as d3 from "d3";
 ```
 
-5. Import utils, classes, interfaces defined in the visual project to the main source file
+5. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L4-L10) utils, classes, interfaces defined in the visual project to the main source file
 
 ```typescript
 import { getLocalizedString } from "./localization/localizationHelper";
@@ -137,8 +130,28 @@ import {
 
 ### `externalJS` in `pbiviz.json`
 
-The tools doesn't require a list of `externalJS` to load into the visual bundle.
+The tools [doesn't require](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L20) a list of `externalJS` to load into the visual bundle.
 
 **The `externalJS` in `pbivi.json` should be empty.**
 
 Call the typical commands `npm run package` to create the visual package or `npm run start` to start dev server.
+
+## Updating D3.js library to the version 5
+
+With new tools, you can start using the new version of D3.js library.
+
+Call commands to update D3 in your visual project
+
+`npm install --save @types/d3@5.4.0` for install the new D3.js.
+
+`npm install --save-dev @types/d3@5.0.5` for install the new type definitions for D3.js.
+
+There are several breaking changes and you should modify your code to use the new D3.js.
+
+1. The interface `d3.Selection<T>` [was changed](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/af2ff9fb0fc70bd94ea0c604d75a362411d5abeb#diff-433142f7814fee940a0ffc98dc75bfcbR157) to `Selection<GElement extends BaseType, Datum, PElement extends BaseType, PDatum>`
+
+2. You can't apply several attributes by a single call of `attr` method. You [should pass](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/af2ff9fb0fc70bd94ea0c604d75a362411d5abeb#diff-433142f7814fee940a0ffc98dc75bfcbR278) each attribute in different call of `attr` method. It is [similar](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/af2ff9fb0fc70bd94ea0c604d75a362411d5abeb#diff-433142f7814fee940a0ffc98dc75bfcbR247) for `style` method too.
+
+3. In D3.js v4 new `merge` method introduced. This method is commonly used to merge the enter and update selections after a data-join. You should [merge](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/83fe8d52d362dccd0034dd8e32c94080d9376b29#diff-433142f7814fee940a0ffc98dc75bfcbR272) two selections to use d3 properly.
+
+[Read more](https://github.com/d3/d3/blob/master/CHANGES.md) about changes in D3.js library.

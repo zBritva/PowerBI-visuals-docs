@@ -12,12 +12,12 @@ D3 is a JavaScript library for producing dynamic, interactive data visualization
 In this task, you will add the D3 JavaScript library and typings.
 
 1. To install D3, in PowerShell, enter the following command.
-For your convenience, many text entries in this lab can be copied from the **D:\PowerBI\Lab12\Assets\Snippets.txt** file.
+For your convenience, many text entries in this tutorial can be copied from [this repository](https://github.com/uve/circlecard).
 To paste the clipboard content into PowerShell, simply right-click at the command prompt.
 ```typescript
    npm i d3@3.5.5 --save
 ```
-2. To install type definitions for d3 library, enter the following command.
+2. To install [type definitions](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) for d3 library, enter the following command.
 This command installs TypeScript definitions based on JavaScript files, enabling you to develop the custom visual in TypeScript (which is a superset of JavaScript). Visual Studio Code is an ideal IDE for developing TypeScript applications.
 ```typescript
    npm i @types/d3@3.5

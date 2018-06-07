@@ -84,4 +84,4 @@ let dataView: DataView = options.dataViews[0];
 ![](../images/visual-123456.png)  
 *You have now configured the data roles, and bound the visual to the dataview. In a later exercise, you will format the value according to the format defined in the Power BI Desktop report.* 
 
-Next step: [Installing Power BI Utilities](../installing-power-bi-utilities/)
+Next step: [Adding Formatting Options](../adding-formatting-options/)

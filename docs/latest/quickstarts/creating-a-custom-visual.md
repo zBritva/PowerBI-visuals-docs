@@ -6,6 +6,8 @@ group: quickstarts
 toc: true
 ---
 
+*The full source code for this tutorial is avalable [here](https://github.com/uve/circlecard)*
+
 1. In Windows PowerShell, first, verify that the Power BI Visual Tools package has been installed.
 ```typescript
    pbiviz
@@ -14,9 +16,9 @@ toc: true
 2. Review the output, including the list of supported commands.
 ![](../images/pbiviz-output.png)
 
-3. Navigate to your **MySolution** folder, using the folder path you used to install the course files.
+3. Navigate to your **Workspace** folder, using the folder path you used to install the course files.
 ```typescript
-   cd D:\PowerBI\MySolution
+   cd C:\Workspace\
 ```
 
 4. To create a custom visual project, enter the following command.
@@ -60,13 +62,12 @@ In this task, you will upload a Power BI Desktop report, and then edit the repor
 6. Select the **Local File** tile.  
 ![](../images/local-file.png)
 
-7. In the **Choose File to Upload window**, navigate to **D:\PowerBI\Lab12\Assets** folder.
+7. In the **Choose File to Upload window**, upload [this Excel file](https://github.com/uve/circlecard/raw/master/sample_dataset/GDP.xlsx).
 
-8. Select **Test Custom Visual.pbix**, and then click **Open**.  
-*This Power BI Desktop report is a light-weight solution containing just two fields to support the
-testing of the custom visual.*
+8. Find **Import Excel Data to Power BI**, and then click **Import**.  
+*This Power BI Desktop dataset is a light-weight solution containing just two fields to support the testing of the custom visual.*
 
-9. Once uploaded, in the **Navigation** pane, select the **Test Custom Visual** report.
+9. Once uploaded, in the **Navigation** pane, select the **My Workspace** -> **Datasets**. Then click on **Create Report** for your dataset.
 
 10. To edit the report, on the toolbar, click **Edit Report**.  
 ![](../images/edit-report.png)

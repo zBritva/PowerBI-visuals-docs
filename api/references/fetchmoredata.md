@@ -8,12 +8,11 @@ toc: true
 
 Load more data API overcome the hard limit of 30K data point. It brings data in chunks. The chunk size is configurable to improve performance according to use case.  
 
+## Enable segmented fetch of large datasets
 
-#### Parameters
+For dataview segment mode, define a "window" dataReductionAlgorithm in the visual's capabilities.json for the required dataViewMapping.
+The "count" will determine the window size which limits the amount of new data rows appended to the dataview in each update. 
 
-| Name | Type | Description |
-|---|---|---|
-| | | |
 
 To be added in capabilities.json 
  
@@ -27,7 +26,7 @@ To be added in capabilities.json
                 }, 
                 "dataReductionAlgorithm": { 
                     "window": { 
-                        "count": 5000 
+                        "count": 100 
                     } 
 
                 } 
@@ -37,39 +36,62 @@ To be added in capabilities.json
     }
 ] 
 ```
+New segments are appended to the existing dataview and provided to the visual as an 'update' call.
 
-#### Sample
+## Usage in the custom visual
 
+The indication of whether or not more data exists is by checking the existence of: 
+```
+    dataView.metadata.segment
+```
+
+It is also possible to check whether this is the first or subsequent update by checking:
+```
+    options.operationKind
+``` .  
+```
+	VisualDataChangeOperationKind.Create
+```
+means the first segment, and 
+```
+	VisualDataChangeOperationKind.Append
+```
+means subsequent segments.
+
+See the code snippet below for a sample implementation:
 ```typescript
-// CV update implementation 
-public update(options: VisualUpdateOptions) { 
-    … 
-    // special handling of the 1st segment of new data. 
-    if (options.operationKind == VisualDataChangeOperationKind.Create) { 
-       …    
-    }  
+// CV update implementation
+public update(options: VisualUpdateOptions) {
+	…
 
-    // on 2nd and later segments: 
-    if (options.operationKind == VisualDataChangeOperationKind.Append) { 
-       … 
-    } 
+	// indicates this is the first segment of new data.
+	if (options.operationKind == VisualDataChangeOperationKind.Create) {
+	   …   
+	} 
 
+	// on second or subesquent segments:
+	if (options.operationKind == VisualDataChangeOperationKind.Append) {
+	   …
+	}
 
-    // complete update implementation 
-    … 
+	// complete update implementation
+	…
+}
+```
 
+fetchMoreData requests could also be invoked from a UI event handler
+```typescript
+btn_click(){
+{
+	// check if more data is expected for the current dataview
+	if (dataView.metadata.segment) {
+		//request for more data if available
+		let request_accepted: bool = this.host.fetchMoreData();
+		// handle rejection
+		if (!request_accepted) {
+				…
+		}
+	}
 
-    // fetchMoreData request could also be invoked from UI event handler 
-    // check if more data is expected for the current dataview 
-
-    if (dataView.metadata.segment) { 
-        //request for more data if available 
-        let request_accepted: bool = this.host.fetchMoreData(); 
-
-        // handle rejection 
-        if (!request_accepted) { 
-               … 
-        } 
-    } 
-} 
+}
 ```

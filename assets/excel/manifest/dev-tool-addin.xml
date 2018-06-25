@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xsi:type="ContentApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.1">
+	<Id>e1804d80-767a-440a-b19c-748c2d2235d0</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="Custom Visual Dev Tool"/>
+	<Description DefaultValue="Devloper Tool for Custom Visuals loads the localhost visual created by the 'pbiviz start' command"/>
+	<IconUrl DefaultValue="https://microsoft.github.io/PowerBI-visuals/assets/excel/img/dev-tool-icon.png"/>
+	<SupportUrl DefaultValue="http://"/>
+    <Hosts>
+    	<Host Name="Workbook"/>
+  	</Hosts>
+	<DefaultSettings>
+		<SourceLocation DefaultValue="http://ovisualuiapp.azurewebsites.net/pbiagave/main-dev.html?pbivizurl=debug"/>
+		<RequestedWidth>480</RequestedWidth>
+		<RequestedHeight>360</RequestedHeight>
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

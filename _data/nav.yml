@@ -50,11 +50,16 @@
     - title: Migrating to powerbi-visuals-tools 2.0
 
 - title: Building for Excel
-  skip: true
   pages:
     - title: Overview
+    - title: Give Feedback
     - title: Getting Started
-    - title: Building for Excel
+    - title: Supported Features
+    - title: Testing In Excel
+    - title: Best Practices
+    - title: FAQ
+    - title: Updates  
+    - title: Submitting Visuals
 
 - title: Libraries and Utilities
   pages:

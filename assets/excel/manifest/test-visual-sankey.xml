@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xsi:type="ContentApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.1">
+	<Id>e1804d80-767a-440a-b19c-748c2d2235da</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="Test-Sankey Chart"/>
+	<Description DefaultValue="Test the Power BI Sankey custom visual in Excel"/>
+	<IconUrl DefaultValue="https://az158878.vo.msecnd.net/marketing/Partner_21474836617/Product_42949680593/Asset_6f35b8c2-2882-46b7-8ea8-dc1d11eebaf5/Sankeyicon96x96.png"/>
+	<SupportUrl DefaultValue="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380777?src=office"/>
+	<Requirements>
+		<Sets>
+			<Set MinVersion="1.1" Name="DataAnalytics.PowerBI"/>
+		</Sets>
+	</Requirements>
+	<DefaultSettings>
+		<SourceLocation DefaultValue="https://visuals.azureedge.net/app-store/SankeyDiagram.1.7.1.0.pbiviz"/>
+		<RequestedWidth>480</RequestedWidth>
+		<RequestedHeight>360</RequestedHeight>
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

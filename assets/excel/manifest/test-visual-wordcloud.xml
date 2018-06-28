@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xsi:type="ContentApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.1">
+	<Id>e1804d80-767a-440a-b19c-748c2d2235dc</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="TEST-Word Cloud"/>
+	<Description DefaultValue="Test the Power BI Word Cloud custom visual in Excel"/>
+	<IconUrl DefaultValue="https://az158878.vo.msecnd.net/marketing/Partner_21474836617/Product_42949680547/Asset_2580161d-d477-43ae-be0d-523d322d328f/WordCloudicon96x96.png"/>
+	<SupportUrl DefaultValue="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380752?src=office"/>
+	<Requirements>
+		<Sets>
+			<Set MinVersion="1.1" Name="DataAnalytics.PowerBI"/>
+		</Sets>
+	</Requirements>
+	<DefaultSettings>
+		<SourceLocation DefaultValue="https://visuals.azureedge.net/app-store/WordCloud.1.5.0.0.pbiviz"/>
+		<RequestedWidth>480</RequestedWidth>
+		<RequestedHeight>360</RequestedHeight>
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

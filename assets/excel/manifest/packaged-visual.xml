@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xsi:type="ContentApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.1">
+	<Id>e1804d80-767a-440a-b19c-748c2d2235d2</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>DEVELOPER NAME</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="ENTER VISUAL NAME"/>
+	<Description DefaultValue="ENTER VISUAL DESCRIPTION"/>
+	<IconUrl DefaultValue="https://microsoft.github.io/PowerBI-visuals/assets/excel/img/dev-package-icon.png"/>
+	<SupportUrl DefaultValue="http://ENTER.SUPPORT.URL"/>
+	<Requirements>
+		<Sets>
+			<Set MinVersion="1.1" Name="DataAnalytics.PowerBI"/>
+		</Sets>
+	</Requirements>
+	<DefaultSettings>
+		<SourceLocation DefaultValue="http://ENTER.PBIVIZ.URL"/>
+		<RequestedWidth>480</RequestedWidth>
+		<RequestedHeight>360</RequestedHeight>
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

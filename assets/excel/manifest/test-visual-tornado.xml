@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xsi:type="ContentApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.1">
+	<Id>e1804d80-767a-440a-b19c-748c2d2235db</Id>
+	<Version>1.0.0.0</Version>
+	<ProviderName>Microsoft</ProviderName>
+	<DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="TEST-Tornado Chart"/>
+	<Description DefaultValue="Test the Power BI Tornado Chart custom visual in Excel"/>
+	<IconUrl DefaultValue="https://az158878.vo.msecnd.net/marketing/Partner_21474836617/Product_42949680597/Asset_3f2e96f9-17c2-4a40-976f-98ac6afc0ffc/Tornadoicon96x96.png"/>
+	<SupportUrl DefaultValue="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380768?src=office"/>
+	<Requirements>
+		<Sets>
+			<Set MinVersion="1.1" Name="DataAnalytics.PowerBI"/>
+		</Sets>
+	</Requirements>
+	<DefaultSettings>
+		<SourceLocation DefaultValue="https://visuals.azureedge.net/app-store/TornadoChart.1.1.1.0.pbiviz"/>
+		<RequestedWidth>480</RequestedWidth>
+		<RequestedHeight>360</RequestedHeight>
+	</DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

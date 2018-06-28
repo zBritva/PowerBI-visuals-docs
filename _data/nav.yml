@@ -50,6 +50,7 @@
     - title: Custom visuals for mobile
     - title: Performance tips
     - title: Migrating to powerbi-visuals-tools 2.0
+    - title: Unit tests introduction
 
 - title: Building for Excel
   skip: true

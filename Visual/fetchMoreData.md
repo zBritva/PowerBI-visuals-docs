@@ -76,6 +76,7 @@ btn_click(){
 		//request for more data if available
 		let request_accepted: bool = this.host.fetchMoreData();
 		// handle rejection
+		// for example when the 100MB limit has been reached
 		if (!request_accepted) {
 				…
 		}
@@ -83,3 +84,5 @@ btn_click(){
 
 }
 ```
+
+Please note that PowerBI will presently limit the total fetched data to 100MB to avoid client memory constraints. You can detect this limit being reached when fetchMoreData() returns 'false'.

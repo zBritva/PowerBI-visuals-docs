@@ -20,26 +20,26 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav bd-navbar-nav flex-row">
       <li class="nav-item">
-        <a class="nav-link {% if page.layout == " home " %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Home');">Home</a>
+        <a class="nav-link {% if page.layout == "home" %}active{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Home');">Home</a>
       </li>
       <li class="nav-item">
 
-        <a class="nav-link {% if page.layout == " docs " %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/overview/"
+        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/overview/"
           onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
 
       </li>
       <li class="nav-item">
 
-        <a class="nav-link {% if page.layout == " docs " %}active{% endif %}" href="{{ site.baseurl }}/api/references/ivisualhost/"
+        <a class="nav-link {% if page.layout == "api" %}active{% endif %}" href="{{ site.baseurl }}/api/references/ivisualhost/"
           onclick="ga('send', 'event', 'Navbar', 'Community links', 'API');">API</a>
 
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if page.title == " Tutorials " %}active{% endif %}" href="{{ site.baseurl }}/tutorials/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Tutorials');">Tutorials</a>
+        <a class="nav-link {% if page.layout == "tutorials" %}active{% endif %}" href="{{ site.baseurl }}/tutorials/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Tutorials');">Tutorials</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link {% if page.title == " Examples " %}active{% endif %}" href="{{ site.baseurl }}/samples/"
+        <a class="nav-link {% if page.layout == "samples" %}active{% endif %}" href="{{ site.baseurl }}/samples/"
           onclick="ga('send', 'event', 'Navbar', 'Community links', 'Samples');">Samples</a>
       </li>
 

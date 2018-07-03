@@ -2,7 +2,7 @@
 layout: docs
 title: Adding Formatting Options
 description: In this exercise, you will add formatting options to the visual.
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 In this task, you will add common properties to the visual.

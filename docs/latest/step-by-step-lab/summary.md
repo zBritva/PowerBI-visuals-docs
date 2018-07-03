@@ -2,7 +2,7 @@
 layout: docs
 title: Summary
 description:
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 

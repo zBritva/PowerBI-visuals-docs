@@ -2,7 +2,7 @@
 layout: docs
 title: Setting Up the Developer Environment
 description: In this exercise, you will install prerequisite software, and install a certificate to enable developing a custom visual.
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 

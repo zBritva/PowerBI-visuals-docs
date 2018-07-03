@@ -4,4 +4,5 @@ group :development, :test do
   gem 'jekyll', '~> 3.7.0'
   gem 'jekyll-redirect-from', '~> 0.13.0'
   gem 'jekyll-sitemap', '~> 1.2.0'
+  gem 'html-proofer', '~> 3.9.1'
 end

@@ -2,7 +2,7 @@
 layout: docs
 title: Developing a Power BI Custom Visual
 description: 
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 

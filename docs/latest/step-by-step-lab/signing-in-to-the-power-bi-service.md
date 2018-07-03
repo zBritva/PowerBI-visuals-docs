@@ -2,7 +2,7 @@
 layout: docs
 title: Signing In to the Power BI Service
 description: In this exercise, you will sign in to the Power BI service.
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 

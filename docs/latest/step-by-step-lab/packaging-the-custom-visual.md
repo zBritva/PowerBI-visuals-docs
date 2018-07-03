@@ -2,7 +2,7 @@
 layout: docs
 title: Packaging the Custom Visual
 description: In this exercise, you will enter property values for the custom visual project, update the icon file, and then package the custom visual.
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 
@@ -29,7 +29,7 @@ Displays a formatted measure value inside a circle
 11. In Visual Studio Code, ensure that all files are saved.
 12. To package the custom visual, in PowerShell, enter the following command.
 ```typescript
-this.visualSettings.circle.circleColor
+pbiviz package
 ```  
 *The package is output to the dist folder of the project. The package contain everything required to import the custom visual into either the Power BI service, or a Power BI Desktop report.    
 You have now packaged the custom visual, and it is now ready for use. In the next exercise, you will import the custom visual into your Power BI Desktop report.*

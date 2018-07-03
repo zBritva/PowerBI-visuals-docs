@@ -4,6 +4,8 @@ title: Certification process overview
 description: 
 group: submissions
 toc: true
+redirect_to:
+  - https://docs.microsoft.com/en-us/power-bi/developer/office-store
 ---
 
 # How to submit a custom visual to the Power BI visuals gallery?

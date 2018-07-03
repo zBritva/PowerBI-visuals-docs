@@ -2,7 +2,7 @@
 layout: docs
 title: Creating a Custom Visual
 description: In this exercise, you will create a custom visual, and also setup the development environment in the Power BI service.
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 

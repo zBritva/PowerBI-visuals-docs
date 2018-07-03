@@ -2,7 +2,7 @@
 layout: docs
 title: Adding Visual Elements
 description: In this exercise, you will install the D3 JavaScript library and typings, configure file dependencies, and then develop the custom visual to display a circle and text.
-group: quickstarts
+group: step-by-step-lab
 toc: true
 ---
 

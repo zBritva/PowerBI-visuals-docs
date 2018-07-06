@@ -26,9 +26,13 @@
           {{ content }}
         </main>
 
+        {% include comments.html %}
+
       </div>
     </div>
 
-    {% include scripts.html %}
+    {% if page.comments %}
+      {% include scripts.html %}
+    {% endif %}
   </body>
 </html>

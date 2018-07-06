@@ -24,15 +24,14 @@
           <h1 class="bd-title" id="content">{{ page.title | smartify }}</h1>
           <p class="bd-lead">{{ page.description | smartify }}</p>
           {{ content }}
+
+          {% if page.comments %}
+            {% include comments.html %}
+          {% endif %}
         </main>
-
-        {% include comments.html %}
-
       </div>
     </div>
 
-    {% if page.comments %}
-      {% include scripts.html %}
-    {% endif %}
+    {% include scripts.html %}
   </body>
 </html>

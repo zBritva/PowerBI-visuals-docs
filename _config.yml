@@ -15,7 +15,7 @@ destination:    ./_gh_pages
 host:           0.0.0.0
 port:           9001
 baseurl:        "/PowerBI-visuals"
-url:            "https://Microsoft.github.io/PowerBI-visuals"
+url:            "https://microsoft.github.io/PowerBI-visuals"
 encoding:       UTF-8
 exclude:
   - .git/
@@ -49,6 +49,9 @@ current_ruby_version: 4.0.0
 docs_version:         latest
 repo:                 "https://github.com/Microsoft/PowerBI-visuals-tools"
 ga_id:                "UA-116683883-1"            
+
+disqus:
+  shortname:        "powerbi-custom-visuals"
 
 cdn:
   bootstrap_css:    "https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/css/bootstrap.min.css"

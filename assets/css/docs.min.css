@@ -1,6 +1,6 @@
 .bd-navbar {
   min-height: 4rem;
-  background-color: #f1c816;
+  background-color: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -68,6 +68,11 @@
   background-repeat: no-repeat;
   background-position: .4rem .6rem;
   background-size: .75rem .75rem;
+}
+
+.bd-navbar #powerbi-logo {
+  margin-top: -20px;
+  height: 75px;
 }
 
 .bd-masthead {
@@ -412,6 +417,18 @@ h5 {
 .bd-toc-link:hover {
   color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
+}
+
+.bd-toc-item {
+  /*
+  a:before {
+    color: #000;
+    content: "\003E";
+    font-size: 1rem;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  */
 }
 
 .bd-toc-item.active {

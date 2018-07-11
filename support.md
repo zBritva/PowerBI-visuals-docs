@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: support
 title: Support
 group: support
 toc: true

@@ -6,8 +6,8 @@ group: concepts
 toc: true
 ---
 
-To migrate from the legacy APIs to the new versioned Visuals API, use [PowerBI visuals CLI tools](../../quickstarts/installation-and-environment-setup/) and [NPM API packages](#utility-libraries-using-npm-packages).
-Check the [Power BI visuals API roadmap](../../Roadmap) for current and upcomming features.
+To migrate from the legacy APIs to the new versioned Visuals API, use [PowerBI visuals CLI tools](../../step-by-step-lab/setting-up-the-developer-environment/) and [NPM API packages](#utility-libraries-using-npm-packages).
+Check the [Power BI visuals API roadmap](../../roadmap) for current and upcomming features.
 
 
 ## Utility libraries using NPM packages

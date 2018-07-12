@@ -168,7 +168,7 @@ Most visuals provide a single mapping, but you can provide multiple dataViewMapp
 ]
 ```
 
-[Learn more about DataViewMappings](../dataviewmappings.md)
+[Learn more about DataViewMappings](../dataviewmappings)
 
 
 ## Define property pane options - `objects`
@@ -186,22 +186,22 @@ Types refer to what the property will be. See below for more information about t
 }
 ```
 
-[Learn more about objects](../objects-and-properties.md)
+[Learn more about objects](../objects-and-properties)
 
 ## Handle partial highlighting - `supportsHighlight`
 
 By default this value is set to false which means your "Values" will be automatically filtered when something on the page is selected which will in turn update your visual to display just the selected value. If you want display the full data, but just highlight the selected items you need to set `supportsHighlight` to true in your capabilities.json.
 
-[Learn more about highlighting](Highlighting.md)
+[Learn more about highlighting](../../how-to-guide/highlighting)
 
 ## Handle Advanced Edit Mode - `advancedEditModeSupport`
 
 A visual can declare its support of Advanced Edit Mode.
 By default, a visual doesn't support Advanced Edit Mode, unless stated otherwise in the capabilities json.
-[Learn more about advancedEditModeSupport](AdvancedEditMode.md)
+[Learn more about advancedEditModeSupport](../advanced-edit-mode)
 
 ## Data sorting options for visual - `sorting`
 
 A visual can define its sorting behavior via its capabilities.
 By default, a visual doesn't support modifying its sorting order unless stated otherwise in the capabilities.json.
-[Learn more about sorting](Sorting.md)
+[Learn more about sorting](../../how-to-guide/sorting)

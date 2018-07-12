@@ -45,6 +45,7 @@
     - title: Adding drill down support
     - title: Allow interactions
     - title: Adding localization
+    - title: Enable Sync Slicers
     - title: Custom visuals for mobile
     - title: Performance tips
     - title: Migrating to powerbi-visuals-tools 2.0

@@ -9,6 +9,10 @@ The page contains a quick summary of the API versions.
 
 Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](../roadmap/).
 
+
+## API v1.13
+* **[Sync Slicers](../how-to-guide/enable-sync-slicers)** - Added Sync Slicers feature. [Read more](https://docs.microsoft.com/en-us/power-bi/desktop-slicers)
+
 ## API v1.12
 * Themes support
 * **[LoadMoreData](../../../api/references/fetchmoredata/)** - Load more data API overcome the hard limit of 30K data points

@@ -32,23 +32,24 @@
     
 - title: How-to guide
   pages:
-    - title: How to debug
-    - title: Bookmarks support
-    - title: Adding colors to your visual
-    - title: Adding tooltips
-    - title: Adding report page tooltips
-    - title: Launching URL
-    - title: Sorting
-    - title: Adding selection and interaction with other visuals
-    - title: Highlighting
     - title: Adding a slide control
+    - title: Adding colors to your visual
     - title: Adding drill down support
-    - title: Allow interactions
     - title: Adding localization
-    - title: Enable Sync Slicers
+    - title: Adding report page tooltips
+    - title: Adding selection and interaction with other visuals
+    - title: Adding tooltips
+    - title: Allow interactions
+    - title: Bookmarks support
     - title: Custom visuals for mobile
-    - title: Performance tips
+    - title: Enable Sync Slicers
+    - title: High-contrast support
+    - title: Highlighting
+    - title: How to debug
+    - title: Launching URL
     - title: Migrating to powerbi-visuals-tools 2.0
+    - title: Performance tips
+    - title: Sorting
 
 - title: Building for Excel
   pages:

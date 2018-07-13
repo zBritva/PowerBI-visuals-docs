@@ -50,6 +50,7 @@
     - title: Migrating to powerbi-visuals-tools 2.0
     - title: Performance tips
     - title: Sorting
+    - title: Unit tests introduction
 
 - title: Building for Excel
   pages:

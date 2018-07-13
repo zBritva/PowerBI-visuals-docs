@@ -11,7 +11,9 @@ Versions listed on this page are considered stable and should not change. For in
 
 
 ## API v1.13
-* **[Sync Slicers](../how-to-guide/enable-sync-slicers)** - Added Sync Slicers feature. [Read more](https://docs.microsoft.com/en-us/power-bi/desktop-slicers)
+* **[Sync Slicers](../how-to-guide/enable-sync-slicers)** - Added Sync Slicers feature. Note that it’ll work only for single field slicers for now due to PBI current code state. [Read more](https://docs.microsoft.com/en-us/power-bi/desktop-slicers)
+* Accessibility: [High-contrast support](../how-to-guide/high-contrast-support) 
+* Accessibility: Allow Keyboard Focus flag
 
 ## API v1.12
 * Themes support

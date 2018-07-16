@@ -1,0 +1,24 @@
+// Local docs variables
+
+$font-family-base: Segoe UI,SegoeUI,Segoe WP,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+$bd-purple:        #563d7c !default;
+$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%) !default;
+$bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%) !default;
+$bd-dark:          #2a2730 !default;
+$bd-download:      #ffe484 !default;
+$bd-info:          #5bc0de !default;
+$bd-warning:       #f0ad4e !default;
+$bd-danger:        #d9534f !default;
+$bd-yellow:      #f1c816 !default;
+
+$bd-white: #fff;
+
+$table-cell-padding: 10px;
+$table-th-font-weight: 500;
+$table-th-background: #778f9c;
+
+$table-tr-background: #f8f9fa;
+$table-tr-border-top: 1px solid #cfd8dc;
+
+$table-td-link: #039be5;

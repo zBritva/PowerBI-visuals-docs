@@ -1,9 +1,10 @@
-@import "../../scss/functions";
-@import "../../scss/variables";
-@import "../../scss/mixins";
+@import "functions";
+@import "variables";
+@import "mixins";
 
 // Load docs components
-@import "variables";
+@import "variables_local";
+@import "reboot";
 @import "nav";
 @import "masthead";
 @import "content";

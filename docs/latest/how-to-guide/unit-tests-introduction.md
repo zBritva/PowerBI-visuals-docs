@@ -280,7 +280,7 @@ npm run test
 
 karma.js will run chrome browser and will execute the test case.
 
-![](./images/KarmaJSChrome.png)
+![](../images/KarmaJSChrome.png)
 
 In command line you will get following output:
 
@@ -348,7 +348,7 @@ The `SampleBarChartDataBuilder` class extends `TestDataViewBuilder` and implemen
 
 When you put data into data field buckets Power BI produces a categorical dataview object based on your data.
 
-![](./images/FieldsBuckets.png)
+![](../images/FieldsBuckets.png)
 
 In unit tests, you don't have Power BI core functions to reproduce it. But you need to map your static data to categorical dataview. And `TestDataViewBuilder` class will help you in that.
 
@@ -501,19 +501,19 @@ Lines        : 52.83% ( 112/212 )
 
 And you must see started Chrome Browser with your visual.
 
-![](./images/KarmaJSChromeUTRunned.png)
+![](../images/KarmaJSChromeUTRunned.png)
 
 Make attention coverage summary increased. Please open `coverage\index.html` to find out more about current code coverage
 
-![](./images/CodeCoverageIndex.png)
+![](../images/CodeCoverageIndex.png)
 
 Or in scope of `src` folder
 
-![](./images/CodeCoverageSrcFolder.png)
+![](../images/CodeCoverageSrcFolder.png)
 
 In the scope of file, you can look at source code. `Coverage` utils would mark row background to red if a code were not executed during running of unit tests.
 
-![](./images/CodeCoverageVisualSrc.png)
+![](../images/CodeCoverageVisualSrc.png)
 
 But code coverage doesn't mean that you have good functionality coverage of visual. One simple unit test provided over 96% of coverage in `src\visual.ts`.
 

@@ -1,3 +1,5 @@
+> This documentation is deprecated. Please use new [PowerBI Custom Visuals](https://microsoft.github.io/PowerBI-visuals/)  site instead.
+
 # Power BI Visuals
 
 Learn how to build Power BI visuals!

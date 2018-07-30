@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Migrating to powerbi-visuals-tools 2.0
+title: Migrating to powerbi-visuals-tools 3.0
 description: Getting started with new version of powerbi-visuals-tools (Preview)
 group: how-to-guide
 toc: true
@@ -48,11 +48,11 @@ The sample of sampleBarChart visual and correspond [changes](https://github.com/
 
 ## How to install Power BI Custom Visuals API
 
-The type definitions for Power BI Custom Visuals API are available in [`@types/powerbi-visuals-tools`](https://www.npmjs.com/package/@types/powerbi-visuals-tools) package. The version of package matches API version of Power BI Custom Visuals.
+The type definitions for Power BI Custom Visuals API are available in [`powerbi-visuals-api`](https://www.npmjs.com/package/powerbi-visuals-api) package. The version of package matches API version of Power BI Custom Visuals.
 
-Add `@types/powerbi-visuals-tools` into dependencies of project by executing command 
-`npm install --save-dev @types/powerbi-visuals-tools`.
-And you should remove the link to old API type definitions. Because types from `@types` include automatically by TS compiler. Correspond changes are in [this](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/package.json#L14) line of `package.json`.
+Add `powerbi-visuals-api` into dependencies of project by executing command 
+`npm install --save-dev powerbi-visuals-api`.
+And you should remove the link to old API type definitions. Because types from `powerbi-visuals-api` include automatically by webpack. Correspond changes are in [this](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/package.json#L14) line of `package.json`.
 
 ## Update `tsconfig.json`
 
@@ -69,7 +69,8 @@ If you use [utils](https://www.npmjs.com/search?q=powerbi-visuals-utils) you sho
 
 Execute the command `npm install powerbi-visuals-utils-<UTILNAME>@beta --save`. (Ex. `npm install powerbi-visuals-utils-dataviewutils@beta --save` ) to get the new version with external modules of TypeScript.
 
-TODO addi link to mekkochart repo PR with converting
+You can faid examle in MekkoChart [repository](https://github.com/Microsoft/powerbi-visuals-mekkochart/tree/dev/beta).
+This visual uses all utils.
 
 ## Changes inside of the visuals sources
 
@@ -87,13 +88,13 @@ module powerbi.extensibility.visual {
 }
 ```
 
-2. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L3) Power BI custom visual API definitions.
+2. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L2) Power BI custom visual API definitions.
 
 ```typescript
-import powerbi from "powerbi-visuals-tools";
+import powerbi from "powerbi-visuals-api";
 ```
 
-3. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L11-L24) necessary interfaces or classes from `powerbi` internal module.
+3. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L12-L23) necessary interfaces or classes from `powerbi` internal module.
 
 ```typescript
 import PrimitiveValue = powerbi.PrimitiveValue; 
@@ -110,10 +111,16 @@ import VisualTooltipDataItem = powerbi.extensibility.VisualTooltipDataItem;
 import ISelectionManager = powerbi.extensibility.ISelectionManager; 
 ```
 
-4. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L2) D3.js library
+4. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L1) D3.js library
 
 ```typescript
 import * as d3 from "d3";
+```
+
+Or import only required d3 library modules
+
+```typescript
+import { max, min } from "d3-array";
 ```
 
 5. [Import](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/src/barChart.ts#L4-L10) utils, classes, interfaces defined in the visual project to the main source file
@@ -130,7 +137,7 @@ import {
 
 ### `externalJS` in `pbiviz.json`
 
-The tools [doesn't require](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L20) a list of `externalJS` to load into the visual bundle.
+The tools [doesn't require](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L20) a list of `externalJS` to load into the visual bundle. Because webpack includes all imported libs.
 
 **The `externalJS` in `pbivi.json` should be empty.**
 

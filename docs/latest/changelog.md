@@ -17,8 +17,8 @@ Versions listed on this page are considered stable and should not change. For in
 
 ## API v1.12
 * Themes support
-* **[LoadMoreData](../../../api/references/fetchmoredata/)** - Load more data API overcome the hard limit of 30K data points
-* **[Canvas tooltips](../how-to-guide/adding-report-page-tooltips/#support-canvas-tooltips)** - Added LaunchUrl API call support
+* **[fetchMoreData](../../../api/references/fetchmoredata/)** - Fetch More Data API overcome the hard limit of 30K data points
+* **[Canvas tooltips](../how-to-guide/adding-report-page-tooltips/#support-canvas-tooltips)** - Canvas tooltip API
 
 ## API v1.11
 * **[FilterManager](FilterManager.md)** - Filter Manager
@@ -29,7 +29,7 @@ Versions listed on this page are considered stable and should not change. For in
 * Added Authentication API call support
 
 ## API v1.9
-* **[LaunchUrl API](../how-to-guide/launching-url/)** - Added LaunchUrl API call support
+* **[launchUrl API](../how-to-guide/launching-url/)** - Added launchUrl API call support
 
 ## API v1.8
 * Added new type "fillRule" (gradient) support in capabilities schema

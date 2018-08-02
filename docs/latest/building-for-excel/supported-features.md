@@ -73,7 +73,7 @@ Read more about API Methods and Properties [here](../../../../api/references/ivi
 | applyJsonFilter           | No                 |
 | createLocalizationManager | No                 |
 | fetchMoreData             | No                 |
-| launchURL                 | No                 |
+| launchUrl                 | No                 |
 | refreshHostData           | No                 |
 
 | Property                 | Supported in Excel |

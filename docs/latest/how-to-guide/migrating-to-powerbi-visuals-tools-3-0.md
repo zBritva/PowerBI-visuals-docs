@@ -6,7 +6,7 @@ group: how-to-guide
 toc: true
 ---
 
-Power BI Visuals Tools 2.0.x brings modern [ECMAScript 2015 modules](https://www.typescriptlang.org/docs/handbook/modules.html) into TypeScript code.
+Power BI Visuals Tools 3.0.x brings modern [ECMAScript 2015 modules](https://www.typescriptlang.org/docs/handbook/modules.html) into TypeScript code.
 
 In TypeScript 1.5 the nomenclature has changed. [Read more about TypeScript modules](https://www.typescriptlang.org/docs/handbook/modules.html).
 
@@ -30,16 +30,16 @@ The sample of sampleBarChart visual and correspond [changes](https://github.com/
     "name": "visual",
     "version": "1.2.3",
     "scripts": {
-        "postinstall": "pbiviz update 1.12.0",
+        "postinstall": "pbiviz update 1.13.0",
         "pbiviz": "pbiviz",
         "start": "pbiviz start",
         "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\"",
         "test": "pbiviz package --resources --no-minify --no-pbiviz"
     },
     "devDependencies": {
-      "@types/d3": "3.5.36",
-      "d3": "3.5.5",
-      "powerbi-visuals-tools": "^2.0.1",
+      "@types/d3": "5.0.0",
+      "d3": "5.5.0"
+      "powerbi-visuals-tools": "^3.0.1",
       "tslint": "^4.4.2",
       "tslint-microsoft-contrib": "^4.0.0"
     }

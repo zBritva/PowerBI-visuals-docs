@@ -12,39 +12,32 @@ The main interface provided by visual constructor method.
 
 | Method | Return type | Brief description |
 |---|---|---|
-| [applyJsonFilter(filter, objectName, propertyName, action)](../applyjsonfilter/) | void | Apply JSON Filter to the host |
-| createLocalizationManager() | ILocalizationManager | Create a an instance of ILocalizationManager |
-| createSelectionManager() | ISelectionManager | Create a an instance of ISelectionManager |
-| [fetchMoreData()](../fetchmoredata/) | boolean | Load more data |
-| [launchUrl(url)](../launchurl) | void | Open an extenal link in a browser|
-| persistProperties(changes) | void | Save properties in a host |
-| refreshHostData() | void | Trigget the host to refresh data |
-| createSelectionIdBuilder() | ISelectionIdBuilder | Create a an instance of ISelectionIdBuilder |
+| [applyJsonFilter(filter, objectName, propertyName, action)](../applyjsonfilter/) | void | Applies a JSON Filter to the host |
+| createLocalizationManager() | ILocalizationManager | Creates an instance of ILocalizationManager |
+| createSelectionManager() | ISelectionManager | Creates an instance of ISelectionManager |
+| [fetchMoreData()](../fetchmoredata/) | boolean | Fetches more data from a data-set |
+| [launchUrl(url)](../launchurl) | void | Opens an external URL in a browser|
+| persistProperties(changes) | void | Saves properties in a host |
+| createSelectionIdBuilder() | ISelectionIdBuilder | Creates an instance of ISelectionIdBuilder |
 
 
 #### Properties
 
 | Property | type | Brief description |
 |-------|--------|---------|
-| [allowInteractions](../../../docs/latest/how-to-guide/allow-interactions/) | boolean | |
-| authenticationService | IAuthenticationService | |
-| colorPalette | IColorPalette | |
-| instanceId | string | |
-| locale | string | |
-| tooltipService | ITooltipService | |
+| [allowInteractions](../../../docs/latest/how-to-guide/allow-interactions/) | boolean | Indicates whether the visual should allow visual interactions |
+| colorPalette | IColorPalette | Power BI color palette |
+| locale | string | Returns current locale (en-US, etc.) |
+| tooltipService | ITooltipService | Returns an instance of ITooltipService |
 
 
 #### Sample
 
  
 ```typescript
-
 export class SomeVisualName implements IVisual {
-
     constructor(options: VisualConstructorOptions) {
-        this.host = options.host;
-
-        ...;
-
-
+        const { host } = options;
+    }
+}
 ```

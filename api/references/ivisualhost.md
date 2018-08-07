@@ -25,7 +25,7 @@ The main interface provided by visual constructor method.
 
 | Property | type | Brief description |
 |-------|--------|---------|
-| [allowInteractions](../../../docs/latest/how-to-guide/allow-interactions/) | boolean | Indicates whether the visual should allow visual interactions |
+| [allowInteractions](../../../docs/how-to-guide/allow-interactions/) | boolean | Indicates whether the visual should allow visual interactions |
 | colorPalette | IColorPalette | Power BI color palette |
 | locale | string | Returns current locale (en-US, etc.) |
 | tooltipService | ITooltipService | Returns an instance of ITooltipService |

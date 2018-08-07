@@ -22,7 +22,7 @@
       </li>
       <li class="nav-item">
 
-        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/overview/"
+        <a class="nav-link {% if page.layout == "docs" %}active{% endif %}" href="{{ site.baseurl }}/docs/overview/"
           onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
 
       </li>
@@ -60,8 +60,7 @@
         v{{ site.current_version }}
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-        <a class="dropdown-item active" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/">API v{{ site.current_version }}</a>
-        <!--<a class="dropdown-item" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/">API v2.0 [PREVIEW]</a>-->
+        <a class="dropdown-item active" href="{{ site.baseurl }}/docs/">API v{{ site.current_version }}</a>
       </div>
     </li>
 

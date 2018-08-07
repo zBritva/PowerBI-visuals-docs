@@ -15,7 +15,7 @@ destination:    ./_gh_pages
 host:           0.0.0.0
 port:           9001
 baseurl:        "/PowerBI-visuals"
-url:            "https://microsoft.github.io/PowerBI-visuals"
+url:            "https://microsoft.github.io"
 encoding:       UTF-8
 exclude:
   - .git/
@@ -45,7 +45,6 @@ appsource:          "https://appsource.microsoft.com/en-us/marketplace/apps?prod
 
 # Custom variables
 current_version:      1.13
-docs_version:         latest
 repo:                 "https://github.com/Microsoft/PowerBI-visuals-tools"
 ga_id:                "UA-116683883-1"            
 

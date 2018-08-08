@@ -35,32 +35,32 @@ Sideloading an Office Add-in begins by pointing to a Shared Folder Catalog of ma
 1. If you would like try out some example visuals in Excel, skip ahead to the [Try Example Visuals](#try-example-visuals) section.
 
 ## Sideload the Custom Visual Developer Tool
-1. Save [this manifest](../../../../assets/excel/manifest/dev-tool-addin.xml) to your Add-In Shared Folder Catalog.  The `SourceLocation` of this manifest points to a specialized developer service that will look for the locally hosted visual you will run in step 2.
+1. Save [this manifest](../../../assets/excel/manifest/dev-tool-addin.xml) to your Add-In Shared Folder Catalog.  The `SourceLocation` of this manifest points to a specialized developer service that will look for the locally hosted visual you will run in step 2.
 1. In Power Shell, navigate to your visual’s project folder and run 
 ```typescript
    pbiviz start
 ```
-as if you were testing your visual in Power BI (see [this page](../../quickstarts/creating-a-custom-visual/#testing-the-custom-visual) for testing visuals in Power BI).  
+as if you were testing your visual in Power BI (see [this page](../../step-by-step-lab/creating-a-custom-visual/#testing-the-custom-visual) for testing visuals in Power BI).  
 1. In Excel, go to **Insert > My Add-Ins** to launch the Office Add-Ins dialog window.  
-![Insert Add-Ins](../../../../assets/excel/img/addin-insert-ribbon.png)
+![Insert Add-Ins](../../../assets/excel/img/addin-insert-ribbon.png)
 1. Navigate to the *Shared Folder* tab, select the custom visual developer tool, and click **Add**.  
 *Note: If the custom visual developer tool does not appear, click the Refresh link in the upper-right.*  
-![Developer Tool Insert](../../../../assets/excel/img/dev-tool-addin-insert.png)
+![Developer Tool Insert](../../../assets/excel/img/dev-tool-addin-insert.png)
 1. You can now attach a debugger to your visual as you test the Excel experience.  
 *Recommendation: Set your debugger to break on caught exceptions.  This will stop code execution wherever an error happens and allow you to debug from there.*  
 <a href="https://docs.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10" target="_blank">This page</a> provides instructions for debugging Add-Ins with Window's built-in F12 developer tools
 
-<!-- 1. Save [this manifest](../../../../assets/excel/manifest/dev-tool-visual.xml) to your Add-In Shared Folder Catalog.  The `SourceLocation` of this manifest points to a specialized developer service that will look for the locally hosted visual you will run in step 2.
+<!-- 1. Save [this manifest](../../../assets/excel/manifest/dev-tool-visual.xml) to your Add-In Shared Folder Catalog.  The `SourceLocation` of this manifest points to a specialized developer service that will look for the locally hosted visual you will run in step 2.
 1. In Power Shell, navigate to your visual’s project folder and run 
 ```typescript
    pbiviz start
 ```
-as if you were testing your visual in Power BI (see [this page](../../quickstarts/creating-a-custom-visual) for testing visuals in Power BI).  
+as if you were testing your visual in Power BI (see [this page](../../step-by-step-lab/creating-a-custom-visual) for testing visuals in Power BI).  
 1. In Excel, go to **Insert > Custom Visuals > More Custom Visuals** to launch the "Custom Visuals" tab of the Insert Chart dialog window.  
-![Insert Ribbon](../../../../assets/excel/img/cv-insert-ribbon.png)
+![Insert Ribbon](../../../assets/excel/img/cv-insert-ribbon.png)
 1. Select the custom visual developer tool and click **OK**.  
 *Note: If the custom visual developer tool does not appear, close and reopen the Insert Chart dialog window.*  
-![Developer Tool Insert](../../../../assets/excel/img/dev-tool-visual-insert.png)
+![Developer Tool Insert](../../../assets/excel/img/dev-tool-visual-insert.png)
 1. You can now attach a debugger to your visual as you test the Excel experience.  
 *Recommendation: Set your debugger to break on caught exceptions.  This will stop code execution wherever an error happens and allow you to debug from there.*
 <a href="https://docs.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10" target="_blank">This page</a> provides instructions for debugging Add-Ins with Window's built-in F12 developer tools
@@ -76,28 +76,28 @@ The .pbiviz file is the final format used for publishing visuals to the store.  
 
 After creating your .pbiviz file:
 1. Save your .pbiviz to a secure server location (HTTPS) that is configured to enable <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">cross-origin resource sharing (CORS)</a>.
-1. Save [this manifest](../../../../assets/excel/manifest/packaged-visual.xml) to your Add-In Shared Folder Catalog
+1. Save [this manifest](../../../assets/excel/manifest/packaged-visual.xml) to your Add-In Shared Folder Catalog
 1. Modify the `SourceLocation` of the manifest to the URL of your .pbiviz file
 1. If you would like, modify additional metadata for your visual.  
 *Learn more about Office Add-in manifests <a href="https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests?tabs=tabid-1" target="_blank">here</a>.*
   * `DisplayName` is the name used for your visual in Excel.
   * `IconUrl` is the icon used for your visual in Excel.
 1. In Excel, go to **Insert > Custom Visuals > More Custom Visuals** to launch the "Custom Visuals" tab of the Insert Chart dialog window  
-![Insert Ribbon](../../../../assets/excel/img/cv-insert-ribbon.png)
+![Insert Ribbon](../../../assets/excel/img/cv-insert-ribbon.png)
 1. Select your visual and click **OK**  
 *Note:  If your visual does not appear, close and reopen the Insert Chart dialog window.*
 
 ## Try Example Visuals
 1. If you have not already, follow the [Set Up Excel for side loading Add-Ins](#set-up-excel-for-side-loading-add-ins) instructions above. 
 1. Save the below manifests to your Add-In Shared Folder Catalog
-  * [Sankey Chart](../../../../assets/excel/manifest/test-visual-sankey.xml)
-  * [Tornado Chart](../../../../assets/excel/manifest/test-visual-tornado.xml)
-  * [Word Cloud](../../../../assets/excel/manifest/test-visual-wordcloud.xml)
+  * [Sankey Chart](../../../assets/excel/manifest/test-visual-sankey.xml)
+  * [Tornado Chart](../../../assets/excel/manifest/test-visual-tornado.xml)
+  * [Word Cloud](../../../assets/excel/manifest/test-visual-wordcloud.xml)
 1. In Excel, select some spreadsheet data and go to **Insert > Custom Visuals > More Custom Visuals** to launch the "Custom Visuals" tab of the Insert Chart dialog window.  
-  *Download [this file](../../../../assets/excel/workbook/test-visuals-data.xlsx) to get sample data sets well suited for these example custom visuals*  
-![Insert Ribbon](../../../../assets/excel/img/cv-insert-ribbon.png)
+  *Download [this file](../../../assets/excel/workbook/test-visuals-data.xlsx) to get sample data sets well suited for these example custom visuals*  
+![Insert Ribbon](../../../assets/excel/img/cv-insert-ribbon.png)
 1. Select an example visual and click **OK**  
 *Note:  If an example visual does not appear, close and reopen the Insert Chart dialog window.*  
-![Test Visual Insert](../../../../assets/excel/img/test-visual-insert.png)
+![Test Visual Insert](../../../assets/excel/img/test-visual-insert.png)
 
 Next: [Best Practices](../best-practices/)

@@ -62,30 +62,27 @@ In this task, you will upload a Power BI Desktop report, and then edit the repor
 6. Select the **Local File** tile.  
 ![](../images/local-file.png)
 
-7. In the **Choose File to Upload window**, upload [this Excel file](https://github.com/uve/circlecard/raw/master/sample_dataset/GDP.xlsx).
+7. In the **Choose File to Upload window**, upload [this PBIX sample report](../images/US_Sales_Analysis.pbix).
 
-8. Find **Import Excel Data to Power BI**, and then click **Import**.  
-*This Power BI Desktop dataset is a light-weight solution containing just two fields to support the testing of the custom visual.*
+8. Once uploaded, in the **Navigation** pane, select the **My Workspace** -> **Datasets**. Then click on **Create Report** for uploaded **US_Sales_Analysis** dataset.
 
-9. Once uploaded, in the **Navigation** pane, select the **My Workspace** -> **Datasets**. Then click on **Create Report** for your dataset.
-
-10. To edit the report, on the toolbar, click **Edit Report**.  
+9. To edit the report, on the toolbar, click **Edit Report**.  
 ![](../images/edit-report.png)
 
-11. In the **Visualizations** pane, select the **Developer Visual**.  
+10. In the **Visualizations** pane, select the **Developer Visual**.  
 ![](../images/visualizations-pane.png)  
 *This visualization represents the custom visual that you started on your computer. It is only available when the developer settings have been enabled.*
 
-12. Notice that a visualization was added to the report canvas.  
+11. Notice that a visualization was added to the report canvas.  
 ![](../images/update-count.png)  
 *This is a very simple visual that displays the number of times its **Update** method has been called. At this stage the visual does not yet retrieve any data.*
 
-13. In the **Fields** pane, check the **Quantity** field to add it to the visual.  
+12. In the **Fields** pane, check the **Quantity** field to add it to the visual.  
 ![](../images/fields-pane.png)  
 
-14. Resize the visual, and notice that the update value increments.
+13. Resize the visual, and notice that the update value increments.
 
-15. In PowerShell, to stop the custom visual running, enter **Ctrl+C**, and when prompted to terminate
+14. In PowerShell, to stop the custom visual running, enter **Ctrl+C**, and when prompted to terminate
 the batch job, enter **Y**, and then press **Enter**.  
 *Tip: During the development and testing of your custom visual, if at any stage you receive errors or unexpected behavior, you should stop and restart the custom visual. Issues can be due to an inconsistent project build, often due to dependencies being added—or, because project files have not yet been saved.*  
 

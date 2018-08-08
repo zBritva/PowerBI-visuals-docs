@@ -40,6 +40,7 @@ Thumbs.db
 
 # Jekyll metadata and extra config file for `github` script
 docs/.jekyll-metadata
+.jekyll-metadata
 twbsconfig.yml
 
 # Folders to ignore

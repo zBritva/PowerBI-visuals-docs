@@ -10,12 +10,12 @@ Custom visuals for Excel is in preview.  **WE WANT YOUR FEEDBACK** on how to mak
 
 * In Excel, go File > Feedback and select the appropriate feedback option.  
 Include the term **`custom visual`** in your feedback  
-![Send a Smile](../../../../assets/excel/img/send-a-smile.png)
+![Send a Smile](../../../assets/excel/img/send-a-smile.png)
 * Visit the [Custom Visuals Development Discussion](https://community.powerbi.com/t5/Custom-Visuals-Development/bd-p/CustomVisualsDevelopmentDiscussion "Custom Visuals Development Discussion") in the Power BI Community.  
 Include **`Excel`** in your subject and add the **`Excel`** label to your post.
 
 When reporting bugs, be sure to include details on your version of Office and the steps that led to your problem.  
 *Check your version of Office by going to File > Account > About Excel*  
-![Office Version](../../../../assets/excel/img/office-version.png)
+![Office Version](../../../assets/excel/img/office-version.png)
 
 Next: [Getting Started](../getting-started/)

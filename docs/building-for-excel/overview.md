@@ -15,6 +15,6 @@ As a preview, custom visuals are only available to Office 365 users that are:
 *Learn more about the Office Insider Program, including how to join the program, by visiting <a href="https://products.office.com/en-us/office-insider?tab=Windows-Desktop" target="_blank">this site</a>.*
 1.	Using the Office for Windows Desktop Build 10313.20013 or greater  
 *Check your version of Office by going to File > Account > About Excel*  
-![Office Version](../../../../assets/excel/img/office-version.png)
+![Office Version](../../../assets/excel/img/office-version.png)
 
 Next: [Give Feedback](../give-feedback/)

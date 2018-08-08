@@ -63,7 +63,7 @@ Read more about Objects [here](../../concepts/objects-and-properties/).
 | geography   | No                 |
 
 ## API Methods/Properties
-Read more about API Methods and Properties [here](../../../../api/references/ivisualhost/).
+Read more about API Methods and Properties [here](../../../api/references/ivisualhost/).
 
 | Method                    | Supported in Excel |
 | ------------------------- | ------------------ |

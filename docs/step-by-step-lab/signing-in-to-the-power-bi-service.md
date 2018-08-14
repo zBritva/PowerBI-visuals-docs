@@ -4,6 +4,8 @@ title: Signing In to the Power BI Service
 description: In this exercise, you will sign in to the Power BI service.
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/signing-in-to-the-power-bi-service/
 ---
 
 1. To open Internet Explorer, on the taskbar, click the Internet Explorer program shortcut.  

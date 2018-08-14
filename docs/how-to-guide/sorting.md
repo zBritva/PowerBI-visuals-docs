@@ -4,6 +4,8 @@ title: Sorting
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/sorting/
 ---
 
 `Sorting` specifies the default sorting behavior for the visual.

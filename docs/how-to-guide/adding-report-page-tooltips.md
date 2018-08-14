@@ -4,6 +4,8 @@ title: Adding tooltips to custom visual
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-report-page-tooltips/
 ---
 
 # Adding Report Page Tooltips support to Bar Chart

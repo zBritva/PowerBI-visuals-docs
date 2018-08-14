@@ -4,6 +4,8 @@ title: Give Feedback
 description: 
 group: building-for-excel
 toc: true
+redirect_from:
+  - /docs/latest/building-for-excel/give-feedback/
 ---
 
 Custom visuals for Excel is in preview.  **WE WANT YOUR FEEDBACK** on how to make this a better experience for developers and end users.  So please use the channels below to raise suggestions/issues/concerns you have around supported features, bugs, UI, documentation or anything else you identify in the custom visual experience.

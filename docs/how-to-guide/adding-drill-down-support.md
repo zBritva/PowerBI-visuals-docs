@@ -4,6 +4,8 @@ title: Adding Drill-Down support
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-drill-down-support/
 ---
 
 Custom visuals are capable of using PowerBI's drill down.

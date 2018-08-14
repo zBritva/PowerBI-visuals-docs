@@ -4,6 +4,8 @@ title: Overview
 description: Thank you for your interest in custom visuals for Excel! 
 group: building-for-excel
 toc: true
+redirect_from:
+  - /docs/latest/building-for-excel/overview/
 ---
 
 We want developers to bring the same great enthusiasm to data visualization in Excel that you brought to Power BI!

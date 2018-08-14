@@ -4,6 +4,8 @@ title: Creating a Custom Visual
 description: In this exercise, you will create a custom visual, and also setup the development environment in the Power BI service.
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/creating-a-custom-visual/
 ---
 
 *The full source code for this tutorial is avalable [here](https://github.com/uve/circlecard)*

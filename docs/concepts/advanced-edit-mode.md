@@ -4,6 +4,8 @@ title: Advanced Edit Mode
 description: 
 group: concepts
 toc: true
+redirect_from:
+  - /docs/latest/concepts/advanced-edit-mode/
 ---
 
 Visuals that require advanced UI controls can declare support of Advanced Edit Mode.

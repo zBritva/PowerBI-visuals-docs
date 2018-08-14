@@ -4,6 +4,8 @@ title: Adding external libraries
 description: 
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/adding-external-libraries/
 ---
 
 * [Including JavaScript files](#including-javascript-files)

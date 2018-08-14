@@ -4,6 +4,8 @@ title: TestUtils
 description: TestUtils is a set of mocks and fakes in order to simplify unit testing for Power BI custom visuals
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/testutils/
 ---
 
 ## Usage

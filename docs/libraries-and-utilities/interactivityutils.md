@@ -4,6 +4,8 @@ title: InteractivityUtils
 description: InteractivityUtils is a set of interfaces for creating powerbi custom visuals
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/interactivityutils/
 ---
 
 ## Usage

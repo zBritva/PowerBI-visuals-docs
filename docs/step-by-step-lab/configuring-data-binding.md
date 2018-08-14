@@ -4,6 +4,8 @@ title: Configuring Data Binding
 description: In this exercise, you will first define the data roles and data view mappings, and then modify the custom visual logic to display the value and display name of a measure.
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/configuring-data-binding/
 ---
 
 ## Configuring the Capabilities

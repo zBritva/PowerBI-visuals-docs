@@ -4,6 +4,8 @@ title: Importing the Custom Visual
 description: In this exercise, you will open the Power BI Desktop report, and then import the Circle Card custom visual. You will then modify the two card visualizations to become Circle Cards, and then modify the circle format options.
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/importing-the-custom-visual/
 ---
 
 In this task, you will open the Power BI Desktop report, and import the Circle Card custom visual.

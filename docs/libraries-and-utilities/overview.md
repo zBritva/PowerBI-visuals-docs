@@ -4,6 +4,8 @@ title: Utilities
 description: Utility libraries
 group: utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/overview/
 ---
 
 * [Color Utils](../colorutils)

@@ -4,6 +4,8 @@ title: Adding colors to your visual
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-colors-to-your-visual/
 ---
 
 Color is exposed as one of the services available on `IVisualHost`.

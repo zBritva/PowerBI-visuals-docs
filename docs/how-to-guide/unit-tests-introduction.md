@@ -4,6 +4,8 @@ title: Custom visuals unit test
 description: Article describes how to write unit tests for Power BI Custom Visuals
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/unit-tests-introduction/
 ---
 
 # Custom visuals unit test

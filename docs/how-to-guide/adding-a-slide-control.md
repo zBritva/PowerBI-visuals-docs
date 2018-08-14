@@ -4,6 +4,8 @@ title: Adding a slide control
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-a-slide-control/
 ---
 
 A Slider control was added to the sample BarChart for reference.

@@ -4,6 +4,8 @@ title: SVGUtils
 description: SVGUtils is a set of functions and classes in order to simplify SVG manipulations for Power BI custom visuals
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/svgutils/
 ---
 
 ## Usage

@@ -4,6 +4,8 @@ title: Getting Started
 description: 
 group: building-for-excel
 toc: true
+redirect_from:
+  - /docs/latest/building-for-excel/getting-started/
 ---
 
 **Just want to try out some custom visuals in Excel?**  

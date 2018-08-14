@@ -3,6 +3,8 @@ layout: docs
 title: Roadmap
 group: roadmap
 toc: true
+redirect_from:
+  - /docs/latest/roadmap/
 ---
 
 * MultiColumn JsonFilter

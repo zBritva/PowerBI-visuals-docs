@@ -4,6 +4,8 @@ title: ColorUtils
 description: ColorUtils is a set of functions and classes in order to simplify color manipulations for Power BI custom visuals
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/colorutils/
 ---
 
 ## Usage

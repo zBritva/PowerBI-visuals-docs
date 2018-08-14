@@ -4,6 +4,8 @@ title: Migrating to versioned API guide
 description: 
 group: concepts
 toc: true
+redirect_from:
+  - /docs/latest/concepts/migrating-to-versioned-api-guide/
 ---
 
 To migrate from the legacy APIs to the new versioned Visuals API, use [PowerBI visuals CLI tools](../../step-by-step-lab/setting-up-the-developer-environment/) and [NPM API packages](#utility-libraries-using-npm-packages).

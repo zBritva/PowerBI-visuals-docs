@@ -4,6 +4,8 @@ title: Packaging the Custom Visual
 description: In this exercise, you will enter property values for the custom visual project, update the icon file, and then package the custom visual.
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/packaging-the-custom-visual/
 ---
 
 In this task, you will enter property values for the custom visual project, update the icon file, and then package the custom visual.

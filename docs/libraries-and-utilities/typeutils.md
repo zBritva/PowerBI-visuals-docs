@@ -4,6 +4,8 @@ title: TypeUtils
 description: TypeUtils is a set of functions and classes in order to extend the basic types for Power BI custom visuals
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/typeutils/
 ---
 
 ## Usage

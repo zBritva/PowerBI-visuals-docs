@@ -4,6 +4,8 @@ title: Adding High-Contrast Mode Support
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/high-contrast-support/
 ---
 
 Windows *High-Contrast* setting makes text and apps easier to see by using more distinct colors.

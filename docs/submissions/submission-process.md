@@ -4,6 +4,8 @@ title: Certification process overview
 description: 
 group: submissions
 toc: true
+redirect_from:
+  - /docs/latest/submissions/submission-process/
 redirect_to:
   - https://docs.microsoft.com/en-us/power-bi/developer/office-store
 ---

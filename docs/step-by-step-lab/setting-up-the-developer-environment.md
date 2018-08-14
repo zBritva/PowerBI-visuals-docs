@@ -4,6 +4,8 @@ title: Setting Up the Developer Environment
 description: In this exercise, you will install prerequisite software, and install a certificate to enable developing a custom visual.
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/setting-up-the-developer-environment/
 ---
 
 ## Installing Visual Studio Code

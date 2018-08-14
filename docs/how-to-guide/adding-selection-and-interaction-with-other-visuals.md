@@ -4,6 +4,8 @@ title: Adding Selection and interaction with other visuals
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-selection-and-interaction-with-other-visuals/
 ---
 
 Selection provides the ability for the user to interact with your visual and also interact with other visuals.

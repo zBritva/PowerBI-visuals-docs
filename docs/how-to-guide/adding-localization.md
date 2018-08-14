@@ -4,6 +4,8 @@ title: Getting the locale in Power BI for custom visuals
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-localization/
 ---
 
 Visuals can retrieve the PowerBI locale, in order to localize their content to the relevant language.

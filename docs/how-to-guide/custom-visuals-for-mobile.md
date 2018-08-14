@@ -4,6 +4,8 @@ title: Mobile Development
 description: How to create mobile-friendly custom visual
 group: concepts
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/custom-visuals-for-mobile/
 ---
 
 One of Power BI's major strengths is staying connected to your data from anywhere, anytime, with the Power BI app for Windows, iOS, and Android. Business users can get a 360° view of your business data on the go - at the touch of their fingertips.  

@@ -4,6 +4,8 @@ title: Objects and properties
 description: 
 group: concepts
 toc: true
+redirect_from:
+  - /docs/latest/concepts/objects-and-properties/
 ---
 
 Objects describe customizable properties associated with the visual.

@@ -4,6 +4,8 @@ title: Using Capabilities
 description: 
 group: concepts
 toc: true
+redirect_from:
+  - /docs/latest/concepts/capabilities/
 ---
 
 Capabilities are used to provide information to the host about your visual. All properties on the Capabilities model are ```optional```

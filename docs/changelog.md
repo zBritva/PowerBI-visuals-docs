@@ -3,6 +3,8 @@ layout: docs
 title: Change Log - Visuals API
 group: changelog
 toc: true
+redirect_from:
+  - /docs/latest/changelog/
 ---
 
 The page contains a quick summary of the API versions.

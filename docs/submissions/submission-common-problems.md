@@ -4,6 +4,8 @@ title: Submission common problems
 description: 
 group: submissions
 toc: true
+redirect_from:
+  - /docs/latest/submissions/submission-common-problems/
 ---
 
 The custom visuals team has written and reviewed many custom visuals. Some of the common issues found with custom visuals are: 

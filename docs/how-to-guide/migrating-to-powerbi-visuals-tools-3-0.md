@@ -4,6 +4,8 @@ title: Migrating to powerbi-visuals-tools 3.0
 description: Getting started with new version of powerbi-visuals-tools (Preview)
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/migrating-to-powerbi-visuals-tools-3-0/
 ---
 
 Power BI Visuals Tools 3.0.x brings modern [ECMAScript 2015 modules](https://www.typescriptlang.org/docs/handbook/modules.html) into TypeScript code.

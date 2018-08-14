@@ -4,6 +4,8 @@ title: Opening a URL in a new tab/window
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/launching-url/
 ---
 
 Launch URL allows opening a new browser tab (or window), by delegating the actual work to Power BI.

@@ -4,6 +4,8 @@ title: Adding tooltips to custom visual
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/adding-tooltips/
 ---
 
 Visuals can now make use of PowerBI's tooltip support. PowerBI tooltips handle the following interactions:

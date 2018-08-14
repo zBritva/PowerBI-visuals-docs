@@ -4,6 +4,8 @@ title: Bookmarks support
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/bookmarks-support/
 ---
 
 Power BI report bookmarks allow capturing the currently configured view of a report page, selection state, filtering state of the visual etc. But it requires additional action from custom visuals side to support the bookmark and react correctly to changes of report state. Read more about bookmarks in the [documentation](https://docs.microsoft.com/en-us/power-bi/desktop-bookmarks)

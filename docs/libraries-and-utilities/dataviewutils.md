@@ -4,6 +4,8 @@ title: DataViewUtils
 description: DataViewUtils is a set of functions and classes in order to simplify parsing of the DataView object for Power BI custom visuals
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/dataviewutils/
 ---
 
 ## Usage

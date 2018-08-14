@@ -4,6 +4,8 @@ title: Enable Sync Slicers
 description: 
 group: how-to-guide
 toc: true
+redirect_from:
+  - /docs/latest/how-to-guide/enable-sync-slicers/
 ---
 
 To support [Sync Slicers](https://docs.microsoft.com/en-us/power-bi/desktop-slicers) your custom slicer visual must use API 1.13 or higher.

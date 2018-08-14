@@ -4,6 +4,8 @@ title: Developing a Power BI Custom Visual
 description: 
 group: step-by-step-lab
 toc: true
+redirect_from:
+  - /docs/latest/step-by-step-lab/developing-a-power-bi-custom-visual/
 ---
 
 In this tutorial, you will develop a Power BI custom visual named Circle Card to display a formatted measure value inside a circle. The Circle Card visual will support customization of fill color and thickness of its outline.

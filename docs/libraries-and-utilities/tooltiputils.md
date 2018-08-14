@@ -4,6 +4,8 @@ title: TooltipUtils
 description: TooltipUtils is a set of functions and classes in order to simplify usage of the Tooltip API for Power BI custom visualss
 group: libraries-and-utilities
 toc: true
+redirect_from:
+  - /docs/latest/libraries-and-utilities/tooltiputils/
 ---
 
 ## Usage

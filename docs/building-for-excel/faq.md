@@ -4,6 +4,8 @@ title: FAQ
 description: 
 group: building-for-excel
 toc: true
+redirect_from:
+  - /docs/latest/building-for-excel/faq/
 ---
 
 The FAQ will grow as we get feedback

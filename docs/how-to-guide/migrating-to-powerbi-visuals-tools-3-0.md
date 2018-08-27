@@ -62,7 +62,6 @@ The sample of sampleBarChart visual and correspond [changes](https://github.com/
     "name": "visual",
     "version": "1.2.3",
     "scripts": {
-        "postinstall": "pbiviz update 2.1.0",
         "pbiviz": "pbiviz",
         "start": "pbiviz start",
         "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\"",

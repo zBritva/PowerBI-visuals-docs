@@ -12,6 +12,36 @@ In TypeScript 1.5 the nomenclature has changed. [Read more about TypeScript modu
 
 The previous version of of Power BI Visuals Tools required to define a visual class under `powerbi.extensibility.visual` module.
 
+## Backward compatibility
+
+The new tools save backward compatibility for old visuals code base but can require some additional changes to load external libraries. 
+Because of the new tools wrap whole sources of external libraries and the visual code into one module. And some libs support module systems and can be load by webpack. They detect context and inits the libs as webpack modules without providing global variables.
+
+The old visual codes expect that global variables of libraries will available in context they can be broken in new tools.
+
+### Fix loading external libraries.
+
+Include new JS file after libs in `externalJS` array of `pbiviz.json`. Example:
+
+```JSON
+"externalJS": [
+    ...
+    "node_modules/d3/d3.min.js",
+    "node_modules/lodash/lodash.min.js",
+    "externalJS/init.lodash.js",
+    "node_modules/globalize/lib/globalize.js",
+    "externalJS/init.globalize.js",
+    ...
+]
+```
+With folowing JS code. Example for `lodash`:
+
+```JS
+var _ = typeof _ === "undefined" ? typeof exports === "undefined" ? window._ : exports._ : _ ;
+```
+
+where `_` is global variable for `lodash` library.
+
 This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
 
 ## How to install powerbi-visuals-tools@beta
@@ -30,7 +60,7 @@ The sample of sampleBarChart visual and correspond [changes](https://github.com/
     "name": "visual",
     "version": "1.2.3",
     "scripts": {
-        "postinstall": "pbiviz update 1.12.0",
+        "postinstall": "pbiviz update 2.1.0",
         "pbiviz": "pbiviz",
         "start": "pbiviz start",
         "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\"",
@@ -162,3 +192,12 @@ There are several breaking changes and you should modify your code to use the ne
 3. In D3.js v4 new `merge` method introduced. This method is commonly used to merge the enter and update selections after a data-join. You should [merge](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/83fe8d52d362dccd0034dd8e32c94080d9376b29#diff-433142f7814fee940a0ffc98dc75bfcbR272) two selections to use d3 properly.
 
 [Read more](https://github.com/d3/d3/blob/master/CHANGES.md) about changes in D3.js library.
+
+# Advantages of using the new tools
+
+1. You can use the new syntax to import modules.
+2. New tools allow using new versions of libraries, for example, D3.js version 4.x.x. or 5.x.x. with defined typings for TS.
+3. Webpack uses [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) to remove unused code
+    `pbiviz package` command runs a build in production mode. It reduces code of JS and as result, you get better performance in loading the visual.
+4. Tools use [webpack-visualizer](https://github.com/chrisbateman/webpack-visualizer) to display the code base of the visual.
+    ![](../images/WebpackStats.png)

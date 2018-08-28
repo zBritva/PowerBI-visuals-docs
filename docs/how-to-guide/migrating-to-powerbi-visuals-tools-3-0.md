@@ -16,10 +16,9 @@ The previous version of of Power BI Visuals Tools required to define a visual cl
 
 ## Backward compatibility
 
-The new tools save backward compatibility for old visuals code base but can require some additional changes to load external libraries. 
-Because of the new tools wrap whole sources of external libraries and the visual code into one module. And some libs support module systems and can be load by webpack. They detect context and inits the libs as webpack modules without providing global variables.
-
-The old visual codes expect that global variables of libraries will available in context they can be broken in new tools.
+The new tools save backward compatibility for old visuals code base, but can require some additional changes to load external libraries. 
+The new toolset is based on Webpack. The libs which support module systems will be imported as Webpack modules. All other libs and visual source code will be wrapped into one module.
+Global variables like JQuery and Lodash that were used in the previous pbiviz tools are obsolete now. It means that if the old visual code relay on global variables, the visual can be broken in this case.
 
 ### Fix loading external libraries.
 
@@ -44,11 +43,11 @@ var _ = typeof _ === "undefined" ? typeof exports === "undefined" ? window._ : e
 
 where `_` is global variable for `lodash` library.
 
-This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
+This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As a sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
 
 ## How to install powerbi-visuals-tools@beta
 
-The new tools set is available as a `beta` version and can be installed by executing the command. 
+The new toolset is available as a `beta` version and can be installed by executing the command. 
 Please do not use it in production until API 2.0 will be released.
 
 `npm install powerbi-visuals-tools@beta`. 

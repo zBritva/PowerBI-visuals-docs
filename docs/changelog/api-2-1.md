@@ -7,7 +7,7 @@ toc: true
 ---
 
 ### API 2.1 Release notes
-* Known limitation 
+##### Known limitation 
 	* Filtering APIs are also being refactored and will be available in API 2.2. Not supported in 2.1.
 	* Visuals will only receive the dataView type that was declared in their capabilities. Visuals that used multiple dataView types will break as a result of this update. 
 	* The DataViewScopeIdentity interface is no longer supported, it was replaced with the data.DataRepetitionSelector interface.

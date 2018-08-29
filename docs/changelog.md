@@ -12,9 +12,10 @@ The page contains a quick summary of the API versions.
 Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](../roadmap/).
 
 ## API v2.1
-* use Custom Visuals Selection id's instead of old Selection id's
-* remove Semantic Query dependency inside the iFrame
-* Serialize DataView and remove multiple DataView types
+* Significant performance enhancements:
+    * Faster loading times
+    * Significantly smaller memory footprint
+    * Optimized data and event transactions
 
 ## API v1.13
 * **[Sync Slicers](../how-to-guide/enable-sync-slicers)** - Added Sync Slicers feature. Note that it’ll work only for single field slicers for now due to PBI current code state. [Read more](https://docs.microsoft.com/en-us/power-bi/desktop-slicers)

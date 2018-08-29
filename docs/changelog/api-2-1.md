@@ -18,8 +18,9 @@ Visuals that use this pattern may be broken by this update.
 Make sure you check for null in array:  
 ```typescript
 	for (var item in myArray) {
-		if (!item)
-			continue;
+	   if (!item) {
+		continue;
+	   }
 	   console.log(item);
 	}
 ```  

@@ -47,8 +47,7 @@ This step-by-step guideline describes how to convert an existing custom visual t
 
 ## How to install powerbi-visuals-tools@beta
 
-The new toolset is available as a `beta` version and can be installed by executing the command. 
-Please do not use it in production until API 2.0 will be released.
+The new toolset is available as a `beta` version and can be installed by executing the command.
 
 `npm install powerbi-visuals-tools@beta`. 
 

@@ -179,9 +179,9 @@ With new tools, you can start using the new version of D3.js library.
 
 Call commands to update D3 in your visual project
 
-`npm install --save @types/d3@5.4.0` for install the new D3.js.
+`npm install --save d3@5` for install the new D3.js.
 
-`npm install --save-dev @types/d3@5.0.5` for install the new type definitions for D3.js.
+`npm install --save-dev @types/d3@5` for install the new type definitions for D3.js.
 
 There are several breaking changes and you should modify your code to use the new D3.js.
 

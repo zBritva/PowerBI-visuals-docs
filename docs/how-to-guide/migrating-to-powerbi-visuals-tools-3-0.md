@@ -164,9 +164,9 @@ import {
 } from "./tooltipServiceWrapper";
 ```
 
-### Import CSS Style
+### Import CSS Styles
 The new version of tools allows developers to import CSS, LESS style directly into the TypeScript code. 
-So, previously used [styles section][https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L22] will be ignored by a compiler.  
+So, previously used [styles section](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L22) will be ignored by a compiler.  
 To use your stylesheet, open main ts file and add the following line:  
 ```typescript
 import "./../style/visual.less";

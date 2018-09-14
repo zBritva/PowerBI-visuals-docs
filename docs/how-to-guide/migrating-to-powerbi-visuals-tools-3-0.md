@@ -165,9 +165,12 @@ import {
 ```
 
 ### Import CSS Style
-The new version of tools allows developers to import CSS, LESS style directly to the TypeScript code. 
-So previously used (styles section)[https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L22] will be ignored by a compiler. To use your stylesheet, open main ts file and add the following line:
+The new version of tools allows developers to import CSS, LESS style directly into the TypeScript code. 
+So, previously used [styles section][https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L22] will be ignored by a compiler.  
+To use your stylesheet, open main ts file and add the following line:  
+```typescript
 import "./../style/visual.less";
+```  
 Your CSS, LESS styles will be compiled automatically.  
 
 ### `externalJS` in `pbiviz.json`

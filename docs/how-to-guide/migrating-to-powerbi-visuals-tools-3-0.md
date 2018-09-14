@@ -164,6 +164,12 @@ import {
 } from "./tooltipServiceWrapper";
 ```
 
+### Import CSS Style
+The new version of tools allows developers to import CSS, LESS style directly to the TypeScript code. 
+So previously used (styles section)[https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L22] will be ignored by a compiler. To use your stylesheet, open main ts file and add the following line:
+import "./../style/visual.less";
+Your CSS, LESS styles will be compiled automatically.  
+
 ### `externalJS` in `pbiviz.json`
 
 The tools [doesn't require](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L20) a list of `externalJS` to load into the visual bundle. Because webpack includes all imported libs.

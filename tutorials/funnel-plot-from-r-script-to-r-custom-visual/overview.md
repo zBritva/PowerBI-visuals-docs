@@ -11,7 +11,7 @@ github_issue_id: 477
 This [article from The Gaurdian](https://www.theguardian.com/commentisfree/2011/oct/28/bad-science-diy-data-analysis) tells us the inspiring story about how using the wrong visualization tools can 
 lead to the wrong conclusion. The real hero of this story is the funnel plot, which can be used for comparing institutional performance and medical data analysis.  
 
-![funnel plot image](../images/fp.jpg)
+![funnel plot image](fp.JPG)
 
 The funnel plot is easy to consume and interpret. The "funnel" is formed by confidence limits and show the amount of expected variation. 
 The dots outside the funnel are outliers.
@@ -335,6 +335,30 @@ The changes for the HTML-based visual are highlighted
 
 Just copy it instead of your template `script.r` and run `pbiviz package`  again.  Now you get this cool visual in your Power BI report!
 
+
+### Section 4.3: HTML widgets gallery <a name="chapter-43"></a>
+
+Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) of html widgets are  ready to become your next custom visual. To make it easier, we created this single custom visual project: 
+
+[chapter4_RCustomVisual\multipleRHTML](chapter4_RHTMLCustomVisual/multipleRHTML)
+
+It contains __more than 20 interactive HTML visuals !!!__  
+
+![Sample of htmlWidgets1](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
+![Sample of htmlWidgets2](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
+
+Try it out in [PBIX file](chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
+
+If you decide to use it as a starting point for your custom visual: 
+1. Download the whole folder
+1. Edit _script.r_ and _dependencies.json_ to keep only one widget 
+1. Edit _capabilities.json_ and _settings.ts_ to remove `Type` selector
+1. Change `const updateHTMLHead: boolean = true;` to `false` in _visual.ts_  (performance) 
+1. Change metadata in _pbiviz.json_, particularly `"guid"` field
+1. Re-package and continue the development of Custom Visual as explained in previous chapter 
+
+* Remark: Not all of the widgets in this project are supported in service yet. 
+
 ## Quick Summary of R-powered Custom Visuals <a name="summary"></a>
 
 Let's recap main steps for creation and perfection of R-powered custom visual from scratch:
@@ -401,5 +425,3 @@ Basic tutorial on R-custom visuals:
 
 Develop and submit custom visuals to the store:
 [https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-office-store/](https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-office-store/)
-
-

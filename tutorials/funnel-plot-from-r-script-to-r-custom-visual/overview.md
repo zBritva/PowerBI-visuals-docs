@@ -342,10 +342,13 @@ Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) 
 
 [chapter4_RCustomVisual/multipleRHTML](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML)
 
-It contains __more than 20 interactive HTML visuals !!!__  
+It contains __more than 20 interactive HTML visuals !!!__   
 
-![Sample of htmlWidgets1](../images/CaptureSample.PNG | width=600)
-![Sample of htmlWidgets2](../images/CaptureSampleService.PNG | width=600)
+Sample of htmlWidgets1:  
+<img src="https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG" align="left" width="600">  
+
+Sample of htmlWidgets2:  
+<img src="https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG" align="left" width="600">  
 
 Try it out in [PBIX file](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
 

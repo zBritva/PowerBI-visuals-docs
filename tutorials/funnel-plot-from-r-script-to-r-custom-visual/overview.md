@@ -65,7 +65,7 @@ __Remark:__ The `dataset` is hard-coded name for the input `data.frame` of any R
 
 We are about to package R code in R-powered Custom Visual. 
 Before you can get started you'll need to install the PBIVIZ tools. This should not take long.
-Follow the [instructions here](/docs/step-by-step-lab/setting-up-the-developer-environment/#installing-packages)
+Follow the [instructions here](/PowerBI-visuals/docs/step-by-step-lab/setting-up-the-developer-environment/#installing-packages)
 
 ### Section 3.1<a name="chapter-31"></a>
 

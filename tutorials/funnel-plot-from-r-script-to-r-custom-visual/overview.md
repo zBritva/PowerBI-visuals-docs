@@ -11,7 +11,7 @@ github_issue_id: 477
 This [article from The Gaurdian](https://www.theguardian.com/commentisfree/2011/oct/28/bad-science-diy-data-analysis) tells us the inspiring story about how using the wrong visualization tools can 
 lead to the wrong conclusion. The real hero of this story is the funnel plot, which can be used for comparing institutional performance and medical data analysis.  
 
-![funnel plot image](fp.JPG)
+![funnel plot image](../images/fp.JPG)
 
 The funnel plot is easy to consume and interpret. The "funnel" is formed by confidence limits and show the amount of expected variation. 
 The dots outside the funnel are outliers.
@@ -32,30 +32,30 @@ We are going to use this code in order to incrementally create:
 
 The minimal R script and the accompanying data table: 
 
-[chapter1_R\dataset.csv](chapter1_R/dataset.csv)
+[chapter1_R/dataset.csv](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter1_R/dataset.csv)
 
-[chapter1_R\vscript_R_v1_00.r](chapter1_R/script_R_v1_00.r)
+[chapter1_R/vscript_R_v1_00.r](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter1_R/script_R_v1_00.r)
 
 The next version of R script is essentially the same, but implements input error handling and user parameters to control the appearance of the plot: 
 
-[chapter1_R\vscript_R_v1_01.r](chapter1_R/script_R_v1_01.r)
+[chapter1_R/vscript_R_v1_01.r](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter1_R/script_R_v1_01.r)
 
-All the code is in [chapter1_R](chapter1_R)
+All the code is in [chapter1_R](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter1_R)
 
 
 ## Chapter 2<a name="chapter-2"></a>
 
 Let us load the "dataset.csv" into Power BI desktop workspace as "Cancer Mortality" table. 
-The code in ["script_R_v1_01.r"](chapter1_R/script_R_v1_01.r) is almost ready to be used within R-visual. 
+The code in ["script_R_v1_01.r"](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter1_R/script_R_v1_01.r) is almost ready to be used within R-visual. 
 We only need to comment out the `read.csv` call.
 
 The resulting R-code is: 
 
-[chapter2_Rvisual\script_RV_v2_00.r](chapter2_Rvisual/script_RV_v2_00.r)
+[chapter2_Rvisual/script_RV_v2_00.r](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter2_Rvisual/script_RV_v2_00.r)
 
 See the result in: 
 
-[chapter2_Rvisual\funnelPlot_Rvisual.pbix](chapter2_Rvisual/funnelPlot_Rvisual.pbix)
+[chapter2_Rvisual/funnelPlot_Rvisual.pbix](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter2_Rvisual/funnelPlot_Rvisual.pbix)
 
 
 __Remark:__ The `dataset` is hard-coded name for the input `data.frame` of any R-visual. 
@@ -81,9 +81,9 @@ Now we will use any command line shell (like "Command Prompt") to create new R-p
 It will create funnelRvisual folder with initial template visual (`-t` stands for _template_). 
 The PBIVIZ is in _"dist"_ folder. Try to import it into Power BI and see what it does. The R-code is inside _"script.r"_ file. 
 
-* Open _"script.r"_ file for editing and replace its contents with  ["script_RV_v2_00.r"](chapter2_Rvisual/script_RV_v2_00.r)  just as is!
-* Open _"capabilities.json"_ in any editor and Find/Replace the `Values` string by `dataset` string. It replaces the name of "Role" in template to be like in R-code.  See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v01/capabilities_changes.PNG)
-* Optionally: open _"dependencies.json"_ in any editor and add one section for each R package required in your R script. This will tell Power BI to automatically import those packages when the visual is loaded for the first time. See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v01/dependencies_changes.PNG)
+* Open _"script.r"_ file for editing and replace its contents with  ["script_RV_v2_00.r"](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter2_Rvisual/script_RV_v2_00.r)  just as is!
+* Open _"capabilities.json"_ in any editor and Find/Replace the `Values` string by `dataset` string. It replaces the name of "Role" in template to be like in R-code.  See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v01/capabilities_changes.PNG)
+* Optionally: open _"dependencies.json"_ in any editor and add one section for each R package required in your R script. This will tell Power BI to automatically import those packages when the visual is loaded for the first time. See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v01/dependencies_changes.PNG)
 
 Now re-package the visual again: 
 
@@ -92,9 +92,9 @@ Now re-package the visual again:
 Try to import it into Power BI again and see what it does.  
 The resulting PBIX and the whole Custom Visual Project from this section may be found in: 
 
-[chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
+[chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
 
-[chapter3_RCustomVisual\funnelRvisual_v01](chapter3_RCustomVisual/funnelRvisual_v01/)
+[chapter3_RCustomVisual/funnelRvisual_v01](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v01/)
 
 
 ### Section 3.2<a name="chapter-32"></a>
@@ -113,12 +113,12 @@ See more information [here](https://github.com/Microsoft/PowerBI-visuals/blob/ma
 
 The resulting  file is 
 
-[chapter3_RCustomVisual\funnelRvisual_v02\capabilities.json](chapter3_RCustomVisual/funnelRvisual_v02/capabilities.json). See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v02/capabilities_before_vs_after.PNG)
+[chapter3_RCustomVisual/funnelRvisual_v02/capabilities.json](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v02/capabilities.json). See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v02/capabilities_before_vs_after.PNG)
 
 * Edit _"script.r"_ to support _Population_, _Number_ and _Tooltips_ as input dataframes instead of _dataset_
 
 The resulting  file is 
-[chapter3_RCustomVisual\funnelRvisual_v02\script.r](chapter3_RCustomVisual/funnelRvisual_v02/script.r ). See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v02/script_r_before_vs_after.PNG)
+[chapter3_RCustomVisual/funnelRvisual_v02/script.r](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v02/script.r ). See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v02/script_r_before_vs_after.PNG)
 
 To follow the changes in R-script, search for the commented blocks: 
 
@@ -143,9 +143,9 @@ Now re-package the visual again:
 Try to import it into Power BI again and see what it does.  
 The resulting PBIX and the whole Custom Visual Project may be found in:
 
-[chapter3_RCustomVisual](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
+[chapter3_RCustomVisual](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
 
-[chapter3_RCustomVisual\funnelRvisual_v02](chapter3_RCustomVisual/funnelRvisual_v02)
+[chapter3_RCustomVisual/funnelRvisual_v02](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v02)
 
 
 ### Section 3.3<a name="chapter-33"></a>
@@ -166,10 +166,10 @@ This is the place to define names, tooltips and types of each parameter. We also
 
 The resulting  file is
 
-[chapter3_RCustomVisual\funnelRvisual_v03\capabilities.json](chapter3_RCustomVisual/funnelRvisual_v03/capabilities.json)
-See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/capabilities_before_after.PNG)
+[chapter3_RCustomVisual/funnelRvisual_v03/capabilities.json](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/capabilities.json)
+See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/capabilities_before_after.PNG)
 
-* Now edit the _"src\settings.ts"_ file. 
+* Now edit the _"src/settings.ts"_ file. 
 
 This file is written in TypeScript.  Don't worry, it is easy to use this example as a template.  
 
@@ -182,20 +182,20 @@ To follow the changes in TypeScript, search for the commented blocks:
 ```
 
 The resulting  file is 
-[chapter3_RCustomVisual\funnelRvisual_v03\src\settings.ts](chapter3_RCustomVisual/funnelRvisual_v03/src/settings.ts)
+[chapter3_RCustomVisual/funnelRvisual_v03/src/settings.ts](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/src/settings.ts)
  
 
 You will find two blocks of code added. 
 1. Declare new interface to hold the property value; 
 1. Define a member property and default values; 
 
-See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/settings_ts_before_after.PNG)
+See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/settings_ts_before_after.PNG)
 
 * Now edit _"script.r"_ to support the parameters in UI, it is quite easy just by adding `if.exists` calls per user-parameter
 
 The resulting  file is:
 
-[chapter3_RCustomVisual\funnelRvisual_v03\script.r](chapter3_RCustomVisual/funnelRvisual_v03/script.r)
+[chapter3_RCustomVisual/funnelRvisual_v03/script.r](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/script.r)
 
 To follow the changes in the R script, search for the commented code blocks: 
 
@@ -212,7 +212,7 @@ and
  ...
 #RVIZ_IN_PBI_GUIDE:END:Removed to enable user parameters
 ```
-See [before vs. after](chapter3_RCustomVisual/funnelRvisual_v03/script_r_before_after_1.png)
+See [before vs. after](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/script_r_before_after_1.png)
 
 
 Note that you may decide not to expose some of the parameters to UI, like we did.  
@@ -226,9 +226,9 @@ Try to import it into Power BI again and see what it does.
 The resulting PBIX and the whole Custom Visual project in this section may be found in:  
 
 
-[chapter3_RCustomVisual](chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
+[chapter3_RCustomVisual](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelPlot_RCustomVisual.pbix)
 
-[chapter3_RCustomVisual\funnelRvisual_v03](chapter3_RCustomVisual/funnelRvisual_v03/)
+[chapter3_RCustomVisual/funnelRvisual_v03](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter3_RCustomVisual/funnelRvisual_v03/)
 
 
 __Remark:__ In this tutorial we add  parameters of several types (boolean, numeric, string, color) at once. 
@@ -260,7 +260,7 @@ Explore _"dependencies.json"_ and pay attention to names of R-packages listed th
 Explore _"script.r"_ and pay attention to its structure. You may open and run it in RStudio. It does not use external input. 
 You will find that it creates and saves _"out.html"_ file. The file will have to be self-contained (without external dependencies) and defines graphics inside HTML widget. 
 
-To help `htmlWidgets` users we also provide R-utilities in _"r_files"_ [folder](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/r_files) to help with conversion of `plotly` or `widget` object into self-content HTML. 
+To help `htmlWidgets` users we also provide R-utilities in _"r_files"_ [folder](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/r_files) to help with conversion of `plotly` or `widget` object into self-content HTML. 
 Note that this version of R-powered visual supports `source` command (unlike previous types of visuals) and we will use it to make code more readable.   
  
 * Replace template  _"capabilities.json"_ by _"capabilities.json"_ from previous step, but obviously keep:  
@@ -268,18 +268,18 @@ Note that this version of R-powered visual supports `source` command (unlike pre
 `"scriptOutputType": "html"`  
 
 The resulting  file is:
-[chapter4_RHTMLCustomVisual\funnelRHTMLvisual_v01\capabilities.json](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/capabilities.json)
+[chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/capabilities.json](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/capabilities.json)
 
 * Merge  latest version of the _"sript.r"_ file from Chapter 3 with _"script.r"_ from the template.
 
 What are the changes? We use _plotly_ package to convert _ggplot_ object to _plotly_ object. Next we use _htmlWidgets_ package to save it to HTML-file. 
 
-We also move most of utility functions to [_"r_files/utils.r"_](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/r_files/utils.r) and add `generateNiceTooltips` function for cosmetics of _plotly_ object
+We also move most of utility functions to [_"r_files/utils.r"_](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/r_files/utils.r) and add `generateNiceTooltips` function for cosmetics of _plotly_ object
 
 The resulting  file is 
 
-[chapter4_RHTMLCustomVisual\funnelRHTMLvisual_v01\script.r](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script.r)
-See before vs. after [1](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_1.PNG), [2](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_2.PNG)
+[chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script.r](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script.r)
+See before vs. after [1](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_1.PNG), [2](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/script_befor_after_2.PNG)
 
 To follow the changes in R-script, search for the blocks: 
 
@@ -301,7 +301,7 @@ and
 * Merge  latest version of the _"dependencies.json"_ file from Chapter 3 with _"dependencies.json"_ from the template, to include new R-package dependencies
 
 The resulting  file is 
-[chapter4_RCustomVisual\funnelRHTMLvisual_v01\dependencies.json](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/dependencies.json)
+[chapter4_RCustomVisual/funnelRHTMLvisual_v01/dependencies.json](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/dependencies.json)
 
 * Change the script _"src/settings.ts"_ in exactly the same way as you did in Chapter 3.3 
 
@@ -312,7 +312,7 @@ The resulting  file is
 Try to import it into Power BI again and see what it does.  
 The resulting PBIX and the whole Custom Visual Project may be found in:  
 
-[chapter4_RCustomVisual\funnelRHTMLvisual_v01](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01)
+[chapter4_RCustomVisual/funnelRHTMLvisual_v01](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01)
 
 
 ### Section 4.2: Bonus example. <a name="chapter-42"></a>
@@ -340,14 +340,14 @@ Just copy it instead of your template `script.r` and run `pbiviz package`  again
 
 Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) of html widgets are  ready to become your next custom visual. To make it easier, we created this single custom visual project: 
 
-[chapter4_RCustomVisual\multipleRHTML](chapter4_RHTMLCustomVisual/multipleRHTML)
+[chapter4_RCustomVisual/multipleRHTML](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML)
 
 It contains __more than 20 interactive HTML visuals !!!__  
 
-![Sample of htmlWidgets1](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
-![Sample of htmlWidgets2](chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
+![Sample of htmlWidgets1](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
+![Sample of htmlWidgets2](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
 
-Try it out in [PBIX file](chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
+Try it out in [PBIX file](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
 
 If you decide to use it as a starting point for your custom visual: 
 1. Download the whole folder
@@ -380,7 +380,7 @@ Let's recap main steps for creation and perfection of R-powered custom visual fr
 
 __IMPORTANT:__ the `"guid"` field is an unique identifier for custom visual. You should be creating new project for every different visual, so the GUID will be different for each visual. It will only be the same if you are copying an old project when you create a new visual, which you should not do.  
 
-* Edit [_"assets/icon.png"_](chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/assets/icon.png) to create a cool, unique icon for your custom visual.  
+* Edit [_"assets/icon.png"_](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/funnelRHTMLvisual_v01/assets/icon.png) to create a cool, unique icon for your custom visual.  
 
 * In order to be able to debug your R-code in RStudio with exactly same data as you have in Power BI report, add the following code in the beginning of the R-script (edit `fileRda` variable): 
 

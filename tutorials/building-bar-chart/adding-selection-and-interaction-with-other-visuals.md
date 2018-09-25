@@ -4,6 +4,7 @@ title: Adding Selection and Interaction with Other Visuals
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 484
 ---
 
 # Adding Selection and Interactions with Other Visuals

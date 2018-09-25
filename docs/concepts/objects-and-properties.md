@@ -6,6 +6,7 @@ group: concepts
 toc: true
 redirect_from:
   - /docs/latest/concepts/objects-and-properties/
+github_issue_id: 459
 ---
 
 Objects describe customizable properties associated with the visual.

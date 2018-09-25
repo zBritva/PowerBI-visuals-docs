@@ -4,6 +4,7 @@ title: Custom Visual code structure
 description: Step by step guide how to build simple Slicer Visual
 group: building-slicer-visual
 toc: true
+github_issue_id: 474
 ---
 
 ![](../images/src-folder.PNG)

@@ -4,6 +4,7 @@ title: launchUrl
 description: 
 group: references
 toc: true
+github_issue_id: 468
 ---
 
 Launch URL allows opening a new browser tab (or window), by delegating the actual work to Power BI.

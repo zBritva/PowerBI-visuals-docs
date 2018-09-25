@@ -4,6 +4,7 @@ title: Adding Color to the Bar Chart
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 487
 ---
 
 # Adding Color to your Visual 

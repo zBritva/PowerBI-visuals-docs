@@ -6,6 +6,7 @@ group: concepts
 toc: true
 redirect_from:
   - /docs/latest/concepts/dataviewmappings/
+github_issue_id: 454
 ---
 
 A `dataViewMappings` describes how the data roles relate to each other and allows you to specify conditional requirements for the them.

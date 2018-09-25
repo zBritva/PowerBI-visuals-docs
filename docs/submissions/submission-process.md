@@ -8,6 +8,7 @@ redirect_from:
   - /docs/latest/submissions/submission-process/
 redirect_to:
   - https://docs.microsoft.com/en-us/power-bi/developer/office-store
+github_issue_id: 463
 ---
 
 # How to submit a custom visual to the Power BI visuals gallery?

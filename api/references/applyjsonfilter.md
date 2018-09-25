@@ -4,6 +4,7 @@ title: applyJsonFilter
 description: 
 group: references
 toc: true
+github_issue_id: 467
 ---
 
 The method allows to pass Advanced Filter to the host for filtering other visuals. 

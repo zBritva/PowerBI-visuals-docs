@@ -4,6 +4,7 @@ title: Adding a static property to the property pane
 description: Building R Powered Custom Visual
 group: building-r-powered-custom-visual
 toc: true
+github_issue_id: 481
 ---
 
 In order to enhance the behavior of the R Script based on user input, one can add properties to the property pane.

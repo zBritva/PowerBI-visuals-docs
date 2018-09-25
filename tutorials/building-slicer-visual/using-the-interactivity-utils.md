@@ -4,6 +4,7 @@ title: Using the Interactivity Utils
 description: Step by step guide how to build simple Slicer Visual
 group: building-slicer-visual
 toc: true
+github_issue_id: 472
 ---
 
 The utility package [InteractivityUtils](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils) provides a set of functions and interfaces that simplify cross-visual data point selection and filtering. 

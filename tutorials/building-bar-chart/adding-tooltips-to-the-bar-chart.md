@@ -4,6 +4,7 @@ title: Adding Tooltips to the Bar Chart
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 492
 ---
 
 # Adding ToolTips to the Bar Chart

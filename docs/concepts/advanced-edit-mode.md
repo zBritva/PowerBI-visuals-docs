@@ -6,6 +6,7 @@ group: concepts
 toc: true
 redirect_from:
   - /docs/latest/concepts/advanced-edit-mode/
+github_issue_id: 452
 ---
 
 Visuals that require advanced UI controls can declare support of Advanced Edit Mode.

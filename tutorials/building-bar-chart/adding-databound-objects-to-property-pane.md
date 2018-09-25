@@ -4,6 +4,7 @@ title: Adding Databound Objects to Property Pane
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 490
 ---
 
 # Databound Objects

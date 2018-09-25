@@ -4,6 +4,7 @@ title: Adding Advanced Filter API to the custom visual
 description: Step by step guide how to build simple Slicer Visual
 group: building-slicer-visual
 toc: true
+github_issue_id: 475
 ---
 
 - Add a reference in the package.json:

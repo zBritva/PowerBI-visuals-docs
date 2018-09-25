@@ -4,6 +4,7 @@ title: IVisualHost
 description: 
 group: references
 toc: true
+github_issue_id: 469
 ---
 
 The main interface provided by visual constructor method.

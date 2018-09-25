@@ -4,6 +4,7 @@ title: Funnel Plot from R script to R Custom Visual in Power BI
 description:
 group: tutorials
 toc: true
+github_issue_id: 477
 ---
 
 ## Story about the "Funnel Plot"<a name="chapter-0"></a>

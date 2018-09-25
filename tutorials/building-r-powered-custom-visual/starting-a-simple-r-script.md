@@ -4,6 +4,7 @@ title: Starting a simple R Script
 description: Building R Powered Custom Visual
 group: building-r-powered-custom-visual
 toc: true
+github_issue_id: 480
 ---
 
 When creating a R Powered Custom Visual, the template "rvisual" creates a file in the root folder of the visual called "script.r".

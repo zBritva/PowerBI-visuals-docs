@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/importing-the-custom-visual/
+github_issue_id: 416
 ---
 
 In this task, you will open the Power BI Desktop report, and import the Circle Card custom visual.

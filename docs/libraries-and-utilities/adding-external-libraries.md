@@ -6,6 +6,7 @@ group: libraries-and-utilities
 toc: true
 redirect_from:
   - /docs/latest/libraries-and-utilities/adding-external-libraries/
+github_issue_id: 445
 ---
 
 * [Including JavaScript files](#including-javascript-files)

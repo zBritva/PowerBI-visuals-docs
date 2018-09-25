@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/creating-a-custom-visual/
+github_issue_id: 421
 ---
 
 *The full source code for this tutorial is avalable [here](https://github.com/uve/circlecard)*

@@ -4,6 +4,7 @@ title: Adding URL Launcher element to the Bar Chart
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 486
 ---
 
 # Opening a URL in a new tab/window

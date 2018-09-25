@@ -1,4 +1,22 @@
-<div id="comments">
+<!-- github comments section -->
+{% if page.github_issue_id and site.github_comments_repository %}
 
-                            
+<div id="gh-comments"
+    data-repository="{{ site.github_comments_repository }}"
+    data-issue-id="{{ page.github_issue_id }}">
+
+    <h6>COMMENTS</h6>
+
+    <form class="post-button"
+        action="https://github.com/{{site.github_comments_repository}}/issues/{{
+        page.github_issue_id }}#new_comment_field" rel='nofollow'>
+
+        <button type="submit" class="btn btn-secondary">Post a comment on Github</button>
+    </form>
+    <div id="gh-comments-list"></div>
 </div>
+
+<script async="async" src="{{ site.baseurl }}/assets/js/github-comments.js"> </script>
+<noscript>Please enable JavaScript to view comments.</noscript>
+
+{% endif %}

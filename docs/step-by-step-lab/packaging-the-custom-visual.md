@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/packaging-the-custom-visual/
+github_issue_id: 419
 ---
 
 In this task, you will enter property values for the custom visual project, update the icon file, and then package the custom visual.

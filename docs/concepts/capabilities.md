@@ -6,6 +6,7 @@ group: concepts
 toc: true
 redirect_from:
   - /docs/latest/concepts/capabilities/
+github_issue_id: 456
 ---
 
 Capabilities are used to provide information to the host about your visual. All properties on the Capabilities model are ```optional```

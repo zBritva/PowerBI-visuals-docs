@@ -6,6 +6,7 @@ group: libraries-and-utilities
 toc: true
 redirect_from:
   - /docs/latest/libraries-and-utilities/colorutils/
+github_issue_id: 448
 ---
 
 ## Usage

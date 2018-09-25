@@ -6,6 +6,7 @@ group: building-for-excel
 toc: true
 redirect_from:
   - /docs/latest/building-for-excel/testing-in-excel/
+github_issue_id: 408
 ---
 There are two ways to test visuals in Excel:
 * side loading the custom visual developer tool (best for debugging and examining code changes in real-time)

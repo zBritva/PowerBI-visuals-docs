@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/unit-tests-introduction/
+github_issue_id: 438
 ---
 
 # Custom visuals unit test

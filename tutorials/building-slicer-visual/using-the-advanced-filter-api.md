@@ -4,6 +4,7 @@ title: Using the Advanced Filter API
 description: Step by step guide how to build simple Slicer Visual
 group: building-slicer-visual
 toc: true
+github_issue_id: 473
 ---
 
 The [Advanced Filter API](https://github.com/Microsoft/powerbi-models) is introduced in the version 1.7.0 of [PowerBI Visuals Tools](https://github.com/Microsoft/PowerBI-visuals-tools) and enables complex cross-visual data-point selection/filtering queries based on multiple criteria (such as "LessThan", "Contains", "Is", "IsBlank", etc.). 

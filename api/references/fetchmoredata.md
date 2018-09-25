@@ -4,6 +4,7 @@ title: fetchMoreData()
 description: 
 group: references
 toc: true
+github_issue_id: 470
 ---
 
 Load more data API overcome the hard limit of 30K data point. It brings data in chunks. The chunk size is configurable to improve performance according to use case.  

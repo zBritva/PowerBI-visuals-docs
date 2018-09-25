@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/finishing-up/
+github_issue_id: 413
 ---
 
 1. Close PowerShell.

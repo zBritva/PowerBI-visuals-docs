@@ -4,6 +4,7 @@ title: Adding Databinding to the Bar Chart
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 488
 ---
 
 # Adding Databinding to Bar Chart

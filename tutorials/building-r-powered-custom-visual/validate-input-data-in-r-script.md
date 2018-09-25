@@ -4,6 +4,7 @@ title: Validate input data in R Script
 description: Building R Powered Custom Visual
 group: building-r-powered-custom-visual
 toc: true
+github_issue_id: 478
 ---
 
 In order to write a truly robust R Powered Custom Visual, you should validate all the input you get before running some R function that expects specific values to be given.

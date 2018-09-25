@@ -4,6 +4,7 @@ title: Creating R Powered Custom Visual with HTML output
 description: Building R Powered Custom Visual
 group: building-r-powered-custom-visual
 toc: true
+github_issue_id: 479
 ---
 
 Regular R Powered Custom Visual capture the output plot and displays it as a static image, the same way it is done in R Visuals.

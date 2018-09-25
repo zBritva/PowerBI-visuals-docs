@@ -6,6 +6,7 @@ group: submissions
 toc: true
 redirect_from:
   - /docs/latest/submissions/checklist-before-you-submit/
+github_issue_id: 465
 ---
 # Testing your visual
 ## Test cases

@@ -6,6 +6,7 @@ group: building-for-excel
 toc: true
 redirect_from:
   - /docs/latest/building-for-excel/getting-started/
+github_issue_id: 410
 ---
 
 **Just want to try out some custom visuals in Excel?**  

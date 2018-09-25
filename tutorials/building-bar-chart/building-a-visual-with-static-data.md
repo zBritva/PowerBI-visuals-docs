@@ -4,6 +4,7 @@ title: Building a Visual with Static Data
 description: Step by step guide how to build simple Bar Chart Visual
 group: building-bar-chart
 toc: true
+github_issue_id: 483
 ---
 
 # Building a Static Visual

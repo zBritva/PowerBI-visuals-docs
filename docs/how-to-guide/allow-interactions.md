@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/allow-interactions/
+github_issue_id: 431
 ---
 
 Visuals can query the value of the 'allowInteractions' flag, that indicate whether the visual should allow visual interactions.

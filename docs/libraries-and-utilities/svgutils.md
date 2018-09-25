@@ -6,6 +6,7 @@ group: libraries-and-utilities
 toc: true
 redirect_from:
   - /docs/latest/libraries-and-utilities/svgutils/
+github_issue_id: 450
 ---
 
 ## Usage

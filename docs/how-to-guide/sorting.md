@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/sorting/
+github_issue_id: 437
 ---
 
 `Sorting` specifies the default sorting behavior for the visual.

@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/adding-formatting-options/
+github_issue_id: 423
 ---
 In this task, you will add common properties to the visual.
 

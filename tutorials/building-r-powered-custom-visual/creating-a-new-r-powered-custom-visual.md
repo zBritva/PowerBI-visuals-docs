@@ -4,6 +4,7 @@ title: Creating a new R Powered Custom Visual
 description: Building R Powered Custom Visual
 group: building-r-powered-custom-visual
 toc: true
+github_issue_id: 482
 ---
 
 In order to create a new R Powered Custom Visual we will run the following command:

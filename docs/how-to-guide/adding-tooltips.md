@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/adding-tooltips/
+github_issue_id: 430
 ---
 
 Visuals can now make use of PowerBI's tooltip support. PowerBI tooltips handle the following interactions:

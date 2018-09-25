@@ -5,6 +5,7 @@ group: changelog
 toc: true
 redirect_from:
   - /docs/latest/changelog/
+github_issue_id: 402
 ---
 
 The page contains a quick summary of the API versions.

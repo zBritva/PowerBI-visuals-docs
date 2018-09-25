@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/adding-colors-to-your-visual/
+github_issue_id: 432
 ---
 
 Color is exposed as one of the services available on `IVisualHost`.

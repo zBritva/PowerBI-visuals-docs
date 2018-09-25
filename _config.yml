@@ -48,8 +48,12 @@ current_version:      2.1
 repo:                 "https://github.com/Microsoft/PowerBI-visuals-tools"
 ga_id:                "UA-116683883-1"            
 
-disqus:
-  shortname:        "powerbi-custom-visuals"
+#disqus:
+#  shortname:        "powerbi-custom-visuals"
+
+#github comments:
+github_comments_repository: Microsoft/powerbi-visuals
+
 
 cdn:
   bootstrap_css:    "https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/css/bootstrap.min.css"

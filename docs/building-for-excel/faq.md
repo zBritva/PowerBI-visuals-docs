@@ -6,6 +6,7 @@ group: building-for-excel
 toc: true
 redirect_from:
   - /docs/latest/building-for-excel/faq/
+github_issue_id: 409
 ---
 
 The FAQ will grow as we get feedback

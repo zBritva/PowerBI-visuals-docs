@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/adding-visual-elements/
+github_issue_id: 420
 ---
 
 D3 is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of widely implemented SVG, HTML5, and CSS standards.

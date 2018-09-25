@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/highlighting/
+github_issue_id: 429
 ---
 
 By default whenever an element is selected the `values` array in the `dataView` object will be filtered to just the selected values. This will cause all other visuals on the page to display just the selected data.

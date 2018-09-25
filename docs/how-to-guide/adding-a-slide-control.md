@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/adding-a-slide-control/
+github_issue_id: 426
 ---
 
 A Slider control was added to the sample BarChart for reference.

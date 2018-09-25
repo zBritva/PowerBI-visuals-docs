@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/how-to-debug/
+github_issue_id: 434
 ---
 
 This page shows some tips for debugging while building your visual.

@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/setting-up-the-developer-environment/
+github_issue_id: 418
 ---
 
 ## Installing Visual Studio Code

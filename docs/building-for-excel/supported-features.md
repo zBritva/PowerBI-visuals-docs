@@ -6,6 +6,7 @@ group: building-for-excel
 toc: true
 redirect_from:
   - /docs/latest/building-for-excel/supported-features/
+github_issue_id: 411
 ---
 
 Use the details on this page to review the Power BI custom visual components/APIs that are currently implemented in Excel.  When developing, remember:  

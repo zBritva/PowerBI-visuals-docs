@@ -6,6 +6,7 @@ group: concepts
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/performance-tips/
+github_issue_id: 435
 ---
 
 This article covers several techniques how developers can keep high rendering performance for their visuals.   No one wants a visual to take seconds to render single visual. This is why squeezing every drop of extra performance you can out of code can sometimes be critical. 

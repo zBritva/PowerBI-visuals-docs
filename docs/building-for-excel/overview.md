@@ -6,6 +6,7 @@ group: building-for-excel
 toc: true
 redirect_from:
   - /docs/latest/building-for-excel/overview/
+github_issue_id: 405
 ---
 
 We want developers to bring the same great enthusiasm to data visualization in Excel that you brought to Power BI!

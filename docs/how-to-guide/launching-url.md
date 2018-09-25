@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/launching-url/
+github_issue_id: 424
 ---
 
 Launch URL allows opening a new browser tab (or window), by delegating the actual work to Power BI.

@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/configuring-data-binding/
+github_issue_id: 414
 ---
 
 ## Configuring the Capabilities

@@ -6,6 +6,7 @@ group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/adding-localization/
+github_issue_id: 428
 ---
 
 Visuals can retrieve the PowerBI locale, in order to localize their content to the relevant language.

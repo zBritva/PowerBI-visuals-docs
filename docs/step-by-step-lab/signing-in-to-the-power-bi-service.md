@@ -6,6 +6,7 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/signing-in-to-the-power-bi-service/
+github_issue_id: 417
 ---
 
 1. To open Internet Explorer, on the taskbar, click the Internet Explorer program shortcut.  

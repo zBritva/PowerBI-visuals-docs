@@ -6,6 +6,7 @@ group: building-for-excel
 toc: true
 redirect_from:
   - /docs/latest/building-for-excel/submitting-visuals/
+github_issue_id: 406
 ---
 Custom visuals for Excel is in preview, and users cannot access visuals from the Office store.  
 Revisit this page for updates on submitting your custom visual as an Excel add-in once the store becomes available.

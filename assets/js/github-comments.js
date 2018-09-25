@@ -27,22 +27,23 @@ function loadComments(comments) {
                         </div>
 
 
-                    <div class="edit-comment-hide">
-                    
-                        <task-lists sortable="">
-                            <table class="d-block">
-                                <tbody class="d-block">
-                                    <tr class="d-block">
-                                        <td class="d-block comment-body markdown-body js-comment-body">
-                                        ${item.body_html}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </task-lists>
+                        <div class="edit-comment-hide">
+                        
+                            <task-lists sortable="">
+                                <table class="d-block">
+                                    <tbody class="d-block">
+                                        <tr class="d-block">
+                                            <td class="d-block comment-body markdown-body js-comment-body">
+                                            ${item.body_html}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </task-lists>
+                        </div>
                     </div>
+                </div>
             </div>
-
         </div>
     `
     });

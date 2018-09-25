@@ -109,7 +109,7 @@ Let us divide the input field `dataset` into 3 fields (roles): `Population`, `Nu
 * Edit _"capabilities.json"_ by replacing `dataset` role by three new roles. You will need to update 2 sections: `dataRoles` and `dataViewMappings`
 
 These sections define names, types, tooltips and maximum columns  for each input field. 
-See more information [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Capabilities.md).
+See more information [here](/PowerBI-visuals/docs/concepts/capabilities/).
 
 The resulting  file is 
 
@@ -159,7 +159,7 @@ Of course, it is user parameters.
 The user obviously wants to control colors and sizes of visual elements as well as some internal parameters of algorithm from the UI. 
 Let's add this capability: 
 
-* We need to edit _"capabilities.json"_ again, this time the _objects_ section. Read more about _objects_ section [here](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Objects.md). 
+* We need to edit _"capabilities.json"_ again, this time the _objects_ section. Read more about _objects_ section [here](/PowerBI-visuals/docs/concepts/objects-and-properties/). 
 
 This is the place to define names, tooltips and types of each parameter. We also decide on the partition of parameters into groups (three groups in this case). 
 
@@ -344,8 +344,8 @@ Dozens of visuals from this stunning [gallery](http://gallery.htmlwidgets.org/) 
 
 It contains __more than 20 interactive HTML visuals !!!__  
 
-![Sample of htmlWidgets1](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
-![Sample of htmlWidgets2](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
+![Sample of htmlWidgets1](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSample.PNG)
+![Sample of htmlWidgets2](https://raw.githubusercontent.com/Microsoft/PowerBI-visuals/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/CaptureSampleService.PNG)
 
 Try it out in [PBIX file](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial/TutorialFunnelPlot/chapter4_RHTMLCustomVisual/multipleRHTML/assets/sample.pbix). You can switch between html widgets via `Format > Settings > Type`. 
 
@@ -364,7 +364,7 @@ If you decide to use it as a starting point for your custom visual:
 Let's recap main steps for creation and perfection of R-powered custom visual from scratch:
 
 1. Start with a working R-script
-1.	[Install](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/README.md#installation) all required components: NodeJS and powerbi-visuals-tools 
+1.	[Install](/PowerBI-visuals/docs/step-by-step-lab/setting-up-the-developer-environment/) all required components: NodeJS and powerbi-visuals-tools 
 1.	Create new template custom visual  
 1.	Edit the key files:
     1.  Edit _script.r_ and _capabilities.json_ to create basic working custom visual
@@ -398,12 +398,12 @@ if(file.exists(dirname(fileRda)))
 
 This code saves the environment from Power BI report and loads it in RStudio. 
 
-* You do not need to develop R-powered Custom Visuals from scratch. All the code is available in [_github_](https://github.com/Microsoft?utf8=%E2%9C%93&q=PowerBI&type=&language=). Select the visual which is the most similar to the one you want to develop. Again, you should not be copying the entire project. If you want to reuse the functionality across visuals, copy the core code across into a new project. For example, you can start from the [spline custom visual](https://github.com/Microsoft/PowerBI-visuals-spline).  
+* You do not need to develop R-powered Custom Visuals from scratch. All the code is available in [_github_](https://github.com/Microsoft?utf8=%E2%9C%93&q=PowerBI&type=&language=R). Select the visual which is the most similar to the one you want to develop. Again, you should not be copying the entire project. If you want to reuse the functionality across visuals, copy the core code across into a new project. For example, you can start from the [spline custom visual](https://github.com/Microsoft/PowerBI-visuals-spline).  
 
 
 * Keep in mind, that each R visual and R Custom Visual applies `unique` operator to the input table. To avoid the identical rows being removed, consider adding an extra input field with a unique ID and just ignore it in R code.   
 
-* If you have Power BI account, you can use Power BI service to develop your [visual on-the-fly](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/usage.md#running-your-visual) instead of re-packaging it with `pbiviz package` command. 
+* If you have Power BI account, you can use Power BI service to develop your [visual on-the-fly](/PowerBI-visuals/docs/step-by-step-lab/creating-a-custom-visual/#testing-the-custom-visual) instead of re-packaging it with `pbiviz package` command. 
 
 *  __And finally we recommend developers to submit their R-powered custom visuals to the store. It's a great way to increase your brand recognition and get your work out into the public sphere.__. 
 

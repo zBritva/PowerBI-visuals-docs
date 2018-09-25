@@ -11,7 +11,7 @@ github_issue_id: 477
 This [article from The Gaurdian](https://www.theguardian.com/commentisfree/2011/oct/28/bad-science-diy-data-analysis) tells us the inspiring story about how using the wrong visualization tools can 
 lead to the wrong conclusion. The real hero of this story is the funnel plot, which can be used for comparing institutional performance and medical data analysis.  
 
-![funnel plot image](../images/fp.JPG)
+![funnel plot image](../images/fp.jpg)
 
 The funnel plot is easy to consume and interpret. The "funnel" is formed by confidence limits and show the amount of expected variation. 
 The dots outside the funnel are outliers.

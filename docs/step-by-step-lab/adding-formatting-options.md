@@ -16,7 +16,7 @@ In this task, you will add common properties to the visual.
 ![](../images/formatting-options.png)  
 3. In Visual Studio Code, open the **capabilities.json** file.
 
-4. After the **dataViewMappings** array, and the **objects** object (after line 8).
+4. Before the **dataViewMappings** array, add the **objects** object (after line 8).
 ```typescript
     "objects": {},
 ```  

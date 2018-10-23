@@ -9,7 +9,7 @@ redirect_from:
 github_issue_id: 421
 ---
 
-*The full source code for this tutorial is avalable [here](https://github.com/uve/circlecard)*
+*The full source code for this tutorial is avalable [here](https://github.com/Microsoft/PowerBI-visuals-circlecard)*
 
 1. In Windows PowerShell, first, verify that the Power BI Visual Tools package has been installed.
 ```typescript

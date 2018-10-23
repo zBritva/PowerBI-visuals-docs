@@ -48,3 +48,4 @@ node_modules
 js/coverage
 
 Gemfile.lock
+.vscode

@@ -15,7 +15,7 @@ D3 is a JavaScript library for producing dynamic, interactive data visualization
 In this task, you will add the D3 JavaScript library and typings.
 
 1. To install D3, in PowerShell, enter the following command.
-For your convenience, many text entries in this tutorial can be copied from [this repository](https://github.com/uve/circlecard).
+For your convenience, many text entries in this tutorial can be copied from [this repository](https://github.com/Microsoft/PowerBI-visuals-circlecard).
 To paste the clipboard content into PowerShell, simply right-click at the command prompt.
 ```typescript
    npm i d3@3.5.5 --save

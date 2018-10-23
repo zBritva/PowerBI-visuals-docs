@@ -10,7 +10,7 @@ github_issue_id: 416
 ---
 
 In this task, you will open the Power BI Desktop report, and import the Circle Card custom visual.
-1. Open Power BI Desktop, create new report with any [sample dataset](https://github.com/uve/circlecard/raw/master/sample_dataset/GDP.xlsx)
+1. Open Power BI Desktop, create new report with any [sample dataset](https://github.com/Microsoft/PowerBI-visuals-circlecard/raw/master/sample_dataset/GDP.xlsx)
 2. In the **Visualizations** pane, click the ellipsis, and then select **Import from File**.  
 ![](../images/import-from-a-file.png)  
 

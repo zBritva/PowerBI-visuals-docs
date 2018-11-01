@@ -27,4 +27,4 @@ Context-Menu was added to the sample BarChart for reference:
         }); 
 ```
 
-See [commit](put link here) for what was added at this step.
+See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/a19b47a4c635e9f48c6bce526a3e0f5d5e73638f) for what was added at this step.

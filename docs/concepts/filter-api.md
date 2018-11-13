@@ -10,9 +10,9 @@ redirect_from:
 
 ## Custom Visual Filters API
 
-Filter-visuals allows to filtering data. The main difference from selections is other visuals will be filtered in any way despite on highlight supports by other visual.
+Filter-visuals allow to filter data. The main difference from selections is that other visuals will be filtered in any way despite highlight support by other visual.
 
-To enable filtering for the visual, the visuals should contain `filter` object in `general` section of capabilities.json content.
+To enable filtering for the visual, the visual should contain `filter` object in `general` section of capabilities.json content.
 
 ```json
 "objects": {
@@ -30,7 +30,7 @@ To enable filtering for the visual, the visuals should contain `filter` object i
     }
 ```
 
-The Filter API interfaces are available in [`powerbi-models`](https://www.npmjs.com/package/powerbi-models) package. The package contains also classes to create filter instances.
+Filter API interfaces are available in [`powerbi-models`](https://www.npmjs.com/package/powerbi-models) package. The package also contains classes to create filter instances.
 
 ```
 npm install powerbi-models --save
@@ -64,7 +64,7 @@ export interface IBasicFilter extends IFilter {
 
 `values` - are values for condition
 
-Eaxmple of basic filter:
+Example of basic filter:
 
 ```typescript
 let basicFilter = {
@@ -76,7 +76,7 @@ let basicFilter = {
 }
 ```
 
-The filter means "give me all rows where `col1` is equal to one of values 1,2 or 3"
+The filter means "give me all rows where `col1` equals to one of values 1,2 or 3".
 
 SQL equivalent is
 
@@ -113,9 +113,9 @@ The [Advanced Filter API](https://github.com/Microsoft/powerbi-models) enables c
 
 The filter was introduced in Custom Visuals API 1.7.0.
 
-Advenced Filter API also requires `target` with `table` and `column` name. But Advanced Filter API operators are `"And" | "Or"`. 
+Advanced Filter API also requires `target` with `table` and `column` name. But Advanced Filter API operators are `"And" | "Or"`. 
 
-And the filter uses conditions instead of values with interface:
+Additionally, the filter uses conditions instead of values with interface::
 
 ```typescript
 interface IAdvancedFilterCondition {
@@ -157,9 +157,9 @@ Complete sample code of using Advanced Filter API can be found in [sampleslicer 
 
 ### Tuple filter API
 
-Tupe Filter API was introduced in Custom Visuals API 2.3.0.
+Tuple Filter API was introduced in Custom Visuals API 2.3.0.
 
-Tuple filter API similar to Basic filter, but allows defining conditions for several columns and tables.
+Tuple filter API is similar to Basic filter, but it allows defining conditions for several columns and tables.
 
 And a filter has interface: 
 
@@ -173,8 +173,8 @@ interface IFilter extends IFilter {
 }
 ```
 
-`target` has different structure and match with `ITupleFilterTarget` interface. It's array of columns with table names.
-The visual can use columns from different tables if tables have a relationship. 
+`target` has a different structure and matches with  `ITupleFilterTarget` interface. It's an array of columns with table names.
+The visual can use columns from different tables if tables have a relationship.
 
 `$schema` is "http://powerbi.com/product/schema#tuple"
 
@@ -182,7 +182,7 @@ The visual can use columns from different tables if tables have a relationship.
 
 `operator` allows to use only `"In"` operator
 
-`values` is array of conditions, where each element of arrays represents one condition of filter and has structure:
+`values` is an array of conditions, where each element of arrays represents one condition of filter and has the following structure:
 
 ```typescript
 declare type TupleValueType = ITupleElementValue[];
@@ -193,7 +193,7 @@ interface ITupleElementValue {
 }
 ```
 
-`TupleValueType` is array also and each element of arrays represents a condition for one concrete column.
+`TupleValueType` is also an array and each element of arrays represents a condition for one concrete column.
 
 Complete example:
 
@@ -242,7 +242,7 @@ let filter: ITupleFilter = {
 visualHost.applyJsonFilter(filter, "general", "filter", FilterAction.merge);
 ```
 
-**Order of column names and values of condition are sensetive.**
+**Order of column names and values of condition are sensitive.**
 
 SQL equivalent is
 

@@ -23,6 +23,7 @@
       skip: true
     - title: DataViewMappings
     - title: Objects and properties
+    - title: Filter API
     - title: Advanced Edit Mode
     - title: R Powered Custom Visuals
       skip: true
@@ -85,6 +86,7 @@
     - title: Certification
 
 - title: Changelog
+  url: changelog
   pages:
     - title: API 2.1
 

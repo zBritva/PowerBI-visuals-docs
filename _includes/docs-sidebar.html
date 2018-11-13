@@ -1,6 +1,12 @@
-<form class="bd-search d-flex align-items-center" role="search" method="get" action="{{ site.baseurl }}/search/">
-  <input type="search" name="q" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-siteurl="{{ site.url }}">
-  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+<form class="bd-search d-flex align-items-center" role="search" method="get"
+  action="{{ site.baseurl }}/search/">
+  <input type="search" name="q" class="form-control" id="search-input"
+    placeholder="Search..." aria-label="Search for..." autocomplete="off"
+    data-siteurl="{{ site.url }}">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3"
+    type="button" data-toggle="collapse" data-target="#bd-docs-nav"
+    aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs
+    navigation">
     {%- include icons/menu.svg width="30" height="30" -%}
   </button>
 </form>
@@ -9,58 +15,67 @@
   {%- assign page_slug = page.url | split: '/' | last -%}
   {%- for group in site.data.nav -%}
 
+
+  {%- if group.url != nil -%}
+  {%- assign link = group -%}
+  {%- assign link_slug = nil -%}
+  {%- else -%}
   {%- assign link = group.pages | first -%}
   {%- assign link_slug = link.title | slugify -%}
+  {%- endif -%}
+
   {%- assign group_slug = group.title | slugify -%}
   {%- assign active = nil -%}
 
   {%- if page.group == group_slug -%}
-    {%- assign active = 'active' -%}
+  {%- assign active = 'active' -%}
   {%- endif -%}
 
 
   {%- if group.skip != true -%}
 
-  <div class="bd-toc-item{% unless active == nil %} {{ active }}{% endunless %}">
-      <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
-        {{ group.title }}
-      </a>
+  <div class="bd-toc-item{% unless active == nil %} {{ active }}{% endunless
+    %}">
+    <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ group_slug }}/{% if
+      link_slug %}{{ link_slug }}/{% endif %}">
+      {{ group.title }}
+    </a>
 
-      <ul class="nav bd-sidenav">
-        {%- for doc in group.pages -%}
-          {%- assign doc_slug = doc.title | slugify -%}
-          {%- assign active = nil -%}
+    <ul class="nav bd-sidenav">
+      {%- for doc in group.pages -%}
+      {%- assign doc_slug = doc.title | slugify -%}
+      {%- assign active = nil -%}
 
-          {%- if page.group == group_slug and page_slug == doc_slug -%}
-            {%- assign active = 'active bd-sidenav-active' -%}
-          {%- endif -%}
+      {%- if page.group == group_slug and page_slug == doc_slug -%}
+      {%- assign active = 'active bd-sidenav-active' -%}
+      {%- endif -%}
 
 
-          {%- if doc.skip != true -%}
+      {%- if doc.skip != true -%}
 
-          <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
-            <a href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
-              {{ doc.title }}
+      <li{% unless active == nil %} class="{{ active }}" {% endunless %}>
+        <a href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
+          {{ doc.title }}
+        </a>
+
+        {%- comment -%}
+        {% unless doc.sections == nil %}
+        <ul class="nav">
+          {% for section in doc.sections %}
+          <li>
+            <a href="#{{ section.title | downcase | replace: ' ', '-' }}">
+              {{ section.title }}
             </a>
-
-            {%- comment -%}
-            {% unless doc.sections == nil %}
-              <ul class="nav">
-                {% for section in doc.sections %}
-                  <li>
-                    <a href="#{{ section.title | downcase | replace: ' ', '-' }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endunless %}
-            {%- endcomment -%}
           </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    </div>
-    {%- endif -%}
+          {% endfor %}
+        </ul>
+        {% endunless %}
+        {%- endcomment -%}
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
   {%- endfor -%}
 </nav>

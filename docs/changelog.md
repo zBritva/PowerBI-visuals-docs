@@ -12,6 +12,11 @@ The page contains a quick summary of the API versions.
 
 Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](../roadmap/).
 
+## API v2.2
+  * **[JSON Filter Support](../concepts/filter-api/)**
+  * **[ContextMenu API](../../tutorials/building-bar-chart/adding-context-menu-to-the-bar/)**
+
+
 ## API v2.1
   * Significant performance enhancements:
   * Faster loading times

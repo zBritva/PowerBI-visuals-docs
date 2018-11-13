@@ -8,6 +8,5 @@ redirect_from:
 github_issue_id: 403
 ---
 
-* MultiColumn JsonFilter
 * ES6 imports support
 * Typescript 2.8 support

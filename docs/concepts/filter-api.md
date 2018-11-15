@@ -164,37 +164,36 @@ Tuple filter API is similar to Basic filter, but it allows defining conditions f
 And a filter has interface: 
 
 ```typescript
-interface IFilter extends IFilter {
+interface ITupleFilter extends IFilter {
     $schema: string;
     filterType: FilterType;
-    operator: IFlterOperators;
-    target: IFilterTarget;
+    operator: TupleFilterOperators;
+    target: ITupleFilterTarget;
     values: TupleValueType[];
 }
 ```
 
-`target` has a different structure and matches with  `ITupleFilterTarget` interface. It's an array of columns with table names.
-The visual can use columns from different tables if tables have a relationship.
+`target` is an array of columns with table names:
+```typescript
+declare type ITupleFilterTarget = IFilterTarget[];
+```
+The filter can address columns from different tables.
 
 `$schema` is "http://powerbi.com/product/schema#tuple"
 
-`filterType` is `FilterType.TupleInFilter`
+`filterType` is `FilterType.Tuple`
 
-`operator` allows to use only `"In"` operator
+`operator` only allows to use `"In"` operator
 
-`values` is an array of conditions, where each element of arrays represents one condition of filter and has the following structure:
+`values` is an array of value tuples, where each tuple represents one permitted combination of the target column values 
 
 ```typescript
 declare type TupleValueType = ITupleElementValue[];
 
 interface ITupleElementValue {
-    value: PrimitiveValueType,
-    keyValues?: PrimitiveValueType[];
+    value: PrimitiveValueType
 }
 ```
-
-`TupleValueType` is also an array and each element of arrays represents a condition for one concrete column.
-
 Complete example:
 
 ```typescript
@@ -232,7 +231,7 @@ let values = [
 
 let filter: ITupleFilter = {
     $schema: "http://powerbi.com/product/schema#tuple",
-    filterType: FilterType.TupleInFilter,
+    filterType: FilterType.Tuple,
     operator: "In",
     target: target,
     values: values

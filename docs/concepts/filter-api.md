@@ -210,7 +210,7 @@ let target: ITupleFilterTarget = [
 
 let values = [
     [
-        // the first value tuple(aka value vector) that the filter will pass through
+        // the 1st column combination value (aka column tuple/vector value) that the filter will pass through
         {
             value: "Team1" // the value for `Team` column of `DataTable` table
         },
@@ -219,7 +219,7 @@ let values = [
         }
     ],
     [
-        // the 2nd value tuple(aka value vector)  that the filter will pass through
+        // the 2nd column combination value (aka column tuple/vector value) that the filter will pass through
         {
             value: "Team2" // the value for `Team` column of `DataTable` table
         },

@@ -174,10 +174,10 @@ interface ITupleFilter extends IFilter {
 ```
 
 `target` is an array of columns with table names:
-```typescript
-declare type ITupleFilterTarget = IFilterTarget[];
-```
-The filter can address columns from different tables.
+  ```typescript
+  declare type ITupleFilterTarget = IFilterTarget[];
+  ```
+  The filter can address columns from different tables.
 
 `$schema` is "http://powerbi.com/product/schema#tuple"
 
@@ -187,59 +187,59 @@ The filter can address columns from different tables.
 
 `values` is an array of value tuples, where each tuple represents one permitted combination of the target column values 
 
-```typescript
-declare type TupleValueType = ITupleElementValue[];
+  ```typescript
+  declare type TupleValueType = ITupleElementValue[];
 
-interface ITupleElementValue {
-    value: PrimitiveValueType
-}
-```
+  interface ITupleElementValue {
+      value: PrimitiveValueType
+  }
+  ```
 Complete example:
 
-```typescript
-let target: ITupleFilterTarget = [
-    {
-        table: "DataTable",
-        column: "Team"
-    },
-    {
-        table: "DataTable",
-        column: "Value"
-    }
-];
+  ```typescript
+  let target: ITupleFilterTarget = [
+      {
+          table: "DataTable",
+          column: "Team"
+      },
+      {
+          table: "DataTable",
+          column: "Value"
+      }
+  ];
 
-let values = [
-    [
-        // the 1st column combination value (aka column tuple/vector value) that the filter will pass through
-        {
-            value: "Team1" // the value for `Team` column of `DataTable` table
-        },
-        {
-            value: 5 // the value for `Value` column of `DataTable` table
-        }
-    ],
-    [
-        // the 2nd column combination value (aka column tuple/vector value) that the filter will pass through
-        {
-            value: "Team2" // the value for `Team` column of `DataTable` table
-        },
-        {
-            value: 6 // the value for `Value` column of `DataTable` table
-        }
-    ]
-];
+  let values = [
+      [
+          // the 1st column combination value (aka column tuple/vector value) that the filter will pass through
+          {
+              value: "Team1" // the value for `Team` column of `DataTable` table
+          },
+          {
+              value: 5 // the value for `Value` column of `DataTable` table
+          }
+      ],
+      [
+          // the 2nd column combination value (aka column tuple/vector value) that the filter will pass through
+          {
+              value: "Team2" // the value for `Team` column of `DataTable` table
+          },
+          {
+              value: 6 // the value for `Value` column of `DataTable` table
+          }
+      ]
+  ];
 
-let filter: ITupleFilter = {
-    $schema: "http://powerbi.com/product/schema#tuple",
-    filterType: FilterType.Tuple,
-    operator: "In",
-    target: target,
-    values: values
-}
+  let filter: ITupleFilter = {
+      $schema: "http://powerbi.com/product/schema#tuple",
+      filterType: FilterType.Tuple,
+      operator: "In",
+      target: target,
+      values: values
+  }
 
-// invoke the filter
-visualHost.applyJsonFilter(filter, "general", "filter", FilterAction.merge);
-```
+  // invoke the filter
+  visualHost.applyJsonFilter(filter, "general", "filter", FilterAction.merge);
+  ```
 
 **Order of column names and values of condition are sensitive.**
 

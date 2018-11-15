@@ -210,21 +210,21 @@ let target: ITupleFilterTarget = [
 
 let values = [
     [
-        // the first condition of filter
+        // the first value tuple(aka value vector) that the filter will pass through
         {
-            value: "Team1" // the value of condition for `Team` column of `DataTable` table
+            value: "Team1" // the value for `Team` column of `DataTable` table
         },
         {
-            value: 5 // the value of condition for `Value` column of `DataTable` table
+            value: 5 // the value for `Value` column of `DataTable` table
         }
     ],
     [
-        // the second condition of filter
+        // the 2nd value tuple(aka value vector)  that the filter will pass through
         {
-            value: "Team2" // the value of condition for `Team` column of `DataTable` table
+            value: "Team2" // the value for `Team` column of `DataTable` table
         },
         {
-            value: 6 // the value of condition for `Value` column of `DataTable` table
+            value: 6 // the value for `Value` column of `DataTable` table
         }
     ]
 ];

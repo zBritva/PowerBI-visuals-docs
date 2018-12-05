@@ -56,10 +56,11 @@ github_comments_repository: Microsoft/powerbi-visuals
 
 
 cdn:
-  bootstrap_css:    "https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/css/bootstrap.min.css"
+  bootstrap_css:    "https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/css/bootstrap.min.css"
   css_hash:         "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-  js:               "https://ajax.aspnetcdn.com/ajax/bootstrap/4.0.0/bootstrap.min.js"
-  js_hash:          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  bootstrap_js:               "https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/bootstrap.min.js"
+  bootstrap_js_hash:          "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  jquery_js:        "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"
 
 toc:
   min_level:        1

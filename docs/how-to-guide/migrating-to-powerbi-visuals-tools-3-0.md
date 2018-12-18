@@ -202,6 +202,22 @@ There are several breaking changes and you should modify your code to use the ne
 
 [Read more](https://github.com/d3/d3/blob/master/CHANGES.md) about changes in D3.js library.
 
+## Babel 7.*
+
+Starting from version 3.0.9 the tools use babel to compile new modern JS code into old ES5 to support wide range browsers.
+
+This option is enabled by default, but you need to manually import the [`@babel/polyfill`](https://babeljs.io/docs/en/babel-polyfill) package.
+
+Execute command to install the package
+
+`npm install --save @babel/polyfill`
+
+and import the package on the start point of the visual code (usually it's 'src/visual.ts' file):
+
+`import "@babel/polyfill";`
+
+Read more about Babel [in docs](https://babeljs.io/docs/en/).
+
 # Advantages of using the new tools
 
 1. You can use the new syntax to import modules.

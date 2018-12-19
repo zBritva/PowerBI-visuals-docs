@@ -202,9 +202,9 @@ There are several breaking changes and you should modify your code to use the ne
 
 [Read more](https://github.com/d3/d3/blob/master/CHANGES.md) about changes in D3.js library.
 
-## Babel 7.*
+## Babel
 
-Starting from version 3.0.9 the tools use babel to compile new modern JS code into old ES5 to support wide range browsers.
+Starting from version 3.0.9 the tools use babel to compile new modern JS code into old ES5 to support wide range of browsers.
 
 This option is enabled by default, but you need to manually import the [`@babel/polyfill`](https://babeljs.io/docs/en/babel-polyfill) package.
 
@@ -220,7 +220,7 @@ Read more about Babel [in docs](https://babeljs.io/docs/en/).
 
 # Advantages of using the new tools
 
-1. You can use the new syntax to import modules.
+1. You can use new syntax to import modules
 2. New tools allow using new versions of libraries, for example, D3.js version 4.x.x. or 5.x.x. with defined typings for TS.
 3. Webpack uses [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) to remove unused code
     `pbiviz package` command runs a build in production mode. It reduces code of JS and as result, you get better performance in loading the visual.

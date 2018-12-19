@@ -3,9 +3,11 @@
     - title: Building a Visual with Static Data
     - title: Adding Databinding to the Bar Chart
     - title: Adding Color to the Bar Chart
+    - title: Adding context menu to the bar
     - title: Adding Selection and Interaction with Other Visuals
     - title: Adding Static Objects to Property Pane
     - title: Adding Databound Objects to Property Pane
+    - title: Adding landing page to the bar
     - title: Adding Tooltips to the Bar Chart
     - title: Adding A Slider control to the Bar Chart
     - title: Adding Locale support to the Bar Chart

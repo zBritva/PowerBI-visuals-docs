@@ -290,7 +290,7 @@ The data can be aggregated by selecting the desired field and clicking sum.
 
 ## Matrix Data Mapping
 
-Matrix Data Mapping similar to table data mapping, but rows are presented hierarchically. And one `dataRole` values can be used as column header values.
+Matrix Data Mapping is similar to table data mapping, but rows are presented hierarchically. And one of `dataRole` values can be used as a column header value.
 
 ```json
 {
@@ -342,7 +342,7 @@ Matrix Data Mapping similar to table data mapping, but rows are presented hierar
 }
 ```
 
-Power BI creates hierarchically data stucture, where in the roots of tree are data from the first column of `Category` data role with childs from the second column of data role.
+Power BI creates hierarchical data stucture. The root of tree includes the data from the first column of `Category` data role with children from the second column of data role.
 
 Sample dataset:
 
@@ -365,11 +365,11 @@ Sample dataset:
 | Parent2 | Child3 | Grand child8 | Col1 | 10 |
 | Parent2 | Child3 | Grand child8 | Col2 | 13 |
 
-Core Matrix visual of Power BI visualizes it like a table
+Core Matrix visual of Power BI renders it like a table.
 
 ![Matrix visual](../images/MatrixVisualSmaple.png)
 
-The visual gets data stucture described below (only the first two rows presented): 
+The visual gets data stucture as described below (only the first two rows are presented): 
 
 ```json
 {

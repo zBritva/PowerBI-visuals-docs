@@ -6,6 +6,7 @@ group: concepts
 toc: true
 redirect_from:
   - /docs/latest/concepts/filterapi/
+github_issue_id: 520
 ---
 
 ## Custom Visual Filters API
@@ -155,7 +156,7 @@ SELECT * FROM table WHERE col1 < 0;
 
 Complete sample code of using Advanced Filter API can be found in [sampleslicer visual repository](https://github.com/Microsoft/powerbi-visuals-sampleslicer).
 
-### Tuple filter API
+### Tuple filter API (Multi column filter)
 
 Tuple Filter API was introduced in Custom Visuals API 2.3.0.
 

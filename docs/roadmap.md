@@ -9,4 +9,4 @@ github_issue_id: 403
 ---
 
 * ES6 imports support
-* Typescript 2.8 support
+* Typescript 3.1 support

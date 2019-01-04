@@ -2,7 +2,7 @@
 layout: docs
 title: Performance Tips 
 description: How to build a high performance Custom Visual
-group: concepts
+group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/performance-tips/

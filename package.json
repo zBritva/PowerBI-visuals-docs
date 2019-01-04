@@ -14,9 +14,9 @@
     "docs-compile": "bundle exec jekyll build --incremental",
     "docs-github-serve": "bundle exec jekyll serve --skip-initial-build --no-watch",
     "docs-lint": "npm-run-all docs-lint-*",
-    "docs-serve": "bundle exec jekyll serve",
-    "docs-serve-incremental": "bundle exec jekyll serve --incremental",
-    "profile": "bundle exec jekyll serve --profile --incremental"
+    "docs-serve": "bundle exec jekyll serve --host localhost",
+    "docs-serve-incremental": "bundle exec jekyll serve --host localhost --incremental",
+    "profile": "bundle exec jekyll serve --profile --host localhost --incremental"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",

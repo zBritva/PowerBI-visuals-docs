@@ -19,40 +19,37 @@ In case that a problem occurred during the rendering process, preventing the cus
 
 ### Usage
 ```typescript
-declare module powerbi.extensibility.v020300 {
+export interface IVisualHost extends extensibility.IVisualHost {
+	…
+	eventService: IVisualEventService ;
+	…
+}
 
-	export interface IVisualHost extends extensibility.IVisualHost {
-		…
-		eventService: IVisualEventService ;
-		…
-	}
-	
-	/** 
-	 * An interface for reporting rendering events 
+/** 
+ * An interface for reporting rendering events 
+ */
+export interface IVisualEventService {
+	/**
+	 * Should be called just before the actual rendering was started. 
+	 * Usually at the very start of the update method.
+	 * 
+	 * @param options - the visual update options received as update parameter
 	 */
-	export interface IVisualEventService {
-		/**
-		 * Should be called just before the actual rendering was started. 
-		 * Usually at the very start of the update method.
-		 * 
-		 * @param options - the visual update options received as update parameter
-		 */
-		renderingStarted(options: VisualUpdateOptions): void;
-		
-		/**
-		 * Shoudl be called immediately after finishing successfull rendering.
-		 * 
-		 * @param options - the visual update options received as update parameter
-		 */
-		renderingFinished(options: VisualUpdateOptions): void;
-		
-		/**
-		 * Called when rendering failed with optional reason string
-		 * 
-		 * @param options - the visual update options received as update parameter
-		 * @param reason - the option failure reason string
-		 */
-		renderingFailed(options: VisualUpdateOptions, reason?: string): void;
-	}
+	renderingStarted(options: VisualUpdateOptions): void;
+	
+	/**
+	 * Shoudl be called immediately after finishing successfull rendering.
+	 * 
+	 * @param options - the visual update options received as update parameter
+	 */
+	renderingFinished(options: VisualUpdateOptions): void;
+	
+	/**
+	 * Called when rendering failed with optional reason string
+	 * 
+	 * @param options - the visual update options received as update parameter
+	 * @param reason - the option failure reason string
+	 */
+	renderingFailed(options: VisualUpdateOptions, reason?: string): void;
 }
 ```

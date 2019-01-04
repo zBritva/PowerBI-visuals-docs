@@ -288,6 +288,162 @@ PowerBI will produce you this as the table dataview. Do not assume there is an o
 The data can be aggregated by selecting the desired field and clicking sum.  
 ![](../images/DataAggregation.png)
 
+## Matrix Data Mapping
+
+Matrix Data Mapping similar to table data mapping, but rows are presented hierarchically. And one `dataRole` values can be used as column header values.
+
+```json
+{
+    "dataRoles": [
+        {
+            "name": "Category",
+            "displayName": "Category",
+            "displayNameKey": "Visual_Category",
+            "kind": "Grouping"
+        },
+        {
+            "name": "Column",
+            "displayName": "Column",
+            "displayNameKey": "Visual_Column",
+            "kind": "Grouping"
+        },
+        {
+            "name": "Measure",
+            "displayName": "Measure",
+            "displayNameKey": "Visual_Values",
+            "kind": "Measure"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "matrix": {
+                "rows": {
+                    "for": {
+                        "in": "Category"
+                    }
+                },
+                "columns": {
+                    "for": {
+                        "in": "Column"
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "Measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+
+Power BI creates hierarchically data stucture, where in the roots of tree are data from the first column of `Category` data role with childs from the second column of data role.
+
+Sample dataset:
+
+| Parents | Children | Grand children | Columns | Values |
+|-----|-----|------|-------|-------|
+| Parent1 | Child1 | Grand child1 | Col1 | 5 |
+| Parent1 | Child1 | Grand child1 | Col2 | 6 |
+| Parent1 | Child1 | Grand child2 | Col1 | 7 |
+| Parent1 | Child1 | Grand child2 | Col2 | 8 |
+| Parent1 | Child2 | Grand child3 | Col1 | 5 |
+| Parent1 | Child2 | Grand child3 | Col2 | 3 |
+| Parent1 | Child2 | Grand child4 | Col1 | 4 |
+| Parent1 | Child2 | Grand child4 | Col2 | 9 |
+| Parent1 | Child2 | Grand child5 | Col1 | 3 |
+| Parent1 | Child2 | Grand child5 | Col2 | 5 |
+| Parent2 | Child3 | Grand child6 | Col1 | 1 |
+| Parent2 | Child3 | Grand child6 | Col2 | 2 |
+| Parent2 | Child3 | Grand child7 | Col1 | 7 |
+| Parent2 | Child3 | Grand child7 | Col2 | 1 |
+| Parent2 | Child3 | Grand child8 | Col1 | 10 |
+| Parent2 | Child3 | Grand child8 | Col2 | 13 |
+
+Core Matrix visual of Power BI visualizes it like a table
+
+![Matrix visual](../images/MatrixVisualSmaple.png)
+
+The visual gets data stucture described below (only the first two rows presented): 
+
+```json
+{
+    "metadata": {...},
+    "matrix": {
+        "rows": {
+            "levels": [...],
+            "root": {
+                "childIdentityFields": [...],
+                "children": [
+                    {
+                        "level": 0,
+                        "levelValues": [...],
+                        "value": "Parent1",
+                        "identity": {...},
+                        "childIdentityFields": [...],
+                        "children": [
+                            {
+                                "level": 1,
+                                "levelValues": [...],
+                                "value": "Child1",
+                                "identity": {...},
+                                "childIdentityFields": [...],
+                                "children": [
+                                    {
+                                        "level": 2,
+                                        "levelValues": [...],
+                                        "value": "Grand child1",
+                                        "identity": {...},
+                                        "values": {
+                                            "0": {
+                                                "value": 5 // value for Col1
+                                            },
+                                            "1": {
+                                                "value": 6 // value for Col2
+                                            }
+                                        }
+                                    },
+                                    ...
+                                ]
+                            },
+                            ...
+                        ]
+                    },
+                    ...
+                ]
+            }
+        },
+        "columns": {
+            "levels": [...],
+            "root": {
+                "childIdentityFields": [...],
+                "children": [
+                    {
+                        "level": 0,
+                        "levelValues": [...],
+                        "value": "Col1",
+                        "identity": {...}
+                    },
+                    {
+                        "level": 0,
+                        "levelValues": [...],
+                        "value": "Col2",
+                        "identity": {...}
+                    },
+                    ...
+                ]
+            }
+        },
+        "valueSources": [...]
+    }
+}
+```
+
 # Data Reduction Algorithm
 
 A `DataReductionAlgorithm` can be applied if you want to control the amount of data received in the DataView.

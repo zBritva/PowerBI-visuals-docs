@@ -248,4 +248,26 @@ SQL equivalent is
 
 ```sql
 SELECT * FROM DataTable WHERE ( Team = "Team1" AND Value = 5 ) OR ( Team = "Team2" AND Value = 6 );
+```  
+
+
+### Restoring JSON Filter from DataView
+
+Starting from API 2.2 **JSON Filters** can be restored from **VisualUpdateOptions**
+
+```typescript
+    export interface VisualUpdateOptions extends extensibility.VisualUpdateOptions {
+        viewport: IViewport;
+        dataViews: DataView[];
+        type: VisualUpdateType;
+        viewMode?: ViewMode;
+        editMode?: EditMode;
+        operationKind?: VisualDataChangeOperationKind;
+        jsonFilters?: IFilter[];
+    }
 ```
+
+#### Sample JSON Filter
+
+![Screenshot JSON Filte](../images/json-filter.jpg)
+

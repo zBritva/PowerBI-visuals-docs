@@ -15,13 +15,11 @@ Versions listed on this page are considered stable and should not change. For in
 ## API v2.3
   * **[Landing Page API](../how-to-guide/landing-page/)**
   * **[Tuple filter API (Multi column filter)](../../docs/concepts/filter-api/#tuple-filter-api-multi-column-filter)**
-  * **[Rendering Events API](../how-to-guide/rendering-events/)**
-
+<!---  * **[Rendering Events API](../how-to-guide/rendering-events/)**-->
 
 ## API v2.2
-  * **[JSON Filter Support](../../docs/concepts/filter-api/)**
+  * **[Restoring JSON Filter from DataView](../../docs/concepts/filter-api/#restoring-json-filter-from-dataview)**
   * **[ContextMenu API](../../tutorials/building-bar-chart/adding-context-menu-to-the-bar/)**
-
 
 ## API v2.1
   * Significant performance enhancements:
@@ -41,7 +39,7 @@ Versions listed on this page are considered stable and should not change. For in
 * **[Canvas tooltips](../how-to-guide/adding-report-page-tooltips/#support-canvas-tooltips)** - Canvas tooltip API
 
 ## API v1.11
-* **[FilterManager](FilterManager.md)** - Filter Manager
+* **[FilterManager](../../docs/concepts/filter-api)** - Filter Manager
 * **[Bookmarks Support](../how-to-guide/bookmarks-support/)** - Bookmarks Support
 
 ## API v1.10
@@ -60,7 +58,7 @@ Versions listed on this page are considered stable and should not change. For in
 
 ## API v1.6.2
 * **[Edit mode](../concepts/advanced-edit-mode/)** - support for visual to enter in-visual edit mode
-* **[Interactive (html) R custom visuals](../../../tutorials/building-r-powered-custom-visual/creating-a-new-r-powered-custom-visual/)** - support for creating interactive R custom visuals, based on html
+* **[Interactive (html) R custom visuals](../../tutorials/building-r-powered-custom-visual/creating-a-new-r-powered-custom-visual/)** - support for creating interactive R custom visuals, based on html
 
 ## API v1.5.0
 * **[Allow interactions](../how-to-guide/allow-interactions/)** - support for visual interactivity
@@ -74,7 +72,7 @@ Versions listed on this page are considered stable and should not change. For in
 ## API v1.2.0
 * **colorPallette** - manage the colors used on your visual.
 * **Multiple selection** - selectionManager can accept an array of `SelectionId`.
-* **[R visuals](../../../tutorials/building-r-powered-custom-visual/creating-a-new-r-powered-custom-visual/)** - support for custom visuals using R scripts
+* **[R visuals](../../tutorials/building-r-powered-custom-visual/creating-a-new-r-powered-custom-visual/)** - support for custom visuals using R scripts
 
 ## API v1.1.0
 * Debug visual in iFrame

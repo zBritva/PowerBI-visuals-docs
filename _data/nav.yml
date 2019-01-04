@@ -24,7 +24,6 @@
     - title: DataViewMappings
     - title: Objects and properties
     - title: Filter API
-      skip: true
     - title: Advanced Edit Mode
     - title: R Powered Custom Visuals
       skip: true

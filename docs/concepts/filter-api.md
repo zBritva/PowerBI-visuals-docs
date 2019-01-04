@@ -81,7 +81,7 @@ The filter means "give me all rows where `col1` equals to one of values 1,2 or 3
 SQL equivalent is
 
 ```sql
-SELECT * FROM table WHERE col1 IN (1,2,3)
+SELECT * FROM table WHERE col1 IN ( 1 , 2 , 3 )
 ```
 
 To create a filter you can use BasicFilter class in `powerbi-models`.
@@ -96,7 +96,7 @@ let target: IFilterColumnTarget = {
     column: categories.source.displayName
 };
 
-let values = [1,2,3];
+let values = [ 1, 2, 3 ];
 
 let filter: IBasicFilter = new window['powerbi-models'].BasicFilter(target, "In", values);
 ```
@@ -246,5 +246,5 @@ Complete example:
 SQL equivalent is
 
 ```sql
-SELECT * FROM DataTable WHERE Team = "Team1" AND Value = 5 OR Team = "Team2" AND Value = 6;
+SELECT * FROM DataTable WHERE ( Team = "Team1" AND Value = 5 ) OR ( Team = "Team2" AND Value = 6 );
 ```

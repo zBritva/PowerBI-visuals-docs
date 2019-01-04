@@ -12,8 +12,13 @@ The page contains a quick summary of the API versions.
 
 Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](../roadmap/).
 
+## API v2.3
+  * Custom Visuals landing page
+  * Custom Visuals event service
+  * **[Tuple filter API](../../docs/concepts/filter-api/#tuple-filter-api)**
+
 ## API v2.2
-  * **JSON Filter Support**
+  * **[JSON Filter Support](../../docs/concepts/filter-api/)**
   * **[ContextMenu API](../../tutorials/building-bar-chart/adding-context-menu-to-the-bar/)**
 
 

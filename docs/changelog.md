@@ -15,7 +15,7 @@ Versions listed on this page are considered stable and should not change. For in
 ## API v2.3
   * **[Landing Page API](../how-to-guide/landing-page/)**
   * **[Tuple filter API (Multi column filter)](../../docs/concepts/filter-api/#tuple-filter-api-multi-column-filter)**
-<!---  * **[Rendering Events API](../how-to-guide/rendering-events/)**-->
+  * **[Rendering Events API](../how-to-guide/rendering-events/)**
 
 ## API v2.2
   * **[Restoring JSON Filter from DataView](../../docs/concepts/filter-api/#restoring-json-filter-from-dataview)**

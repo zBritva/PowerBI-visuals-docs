@@ -52,8 +52,7 @@ export interface IVisualEventService {
 }
 ```
 
-#### Sample
- 
+### Sample
 ```typescript
     export class Visual implements IVisual {
         ...

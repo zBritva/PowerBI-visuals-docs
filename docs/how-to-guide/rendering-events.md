@@ -7,15 +7,13 @@ toc: true
 github_issue_id: 518
 ---
 
-The 2.3 API introduces a new rendering events service providing the custom visual developer an ability to notify about rendering progress. 
+The new API consists of three methods (started, finished or failed) which should be called during rendering.
 
-The new API contains three methods (started, finished or failed) to call during rendering is performing.
+When rendering starts, the custom visual code calls the renderingStarted method to indicate that rendering process has started.
 
-When the rendering is only going to start, the custom visual code will call to renderingStarted method to indicate that rendering process was started.
+If the rendering has completed successfully, the custom visual code will immediately call the renderingFinished method notifying the listeners (primarily 'export to PDF' and 'export to PowerPoint') that the visual's image is ready.
 
-If the rendering was completed successfully, the custom visual code will immediately call the renderingFinished method notifying the listeners that this visual image is ready.
-
-In case that a problem occurred during the rendering process, preventing the custom visual to successfully complete it, the custom visual code will call to renderingFailed method notifying the listener that rendering process didn't complete and also will provide an optional string for the cause of failure.
+In case a problem occurred during the rendering process, preventing the custom visual from completing successfully, the custom visual code should call the renderingFailed method notifying the listener that the rendering process has not completed. This method also provides an optional string for the cause of failure.
 
 ### Usage
 ```typescript

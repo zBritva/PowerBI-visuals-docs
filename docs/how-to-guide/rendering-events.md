@@ -51,3 +51,24 @@ export interface IVisualEventService {
 	renderingFailed(options: VisualUpdateOptions, reason?: string): void;
 }
 ```
+
+#### Sample
+ 
+```typescript
+    export class Visual implements IVisual {
+        ...
+        private events: IVisualEventService ;
+        ...
+
+        constructor(options: VisualConstructorOptions) {
+            ...
+            this.events = options.host.eventService;
+            ...
+        }
+
+        public update(options: VisualUpdateOptions) {
+            this.events.renderingStarted(options);
+            ...
+            this.events.renderingFinished(options);
+        }
+```

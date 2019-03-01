@@ -6,6 +6,8 @@ group: step-by-step-lab
 toc: true
 redirect_from:
   - /docs/latest/step-by-step-lab/setting-up-the-developer-environment/
+redirect_to:
+  - https://docs.microsoft.com/en-us/power-bi/developer/custom-visual-develop-tutorial
 github_issue_id: 418
 ---
 

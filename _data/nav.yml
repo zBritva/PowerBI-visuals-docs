@@ -1,6 +1,7 @@
 - title: Overview
 
 - title: Step by step lab
+  skip: true
   pages:
     - title: Developing a Power BI Custom Visual
     - title: Signing In to the Power BI Service

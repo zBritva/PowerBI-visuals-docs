@@ -14,13 +14,12 @@ This article covers several techniques how developers can keep high rendering pe
 ### Tips and Tricks 
 Here are some suggestions how to keep high performance for your visual. 
 
-### Tips and Tricks Use the latest API 
-We constantly working on improving of loading speed of PowerBI service. Each new API update brings not only new features to your visual, but also provides  better performance for visuals infrastructure. 
+### Use the latest API 
+As we continue to improve our platform and enhance our feature set to enable our developers and partners to get the most from custom visuals' platform, we release new API versions constantly. It is always recommended to keep your visuals updated with the new released versions of API to get the latest and greatest features.  
+**With API 2.1 we improved the loading time of custom visual by 20% on average!**
 
 ### Use User Timing API
 The User Timing API enables you to measure your app's JavaScript performance. The basic idea is that you decide which parts of your scripts you want to optimize, and then you instrument those parts of your scripts with the User Timing API. 
-
-### Use User Timing API
 Read the official documentation about User Timing API on [MSDN](https://msdn.microsoft.com/en-us/library/hh772738(v=vs.85).aspx).
 
 ### Does your animation loop redraw elements that haven’t changed? 

@@ -34,6 +34,7 @@
     
 - title: How-to guide
   pages:
+    - title: Create ssl certificate
     - title: Adding a slide control
     - title: Adding colors to your visual
     - title: Adding drill down support

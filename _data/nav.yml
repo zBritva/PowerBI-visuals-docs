@@ -34,7 +34,6 @@
     
 - title: How-to guide
   pages:
-    - title: Create ssl certificate
     - title: Adding a slide control
     - title: Adding colors to your visual
     - title: Adding drill down support
@@ -45,6 +44,7 @@
     - title: Allow interactions
     - title: Bookmarks support
     - title: Custom visuals for mobile
+    - title: Create ssl certificate
     - title: Enable Sync Slicers
     - title: High-contrast support
     - title: Highlighting

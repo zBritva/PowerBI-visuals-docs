@@ -118,7 +118,3 @@ at server section:
     "passphrase":"YOUR PASSPHRASE"
 }
 ```
-
-## Move to next step:
-
-[Install generated SSL certifications to enable live preview of visuals](../server-certification-install)

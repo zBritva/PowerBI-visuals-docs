@@ -2,7 +2,7 @@
 layout: docs
 title: Mobile Development
 description: How to create mobile-friendly custom visual
-group: concepts
+group: how-to-guide
 toc: true
 redirect_from:
   - /docs/latest/how-to-guide/custom-visuals-for-mobile/

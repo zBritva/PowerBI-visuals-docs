@@ -44,7 +44,7 @@ blog:               "https://powerbi.microsoft.com/en-us/blog/"
 appsource:          "https://appsource.microsoft.com/en-us/marketplace/apps?product=power-bi-visuals"
 
 # Custom variables
-current_version:      2.3
+current_version:      2.5
 repo:                 "https://github.com/Microsoft/PowerBI-visuals-tools"
 ga_id:                "UA-116683883-1"            
 

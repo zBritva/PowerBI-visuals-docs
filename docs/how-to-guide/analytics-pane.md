@@ -1,8 +1,15 @@
-## Analytics Properties ##
+---
+layout: docs
+title: Analytics pane
+description: 
+group: how-to-guide
+toc: true
+---
+
 **Analytics pane** was [introduced for native visuals](https://docs.microsoft.com/en-us/power-bi/desktop-analytics-pane) on November 2018. 
 As of API v2.5.0, custom visuals too can present and manage their properties in the **Analytics pane**.
 
-![Analytics Pane](./images/visualization_pane_analytics_tab.png)
+![Analytics Pane](../images/visualization_pane_analytics_tab.png)
 
 This is handled similarly to [managing properties in the Format pane](https://docs.microsoft.com/en-us/power-bi/developer/custom-visual-develop-tutorial-format-options), 
 by defining an object in the visual's capabilities.json file. 
@@ -40,7 +47,7 @@ objectCategory defaults to "Formatting" if omitted.
 ```
 Any other properties may be defined in the same way as done for Format objects. Object enumeration is done exactly the same as in **Format pane**. 
 
-###Known limitations and issues###
+***Known limitations and issues***
   1.	No multi-instance support yet (coming soon). Objects cannot have a [selector](https://microsoft.github.io/PowerBI-visuals/docs/concepts/objects-and-properties/#selector) other than static (i.e. "selector": null), and custom visuals can't have user-defined multiple instances of a card.
   2.	Properties of type `integer` are not displayed correctly. As a workaround, use type `numeric` instead.
 

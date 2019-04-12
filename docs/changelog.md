@@ -9,12 +9,14 @@ github_issue_id: 402
 ---
 
 The page contains a quick summary of the API versions.
+Versions listed on this page are considered stable and should not change.
 
-Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](../roadmap/).
 ## API v2.5
-  * **[Analytics Pane Support](../how-to-guide/analytics-properties/)**
+  * **[Analytics Pane Support](../how-to-guide/analytics-pane/)**
+
 ## API v2.3
   * **[Landing Page API](../how-to-guide/landing-page/)**
+  * **[Local Storage API](../how-to-guide/local-storage/)**
   * **[Tuple filter API (Multi column filter)](../../docs/concepts/filter-api/#tuple-filter-api-multi-column-filter)**
   * **[Rendering Events API](../how-to-guide/rendering-events/)**
 

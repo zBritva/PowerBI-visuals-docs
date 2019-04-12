@@ -42,6 +42,7 @@
     - title: Adding selection and interaction with other visuals
     - title: Adding tooltips
     - title: Allow interactions
+    - title: Analytics pane
     - title: Bookmarks support
     - title: Custom visuals for mobile
     - title: Create ssl certificate
@@ -51,6 +52,7 @@
     - title: How to debug
     - title: Landing Page
     - title: Launching URL
+    - title: Local Storage
     - title: Migrating to powerbi-visuals-tools 3.0
     - title: Performance tips
     - title: Rendering Events 

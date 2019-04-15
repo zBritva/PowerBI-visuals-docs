@@ -54,6 +54,14 @@ for(let dataValue of dataValues) {
 * **withSeries(values: DataViewValueColumns, seriesGroup: DataViewValueColumnGroup)**
     * Your selection ids will include the identity of the given series group. 
     * [See groupings in categorical data mappings for more details](../Capabilities/DataViewMappings.md)
+* **withMatrixNode(matrixNode: DataViewMatrixNode, levels: DataViewHierarchyLevel[])**   
+    Note: Available as of API v2.5.0
+    * Tells the builder to use a sepcific identity under the matrix node provided 
+    * [See matrix data mappings for more details](../Capabilities/DataViewMappings.md)
+* **withTable(table: DataViewTable, rowIndex: number)**   
+    Note: Available as of API v2.5.0
+    * Tells the builder to use a sepcific identity under the table row provided
+    * [See table data mappings for more details](../Capabilities/DataViewMappings.md)
 * **createSelectionId()**
     * Creates the selection id with the properties provided.
 

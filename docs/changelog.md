@@ -13,6 +13,7 @@ Versions listed on this page are considered stable and should not change.
 
 ## API v2.5
   * **[Analytics Pane Support](../how-to-guide/analytics-pane/)**
+  * The DataRepetitionSelector interface is no longer supported, it was replaced with the data.CustomVisualOpaqueIdentity interface.
 
 ## API v2.3
   * **[Landing Page API](../how-to-guide/landing-page/)**

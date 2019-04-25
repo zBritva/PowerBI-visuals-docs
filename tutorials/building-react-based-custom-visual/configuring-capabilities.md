@@ -8,7 +8,8 @@ toc: true
 
 # Capabilities.json
 
-__1.__ Open `capabilities.json`. Remove `Category Data` object from `dataRoles`. ReactCircleCard will display single value, so, we need only `Measure Data`.
+
+__1.__ Open `capabilities.json`. Remove `Category Data` object from `dataRoles`. ReactCircleCard will display single value, so we need only `Measure Data`.
 
   ```json
       "dataRoles": [
@@ -20,7 +21,7 @@ __1.__ Open `capabilities.json`. Remove `Category Data` object from `dataRoles`.
       ],
   ```
 
-__2.__ Remove all the content of `objects` key. It will be filled later.
+__2.__ Remove all the content of `objects` key. It will be filled in later.
 
   ```json
       "objects": {},
@@ -49,6 +50,6 @@ Now you can drag some data from `Fields` pane into visual settings.
 
 ![measureData](../images/measureData.png)
 
-The next step of tutorial will describe how to output that data using React.
+The [next step of tutorial](../receiving-props-from-powerbi-visual/) will describe how to render data using React.
 
 ---------

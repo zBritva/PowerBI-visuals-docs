@@ -9,7 +9,8 @@ toc: true
 
 # Receiving props from PowerBI visual
 
-__1.__ Let the component to display data from it's state. Improve `src/component.tsx`.
+
+__1.__ Let the component display data from its own state. Extend `src/component.tsx`.
 
   ```javascript
   export interface State {
@@ -44,10 +45,10 @@ __1.__ Let the component to display data from it's state. Improve `src/component
   }
   ```
 
-__2.__ Add some style for new markup by editing `styles/visual.less`.
+__2.__ Add some styles for new markup by editing `styles/visual.less`.
 
   ```css
-  .circleCard{
+  .circleCard {
       position: relative;
       box-sizing: border-box;
       border: 1px solid #000;
@@ -68,7 +69,7 @@ __2.__ Add some style for new markup by editing `styles/visual.less`.
   }
   ```
 
-__3.__ Custom visuals receives current data as argument of `update` method. Open `src/visual.ts` and add the following code into `update` method. 
+__3.__ Custom Visuals receive current data as an argument of `update` method. Open `src/visual.ts` and add the following code into `update` method:
 
   ```typescript
       public update(options: VisualUpdateOptions) {
@@ -84,9 +85,9 @@ __3.__ Custom visuals receives current data as argument of `update` method. Open
       }
   ```
 
-It picks `textValue` and `textLabel` from `DataView` and, if data exists, updates component state. That update method will be implemented at the next step.
+It picks `textValue` and `textLabel` from `DataView` and, if data exists, updates component state. This update method will be implemented at the next step.
 
-__4.__ To send the updates to the component instance insert the following into `ReactCircleCard` class:
+__4.__ To send the updates to the component instance insert the following code into `ReactCircleCard` class:
 
   ```typescript
       private static updateCallback: (data: object) => void = null;
@@ -108,8 +109,10 @@ __4.__ To send the updates to the component instance insert the following into `
       }
   ```
 
-__5.__ Now you can test the component. Make sure that `pbiviz start` is run and all files are saved and update developing visual.
+__5.__ Now you can test the component. Make sure that `pbiviz start` is run and all files are saved saved, and update the visual you're creating.
 
 ![circleCard](../images/circleCard.png)
+
+  [At the next step](../getting-viewport-properties/) we will make that component resizable.
 
 ---------

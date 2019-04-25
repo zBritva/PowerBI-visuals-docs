@@ -9,7 +9,8 @@ toc: true
 
 # Basic customization of your custom visual
 
-I's time to make the visual customizable. 
+It's time to make the visual customizable. 
+
 
 __1.__ Go to `capabilities.json` and describe settings in `objects` property
 
@@ -43,7 +44,7 @@ __1.__ Go to `capabilities.json` and describe settings in `objects` property
   //...
   ```
 
-__2.__ Replace existing code from `src/settings.ts` with new one:
+__2.__ Replace existing code from `src/settings.ts` with the new one:
 
   ```typescript
   "use strict";
@@ -72,7 +73,7 @@ __3.__ Import required dependencies at the top of `src/visual.ts`
 
   ```
 
-__4.__ `enumerateObjectInstances` is used to apply visual settings. Improve `src/visual.ts` inserting that lines:
+__4.__ `enumerateObjectInstances` is used to apply visual settings. Extend  `src/visual.ts` by inserting that lines:
 
   ```typescript
   export class Visual implements IVisual {
@@ -118,7 +119,7 @@ __6.__ Apply the corresponding changes to `src/component.tsx`. Extend `State` in
       borderWidth?: number
   }
   ```
-  ...and type following into `render` method.
+  ...and type the following code into `render` method.
 
   ```typescript
       const { /*...*/ background, borderWidth } = this.state;

@@ -10,12 +10,12 @@ toc: true
 # Getting viewport properties
 
 
-__1.__ Our component have fixed width and height. 
+__1.__ Our component has fixed width and height. 
 
 ![circleCard](../images/circleCard.png)
 _200px diameter circle_
 
-At this step we will make it responsive. To do that, we will get current size of custom visual viewport from `options` inside. Let's start with importing of `IViewport` interface at `src/visual.ts` and adding the `viewport` property to visual class.
+At this step we're going to make it responsive. To do that, we will get current size of the Custom Visual viewport from `options` inside. Let's start with importing of `IViewport` interface at `src/visual.ts` and adding the `viewport` property to visual class.
 
   ```typescript
   import IViewport = powerbi.IViewport;
@@ -28,7 +28,7 @@ At this step we will make it responsive. To do that, we will get current size of
   }
   ```
 
-__2.__ Upgrade the `update` method of visual:
+__2.__ Upgrade the `update` method of the visual:
 
   ```typescript
           if (options.dataViews && options.dataViews[0]) {
@@ -45,7 +45,7 @@ __2.__ Upgrade the `update` method of visual:
           }
   ```
 
-__3.__ Add new properties to `State` interface at `src/component.tsx`
+__3.__ Add new properties to `State` interface at `src/component.tsx`:
 
   ```typescript
   export interface State {
@@ -59,7 +59,7 @@ __3.__ Add new properties to `State` interface at `src/component.tsx`
   }
   ```
 
-__4.__ Make following changes at `render` method
+__4.__ Make the following changes at `render` method:
 
   ```tsx
       render() {
@@ -82,6 +82,6 @@ __5.__ Replace `width` and `height` rules in `style/visual.less`
       min-height: 200px;
   ```
 
-  Now you can resize the viewport and the circle diameter will be equal to minimal size (width or height).
+  Now you can resize the viewport and the circle diameter will correspond to minimal size (width or height). [The next step of tutorial](../working-with-settings/) describe how to make custom visual customizable.
 
 ---------

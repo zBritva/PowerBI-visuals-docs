@@ -18,7 +18,7 @@ __1.__ Let the component display data from its own state. Extend `src/component.
       textValue: string
   }
 
-  const initialState: State = {
+  export const initialState: State = {
       textLabel: "",
       textValue: ""
   }
@@ -72,6 +72,12 @@ __2.__ Add some styles for new markup by editing `styles/visual.less`.
 __3.__ Custom Visuals receive current data as an argument of `update` method. Open `src/visual.ts` and add the following code into `update` method:
 
   ```typescript
+  //...
+  import { ReactCircleCard, initialState } from "./component";
+  //...
+
+  export class Visual implements IVisual {
+      //...
       public update(options: VisualUpdateOptions) {
 
           if(options.dataViews && options.dataViews[0]){
@@ -82,7 +88,15 @@ __3.__ Custom Visuals receive current data as an argument of `update` method. Op
                   textValue: dataView.single.value.toString()
               });
           }
-      }
+        } else {
+            this.clear();
+        }
+    }
+
+    private clear() {
+        ReactCircleCard.update(initialState);
+    }
+  }
   ```
 
 It picks `textValue` and `textLabel` from `DataView` and, if data exists, updates component state. This update method will be implemented at the next step.

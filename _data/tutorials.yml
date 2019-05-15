@@ -1,11 +1,3 @@
-- title: Building React based custom visual
-  pages:
-    - title: Getting started
-    - title: Developing React component
-    - title: Configuring capabilities
-    - title: Receiving props from PowerBI visual
-    - title: Getting viewport properties
-    - title: Working with settings
 - title: Building Bar Chart
   pages:
     - title: Building a Visual with Static Data
@@ -22,6 +14,14 @@
     - title: Adding Locale support to the Bar Chart
     - title: Adding URL Launcher element to the Bar Chart
     - title: Finally Package for Distribution
+- title: Building React based custom visual
+  pages:
+    - title: Getting started
+    - title: Developing React component
+    - title: Configuring capabilities
+    - title: Receiving props from PowerBI visual
+    - title: Getting viewport properties
+    - title: Working with settings
 - title: Building Slicer Visual
   pages:
     - title: Code structure

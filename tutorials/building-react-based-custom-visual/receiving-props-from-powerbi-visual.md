@@ -6,127 +6,123 @@ group: building-react-based-custom-visual
 toc: true
 ---
 
+1. Let the component display data from its own state. Extend `src/component.tsx`.
 
-# Receiving props from PowerBI visual
+    ```javascript
+    export interface State {
+        textLabel: string,
+        textValue: string
+    }
 
+    export const initialState: State = {
+        textLabel: "",
+        textValue: ""
+    }
 
-__1.__ Let the component display data from its own state. Extend `src/component.tsx`.
+    export class ReactCircleCard extends React.Component<{}, State>{
+        constructor(props: any){
+            super(props);
+            this.state = initialState;
+        }
 
-  ```javascript
-  export interface State {
-      textLabel: string,
-      textValue: string
-  }
+        render(){
+            const { textLabel, textValue } = this.state;
 
-  export const initialState: State = {
-      textLabel: "",
-      textValue: ""
-  }
-
-  export class ReactCircleCard extends React.Component<{}, State>{
-      constructor(props: any){
-          super(props);
-          this.state = initialState;
-      }
-
-      render(){
-          const { textLabel, textValue } = this.state;
-
-          return (
-              <div className="circleCard">
-                  <p>
-                      {textLabel}
-                      <br/>
-                      <em>{textValue}</em>
-                  </p>
-              </div>
-          )
-      }
-  }
-  ```
-
-__2.__ Add some styles for new markup by editing `styles/visual.less`.
-
-  ```css
-  .circleCard {
-      position: relative;
-      box-sizing: border-box;
-      border: 1px solid #000;
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-  }
-
-  p {
-      text-align: center;
-      line-height: 30px;
-      font-size: 20px;
-      font-weight: bold;
-
-      position: relative;
-      top: -30px;
-      margin: 50% 0 0 0;
-  }
-  ```
-
-__3.__ Custom Visuals receive current data as an argument of `update` method. Open `src/visual.ts` and add the following code into `update` method:
-
-  ```typescript
-  //...
-  import { ReactCircleCard, initialState } from "./component";
-  //...
-
-  export class Visual implements IVisual {
-      //...
-      public update(options: VisualUpdateOptions) {
-
-          if(options.dataViews && options.dataViews[0]){
-              const dataView: DataView = options.dataViews[0];
-
-              ReactCircleCard.update({
-                  textLabel: dataView.metadata.columns[0].displayName,
-                  textValue: dataView.single.value.toString()
-              });
-          }
-        } else {
-            this.clear();
+            return (
+                <div className="circleCard">
+                    <p>
+                        {textLabel}
+                        <br/>
+                        <em>{textValue}</em>
+                    </p>
+                </div>
+            )
         }
     }
+    ```
 
-    private clear() {
-        ReactCircleCard.update(initialState);
+2. Add some styles for new markup by editing `styles/visual.less`.
+
+    ```css
+    .circleCard {
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
     }
-  }
-  ```
 
-It picks `textValue` and `textLabel` from `DataView` and, if data exists, updates component state. This update method will be implemented at the next step.
+    p {
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: bold;
 
-__4.__ To send the updates to the component instance insert the following code into `ReactCircleCard` class:
+        position: relative;
+        top: -30px;
+        margin: 50% 0 0 0;
+    }
+    ```
 
-  ```typescript
-      private static updateCallback: (data: object) => void = null;
+3. Custom Visuals receive current data as an argument of `update` method. Open `src/visual.ts` and add the following code into `update` method:
 
-      public static update(newState: State) {
-          if(typeof ReactCircleCard.updateCallback === 'function'){
-              ReactCircleCard.updateCallback(newState);
-          }
-      }
+    ```typescript
+    //...
+    import { ReactCircleCard, initialState } from "./component";
+    //...
 
-      public state: State = initialState;
+    export class Visual implements IVisual {
+        //...
+        public update(options: VisualUpdateOptions) {
 
-      public componentWillMount() {
-          ReactCircleCard.updateCallback = (newState: State): void => { this.setState(newState); };
-      }
+            if(options.dataViews && options.dataViews[0]){
+                const dataView: DataView = options.dataViews[0];
 
-      public componentWillUnmount() {
-          ReactCircleCard.updateCallback = null;
-      }
-  ```
+                ReactCircleCard.update({
+                    textLabel: dataView.metadata.columns[0].displayName,
+                    textValue: dataView.single.value.toString()
+                });
+            }
+            } else {
+                this.clear();
+            }
+        }
 
-__5.__ Now you can test the component. Make sure that `pbiviz start` is run and all files are saved saved, and update the visual you're creating.
+        private clear() {
+            ReactCircleCard.update(initialState);
+        }
+    }
+    ```
 
-![circleCard](../images/circleCard.png)
+    It picks `textValue` and `textLabel` from `DataView` and, if data exists, updates component state. This update method will be implemented at the next step.
 
-  [At the next step](../getting-viewport-properties/) we will make that component resizable.
+4. To send updates to component instance, insert the following code into `ReactCircleCard` class:
+
+    ```typescript
+        private static updateCallback: (data: object) => void = null;
+
+        public static update(newState: State) {
+            if(typeof ReactCircleCard.updateCallback === 'function'){
+                ReactCircleCard.updateCallback(newState);
+            }
+        }
+
+        public state: State = initialState;
+
+        public componentWillMount() {
+            ReactCircleCard.updateCallback = (newState: State): void => { this.setState(newState); };
+        }
+
+        public componentWillUnmount() {
+            ReactCircleCard.updateCallback = null;
+        }
+    ```
+
+5. Now you can test the component. Make sure that `pbiviz start` is run and all files are saved, then update the visual you've created.
+
+    ![circleCard](../images/circleCard.png)
+
+[At the next step](../getting-viewport-properties/) we will make the component resizable.
 
 ---------

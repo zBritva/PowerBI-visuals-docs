@@ -6,50 +6,47 @@ group: building-react-based-custom-visual
 toc: true
 ---
 
-# Capabilities.json
+1. Open `capabilities.json`. Remove `Category Data` object from `dataRoles`. ReactCircleCard will display a single value, so we need only `Measure Data`.
 
-
-__1.__ Open `capabilities.json`. Remove `Category Data` object from `dataRoles`. ReactCircleCard will display single value, so we need only `Measure Data`.
-
-  ```json
-      "dataRoles": [
-          {
-              "displayName": "Measure Data",
-              "name": "measure",
-              "kind": "Measure"
-          }
-      ],
-  ```
-
-__2.__ Remove all the content of `objects` key. It will be filled in later.
-
-  ```json
-      "objects": {},
-  ```
-
-__3.__ Copy the following code of `dataViewMappings` property. Pay attention to `condition`: `max: 1` means that only one measure column can be submitted.
-
-  ```json
-        "dataViewMappings": [
+    ```json
+    "dataRoles": [
         {
-            "conditions": [
-                {
-                    "measure": {
-                        "max": 1
-                    }
-                }
-            ],
-            "single": {
-                "role": "measure"
-            }
+            "displayName": "Measure Data",
+            "name": "measure",
+            "kind": "Measure"
         }
-    ]
-  ```
+    ],
+    ```
 
-Now you can drag some data from `Fields` pane into visual settings.
+2. Remove all the content of `objects` key. It will be filled in later.
 
-![measureData](../images/measureData.png)
+    ```json
+        "objects": {},
+    ```
 
-The [next step of tutorial](../receiving-props-from-powerbi-visual/) will describe how to render data using React.
+3. Copy the following code of `dataViewMappings` property. Pay attention to `condition`: `max: 1` It means that the only one measure column can be submitted.
+
+    ```json
+        "dataViewMappings": [
+            {
+                "conditions": [
+                    {
+                        "measure": {
+                            "max": 1
+                        }
+                    }
+                ],
+                "single": {
+                    "role": "measure"
+                }
+            }
+        ]
+    ```
+
+4. Now you can drag some data from `Fields` pane into the visual settings.
+
+    ![measureData](../images/measureData.png)  
+
+ The [next step of tutorial](../receiving-props-from-powerbi-visual/) will describe how to render data using React.
 
 ---------

@@ -11,9 +11,14 @@ github_issue_id: 402
 The page contains a quick summary of the API versions.
 Versions listed on this page are considered stable and should not change.
 
+## API v2.6
+  * Added **isInFocus** to update option and **switchFocusModeState** method to visual host
+  * Now Custom Visuals support **subtotals** customization
+
 ## API v2.5
   * **[Analytics Pane Support](../how-to-guide/analytics-pane/)**
-  * The DataRepetitionSelector interface is no longer supported, it was replaced with data.CustomVisualOpaqueIdentity interface.
+  * The DataRepetitionSelector interface is no longer supported, it was replaced with data.CustomVisualOpaqueIdentity interface
+  * SelectionIdBuilder supports **withMatrixNode** and **withTable** methods
 
 ## API v2.3
   * **[Landing Page API](../how-to-guide/landing-page/)**

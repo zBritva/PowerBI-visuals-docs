@@ -50,6 +50,15 @@
     - name: Mekko Chart
       description: "A mix of 100% stacked column chart and 100% stacked bar chart combined into one view"
       github: "https://github.com/Microsoft/powerbi-visuals-mekkochart"
+    - name: MultiKPI
+      description: "A powerful Multi KPI visualization, of a key KPI along with multiple sparklines of supporting data"
+      github: "https://github.com/microsoft/PowerBI-visuals-MultiKPI"
+    - name: PowerKPI
+      description: "A powerful KPI Indicator with multi-line chart and labels for current date, value and variances."
+      github: "https://github.com/microsoft/PowerBI-visuals-PowerKPI"
+    - name: PowerKPI Matrix
+      description: "Monitor balanced scorecards and unlimited number of metrics and KPIs in a compact, easy to read list"
+      github: "https://github.com/microsoft/PowerBI-visuals-PowerKPIMatrix"
     - name: Pulse Chart
       description: "Line chart annotated with key events. Perfect for story telling with data"
       github: "https://github.com/Microsoft/powerbi-visuals-pulsechart"

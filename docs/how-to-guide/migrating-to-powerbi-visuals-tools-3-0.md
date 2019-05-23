@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Migrating to powerbi-visuals-tools 3.0
+title: Migrating to powerbi-visuals-tools 3.x
 description: Getting started with new version of powerbi-visuals-tools (Preview)
 group: how-to-guide
 toc: true
@@ -46,11 +46,11 @@ where `_` is global variable for `lodash` library.
 
 This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As a sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
 
-## How to install powerbi-visuals-tools@beta
+## How to install powerbi-visuals-tools
 
-The new toolset is available as a `beta` version and can be installed by executing the command.
+The new toolset can be installed by executing the command.
 
-`npm install powerbi-visuals-tools@beta`. 
+`npm install powerbi-visuals-tools`. 
 
 It will install tools set locally.
 
@@ -95,11 +95,11 @@ And you can also change `target` option to `ES6` if you want to use modern JavaS
 
 ## Update Custom Visuals utils
 
-If you use [utils](https://www.npmjs.com/search?q=powerbi-visuals-utils) you should update them to `beta` version too.
+If you use [utils](https://www.npmjs.com/search?q=powerbi-visuals-utils) you should update them to the latest version too.
 
-Execute the command `npm install powerbi-visuals-utils-<UTILNAME>@beta --save`. (Ex. `npm install powerbi-visuals-utils-dataviewutils@beta --save` ) to get the new version with external modules of TypeScript.
+Execute the command `npm install powerbi-visuals-utils-<UTILNAME> --save`. (Ex. `npm install powerbi-visuals-utils-dataviewutils --save` ) to get the new version with external modules of TypeScript.
 
-You can faid examle in MekkoChart [repository](https://github.com/Microsoft/powerbi-visuals-mekkochart/tree/dev/beta).
+You can find example in MekkoChart [repository](https://github.com/Microsoft/powerbi-visuals-mekkochart).
 This visual uses all utils.
 
 ## Changes inside of the visuals sources

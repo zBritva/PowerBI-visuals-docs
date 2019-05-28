@@ -30,7 +30,6 @@
       skip: true
     - title: Limitations
       skip: true
-    - title: Migrating to versioned API guide
     
 - title: How-to guide
   pages:

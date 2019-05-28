@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Migrating to powerbi-visuals-tools 3.x
-description: Getting started with new version of powerbi-visuals-tools (Preview)
+description: Getting started with new version of powerbi-visuals-tools
 group: how-to-guide
 toc: true
 redirect_from:
@@ -9,50 +9,32 @@ redirect_from:
 github_issue_id: 436
 ---
 
-Power BI Visuals Tools 3.0.x brings modern [ECMAScript 2015 modules](https://www.typescriptlang.org/docs/handbook/modules.html) into TypeScript code.
+## Overview
+  Starting from version 3, Power BI Visuals Tools uses Webpack to build Custom Visuals.
+For developers new version brings a lot of new opportunites to create the visual:
+* TypeScript v3.0.1 by default. Starting from TypeScript 1.5 the nomenclature has changed. [Read more about TypeScript modules](https://www.typescriptlang.org/docs/handbook/modules.html).
+* ES6 modules are supported. Developers should not use [externalJS](../migrating-to-powerbi-visuals-tools-3-0/#fix-loading-external-libraries) any more, use ES6 imports instead.
+* New versions of [D3v5](https://d3js.org/) and other ES6 module based libraries are supported.
+* Reduced package size. Webpack uses [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) to remove unused code. It reduces code of JS and as a result, you get better performance in visual loading.
+* Improved API performance.
+* Globalize.js library [is integrated](../migrating-to-powerbi-visuals-tools-3-0/#remove-globalizejs-library) into formatting-utils.
+* Tools uses [webpack-visualizer](https://github.com/chrisbateman/webpack-visualizer) to display the code base of the visual.
 
-In TypeScript 1.5 the nomenclature has changed. [Read more about TypeScript modules](https://www.typescriptlang.org/docs/handbook/modules.html).
 
-The previous version of of Power BI Visuals Tools required to define a visual class under `powerbi.extensibility.visual` module.
+All migration steps for the new version of Power BI Visuals Tools are described below.
 
 ## Backward compatibility
 
 The new tools save backward compatibility for old visuals code base, but can require some additional changes to load external libraries. 
-The new toolset is based on Webpack. The libs which support module systems will be imported as Webpack modules. All other libs and visual source code will be wrapped into one module.
+The libs which support module systems will be imported as Webpack modules. All other libs and visual source code will be wrapped into one module.
 Global variables like JQuery and Lodash that were used in the previous pbiviz tools are obsolete now. It means that if the old visual code relay on global variables, the visual can be broken in this case.
 
-### Fix loading external libraries.
-
-Include new JS file after libs in `externalJS` array of `pbiviz.json`. Example:
-
-```JSON
-"externalJS": [
-    ...
-    "node_modules/d3/d3.min.js",
-    "node_modules/lodash/lodash.min.js",
-    "externalJS/init.lodash.js",
-    "node_modules/globalize/lib/globalize.js",
-    "externalJS/init.globalize.js",
-    ...
-]
-```
-With folowing JS code. Example for `lodash`:
-
-```JS
-var _ = typeof _ === "undefined" ? typeof exports === "undefined" ? window._ : exports._ : _ ;
-```
-
-where `_` is global variable for `lodash` library.
-
-This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As a sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
+The previous version of of Power BI Visuals Tools required to define a visual class under `powerbi.extensibility.visual` module.
 
 ## How to install powerbi-visuals-tools
 
 The new toolset can be installed by executing the command.
-
-`npm install powerbi-visuals-tools`. 
-
-It will install tools set locally.
+`npm install -g powerbi-visuals-tools`. 
 
 The sample of sampleBarChart visual and correspond [changes](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/package.json#L16) in `package.json`:
 
@@ -68,8 +50,8 @@ The sample of sampleBarChart visual and correspond [changes](https://github.com/
     },
     "devDependencies": {
       "@types/d3": "5.0.0",
-      "d3": "5.5.0"
-      "powerbi-visuals-tools": "^3.0.1",
+      "d3": "5.5.0",
+      "powerbi-visuals-tools": "^3.1.0",
       "tslint": "^4.4.2",
       "tslint-microsoft-contrib": "^4.0.0"
     }
@@ -78,7 +60,7 @@ The sample of sampleBarChart visual and correspond [changes](https://github.com/
 
 ## How to install Power BI Custom Visuals API
 
-The type definitions for Power BI Custom Visuals API are available in [`powerbi-visuals-api`](https://www.npmjs.com/package/powerbi-visuals-api) package. The version of package matches API version of Power BI Custom Visuals.
+New version of powerbi-visual-tools doesn't include all API versions inside. Instead of that developer should install a specific version of [`powerbi-visuals-api`](https://www.npmjs.com/package/powerbi-visuals-api) package. The version of package matches API version of Power BI Custom Visuals and it provides all type definitions for Power BI Custom Visuals API.
 
 Add `powerbi-visuals-api` into dependencies of project by executing command 
 `npm install --save-dev powerbi-visuals-api`.
@@ -101,6 +83,43 @@ Execute the command `npm install powerbi-visuals-utils-<UTILNAME> --save`. (Ex. 
 
 You can find example in MekkoChart [repository](https://github.com/Microsoft/powerbi-visuals-mekkochart).
 This visual uses all utils.
+
+## Remove Globalize.js library
+New version of [powerbi-visuals-utils-formattingutils@4.3](https://www.npmjs.com/package/powerbi-visuals-utils-formattingutils) includes globalize.js out of the box.
+You don't need to include this library manually to the project.
+All required localizations will be added to the final package automatically.
+
+```JSON
+"externalJS": [
+    ...
+    ~~"node_modules/lodash/lodash.min.js",~~
+    ...
+]
+```
+
+
+## Fix loading external libraries.
+
+Include new JS file after libs in `externalJS` array of `pbiviz.json`. Example:
+
+```JSON
+"externalJS": [
+    ...
+    "node_modules/lodash/lodash.min.js",
+    "externalJS/init.lodash.js",
+    ...
+]
+```
+With folowing JS code. Example for `lodash`:
+
+```JS
+var _ = typeof _ === "undefined" ? typeof exports === "undefined" ? window._ : exports._ : _ ;
+```
+
+where `_` is global variable for `lodash` library.
+
+This step-by-step guideline describes how to convert an existing custom visual to ES2015 modules. As a sample, [`sampleBarChart`](https://github.com/Microsoft/powerbi-visuals-sampleBarchart) will be used.
+
 
 ## Changes inside of the visuals sources
 
@@ -174,11 +193,11 @@ import "./../style/visual.less";
 ```  
 Your CSS, LESS styles will be compiled automatically.  
 
-### `externalJS` in `pbiviz.json`
+### externalJS section in pbiviz.json
 
 The tools [doesn't require](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/sample-next/pbiviz.json#L20) a list of `externalJS` to load into the visual bundle. Because webpack includes all imported libs.
 
-**The `externalJS` in `pbivi.json` should be empty.**
+**The externalJS section in pbivi.json should be empty.**
 
 Call the typical commands `npm run package` to create the visual package or `npm run start` to start dev server.
 
@@ -204,7 +223,7 @@ There are several breaking changes and you should modify your code to use the ne
 
 ## Babel
 
-Starting from version 3.0.9 the tools use babel to compile new modern JS code into old ES5 to support wide range of browsers.
+Starting from version 3.1 the tools use babel to compile new modern JS code into old ES5 to support wide range of browsers.
 
 This option is enabled by default, but you need to manually import the [`@babel/polyfill`](https://babeljs.io/docs/en/babel-polyfill) package.
 
@@ -218,11 +237,6 @@ and import the package on the start point of the visual code (usually it's 'src/
 
 Read more about Babel [in docs](https://babeljs.io/docs/en/).
 
-# Advantages of using the new tools
+Finally run [webpack-visualizer](https://github.com/chrisbateman/webpack-visualizer) to display the code base of the visual.  
 
-1. You can use new syntax to import modules
-2. New tools allow using new versions of libraries, for example, D3.js version 4.x.x. or 5.x.x. with defined typings for TS.
-3. Webpack uses [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) to remove unused code
-    `pbiviz package` command runs a build in production mode. It reduces code of JS and as result, you get better performance in loading the visual.
-4. Tools use [webpack-visualizer](https://github.com/chrisbateman/webpack-visualizer) to display the code base of the visual.
-    ![](../images/WebpackStats.png)
+  ![](../images/WebpackStats.png)

@@ -89,14 +89,6 @@ New version of [powerbi-visuals-utils-formattingutils@4.3](https://www.npmjs.com
 You don't need to include this library manually to the project.
 All required localizations will be added to the final package automatically.
 
-```JSON
-"externalJS": [
-    ...
-    ~~"node_modules/lodash/lodash.min.js",~~
-    ...
-]
-```
-
 
 ## Fix loading external libraries.
 

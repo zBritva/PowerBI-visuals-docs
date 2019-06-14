@@ -271,3 +271,11 @@ Starting from API 2.2 **JSON Filters** can be restored from **VisualUpdateOption
 
 ![Screenshot JSON Filte](../images/json-filter.jpg)
 
+### Clear JSON Filter
+
+Filter API accepts `null` value of filter as reset or clear
+
+```
+  // invoke the filter
+  visualHost.applyJsonFilter(null, "general", "filter", FilterAction.merge);
+  ```

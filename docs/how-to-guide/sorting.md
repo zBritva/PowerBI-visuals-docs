@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 437
 ---
 
+**The article is outdated, read [updated article about sorting in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/sort-options).**
+
 `Sorting` specifies the default sorting behavior for the visual.
 Capability requires one of the parameters described below:
 

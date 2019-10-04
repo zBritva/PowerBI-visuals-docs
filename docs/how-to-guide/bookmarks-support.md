@@ -8,6 +8,8 @@ redirect_from:
   - /docs/latest/how-to-guide/bookmarks-support/
 ---
 
+**The article is outdated, read [updated article about bookmarks in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/bookmarks-support).**
+
 Power BI report bookmarks allow capturing the currently configured view of a report page, selection state, filtering state of the visual etc. But it requires additional action from custom visuals side to support the bookmark and react correctly to changes of report state. Read more about bookmarks in the [documentation](https://docs.microsoft.com/en-us/power-bi/desktop-bookmarks)
 
 ## Report bookmarks support in your visual

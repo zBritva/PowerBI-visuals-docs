@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 456
 ---
 
+**The article is outdated, read [updated article about capabilities in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/capabilities).**
+
 Capabilities are used to provide information to the host about your visual. All properties on the Capabilities model are ```optional```
 
 Your visual's capabilities are loaded from

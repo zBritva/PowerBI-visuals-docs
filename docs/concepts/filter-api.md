@@ -11,6 +11,8 @@ github_issue_id: 520
 
 ## Custom Visual Filters API
 
+**The article is outdated, read [updated article about filter api in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/filter-api).**
+
 Filter-visuals allow to filter data. The main difference from selections is that other visuals will be filtered in any way despite highlight support by other visual.
 
 To enable filtering for the visual, the visual should contain `filter` object in `general` section of capabilities.json content.
@@ -271,3 +273,11 @@ Starting from API 2.2 **JSON Filters** can be restored from **VisualUpdateOption
 
 ![Screenshot JSON Filte](../images/json-filter.jpg)
 
+### Clear JSON Filter
+
+Filter API accepts `null` value of filter as reset or clear
+
+```
+  // invoke the filter
+  visualHost.applyJsonFilter(null, "general", "filter", FilterAction.merge);
+  ```

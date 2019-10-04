@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 433
 ---
 
+**The article is outdated, read [updated article about sync slicers in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/enable-sync-slicers).**
+
 To support [Sync Slicers](https://docs.microsoft.com/en-us/power-bi/desktop-slicers) your custom slicer visual must use API 1.13 or higher.
 
 The second necessary aspect is enabled option in capabilities.json (see a picture below).

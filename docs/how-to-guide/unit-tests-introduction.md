@@ -11,6 +11,8 @@ github_issue_id: 438
 
 # Custom visuals unit test
 
+**The article is outdated, read [updated article about unit tests in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/unit-tests-introduction).**
+
 This tutorial describes basics of writing unit tests for your custom visuals. In this tutorial, we will consider how to use test runner karma.js, testing framework - jasmine.js and also we will consider how to use powerbi-visuals-utils-testutils package. It is a set of mocks and fakes to simplify unit testing for Power BI custom visuals.
 
 ## Install and configure karma.js and jasmine

@@ -8,6 +8,8 @@ redirect_from:
   - /docs/latest/how-to-guide/high-contrast-support/
 ---
 
+**The article is outdated, read [updated article about high-contrast mode in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/high-contrast-support).**
+
 Windows *High-Contrast* setting makes text and apps easier to see by using more distinct colors.
 Read more about [high-contrast support in Power BI](https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-june-2018-feature-summary/#highContrast).
 

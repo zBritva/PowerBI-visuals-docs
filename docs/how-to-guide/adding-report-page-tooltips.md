@@ -10,6 +10,9 @@ github_issue_id: 439
 ---
 
 # Adding Report Page Tooltips support to Bar Chart
+
+**The article is outdated, read [updated article about report page tooltips in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/add-tooltips#add-report-page-tooltips).**
+
 Report page tooltips support can be done by updating your visual capabilities.
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709) for what was added at this step.
 

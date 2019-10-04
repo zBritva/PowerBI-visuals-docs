@@ -6,6 +6,8 @@ group: how-to-guide
 toc: true
 ---
 
+**The article is outdated, read [updated article about analytics pane in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/analytics-pane).**
+
 **Analytics pane** was [introduced for native visuals](https://docs.microsoft.com/en-us/power-bi/desktop-analytics-pane) on November 2018. 
 As of API v2.5.0, custom visuals too can present and manage their properties in the **Analytics pane**.
 

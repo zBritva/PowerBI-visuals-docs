@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 454
 ---
 
+**The article is outdated, read [updated article about data view mappings in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/dataview-mappings).**
+
 A `dataViewMappings` describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
 There is a section for each of the `dataMappings`.
 

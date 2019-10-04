@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 452
 ---
 
+**The article is outdated, read [updated article about advanced edit mode in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/advanced-edit-mode).**
+
 Visuals that require advanced UI controls can declare support of Advanced Edit Mode.
 If supported, when in report editing mode, an `Edit` button will appear in the visual's menu.
 When the `Edit` button is clicked, EditMode is set to `Advanced`.

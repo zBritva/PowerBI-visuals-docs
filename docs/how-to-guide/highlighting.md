@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 429
 ---
 
+**The article is outdated, read [updated article about highlight data in official documentation of Power BI](https://docs.microsoft.com/en-us/power-bi/developer/visuals/highlight).**
+
 By default whenever an element is selected the `values` array in the `dataView` object will be filtered to just the selected values. This will cause all other visuals on the page to display just the selected data.
 
 ![highlight dataview default behavior](../images/highlightDataView.png)

@@ -6,6 +6,8 @@ group: quickstarts
 toc: true
 ---
 
+**The article is outdated, read [updated article about SSL certificate in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/create-ssl-certificate).**
+
 Run the following command to generates the certificate by using powershell New-SelfSignedCertificate cmdlet on Windows 8 or higher.
 
 For **Windows** **7** tool requires OpenSSL installation. Util `openssll` must be available from command line.

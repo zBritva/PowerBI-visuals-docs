@@ -7,6 +7,8 @@ toc: true
 github_issue_id: 518
 ---
 
+**The article is outdated, read [updated article about render events in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/event-service).**
+
 The new API consists of three methods (started, finished or failed) which should be called during rendering.
 
 When rendering starts, the custom visual code calls the renderingStarted method to indicate that rendering process has started.

@@ -7,6 +7,8 @@ toc: true
 github_issue_id: 519
 ---
 
+**The article is outdated, read [updated article about landing page in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/landing-page).**
+
 As of API 2.3.0, you can add a landing page to your visual, to do so, simply add `supportsLandingPage` to the capabilities and set it to true, this will make your visual initialize and update even before adding data to it (meaning it will no longer show a watermark) so you can design your own landing page to show in the visual as long as it has no data.
 
 ### Usage

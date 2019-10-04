@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 459
 ---
 
+**The article is outdated, read [updated article about about objects and properties in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/objects-properties).**
+
 Objects describe customizable properties associated with the visual.
 Each object can have multiple properties and each property has a type associated with it.
 Types refer to what the property will be. See below for more information about types.

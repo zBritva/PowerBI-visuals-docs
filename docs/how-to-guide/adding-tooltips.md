@@ -9,6 +9,8 @@ redirect_from:
 github_issue_id: 430
 ---
 
+**The article is outdated, read [updated article about tooltips in official documentation of Power BI](https://docs.microsoft.com/power-bi/developer/visuals/add-tooltips).**
+
 Visuals can now make use of PowerBI's tooltip support. PowerBI tooltips handle the following interactions:
 
 Show a tooltip.

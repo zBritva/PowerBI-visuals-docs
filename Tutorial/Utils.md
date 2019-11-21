@@ -1,4 +1,7 @@
 # Adding Power BI utils
+
+**The article is outdated, [read updated article about visual development in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/custom-visual-develop-tutorial)**
+
 Power BI utils are set of tools that allow developer of Power BI visual to easily implement most common capabilities of visualizations, like drawing chart axes, manipulating SVG shapes and managing color formats. Instead of creating such functionality from scratch, developer can integrate these utils into his custom visual and focus on developing specific abilities of visualization.
 
 ## Utils list

@@ -1,5 +1,7 @@
 # How to submit a custom visual to the Power BI visuals gallery?
 
+**The article is outdated, [read updated article about publishing visuals in official documentation of Power BI.](https://docs.microsoft.com/en-us/power-bi/developer/office-store)**
+
 ## Submission and publication
 
 Once you've created and tested your custom visual, you can [submit it to the visuals gallery](https://app.powerbi.com/visuals/info#submit).

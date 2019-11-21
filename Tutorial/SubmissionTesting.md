@@ -1,4 +1,7 @@
 # Testing your visual
+
+**The article is outdated, [read updated article how to add unit test to visual project in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/unit-tests-introduction)**
+
 ## Test cases
 Passed | Test case | Expected Results
 ------ | --------- | ----------------

@@ -1,4 +1,7 @@
 # Adding External Libraries
+
+**The article is outdated, [read updated article about visual development in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/launch-url)**
+
 * [Including JavaScript files](#including-javascript-files)
 * [Including CSS files](#including-css-files)
 

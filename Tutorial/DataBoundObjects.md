@@ -1,4 +1,8 @@
 # Databound Objects
+
+**The article is outdated, [read updated article about objects in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/objects-properties#objects-selector)**
+
+
 Databound objects are similar to static objects, however they typically deal with data selection.
 We will be changing the color associated with the data point.
 

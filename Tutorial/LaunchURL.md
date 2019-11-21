@@ -1,4 +1,7 @@
 # Opening a URL in a new tab/window
+
+**The article is outdated, [read updated article about Launch URL API in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/launch-url)**
+
 Launch URL allows opening a new browser tab (or window), by delegating the actual work to Power BI.
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/2ecc5cf74b9bc6fbf5c03f84c3ab24841b489d4e) for what was added at this step.

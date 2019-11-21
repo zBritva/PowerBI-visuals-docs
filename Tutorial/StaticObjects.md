@@ -1,4 +1,8 @@
 # Static Objects
+
+**The article is outdated, [read updated article about objects in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/objects-properties)**
+
+
 Objects can be added to further customize what the visual can do. These customizations can just be UI changes, but can also be changes related to the data that was queried.
 We will be using static objects to render an x axis for the Bar Chart.
 

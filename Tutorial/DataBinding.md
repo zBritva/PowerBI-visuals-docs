@@ -1,4 +1,8 @@
 # Adding Databinding to Bar Chart
+
+**The article is outdated, [read updated article about data binding in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/dataview-mappings)**
+
+
 Databinding can be done by defining your visual capabilities.
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709) for what was added at this step.
 

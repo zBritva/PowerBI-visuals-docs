@@ -1,4 +1,8 @@
 # Building a Static Visual
+
+**The article is outdated, [read updated article about visual development in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/custom-visual-develop-tutorial)**
+
+
 Typically, it is easier to build your visual with static data before adding PowerBIs data binding.
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/f5ef02a5851c98671b46fedc1e7f7e7133001d7c) for what was added at this step.
 

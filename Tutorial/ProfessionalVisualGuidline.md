@@ -1,5 +1,7 @@
 # Developer guide: How to build a Power BI custom visual
 
+**The article is outdated, [read updated article about visual development in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/custom-visual-develop-tutorial)**
+
 ## Requirements of a quality grade custom visual
 
 Power BI users expect the visuals to contain a minimum set of features and work properly in their Power BI environment. A full-featured visual should include features like formatting, selection and filtering, exception handling, and responsiveness.

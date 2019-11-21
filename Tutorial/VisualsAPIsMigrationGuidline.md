@@ -1,5 +1,8 @@
 # Migrating to the Visuals API
 
+**The article is outdated, [read updated article about visual development in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/custom-visual-develop-tutorial)**
+
+
 To migrate from the legacy APIs to the new versioned Visuals API, use [PowerBI visuals CLI tools](https://github.com/Microsoft/PowerBI-visuals#setting-up-environment) and [NPM API packages](#utility-libraries-using-npm-packages).
 Check the [Power BI visuals API roadmap](https://github.com/Microsoft/PowerBI-visuals/tree/master/Roadmap) for current and upcomming features.
 

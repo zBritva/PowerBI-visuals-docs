@@ -1,6 +1,8 @@
 # PowerBI Visual Tools (pbiviz) - Usage Guide
 
-The easiest way to create custom visuals is by using the PowerBI command line tools which can be easily installed via NPM. The command line tools provide everything you need to develop visuals and test them in live PowerBI reports and dashboards. 
+**The article is outdated, [read updated article about visual development in official documentation of Power BI.](https://docs.microsoft.com/power-bi/developer/visuals/custom-visual-develop-tutorial)**
+
+The easiest way to create custom visuals is by using the PowerBI command line tools which can be easily to installed via NPM. The command line tools provide everything you need to develop visuals and test them in live PowerBI reports and dashboards. 
 
 **Features:**
 
